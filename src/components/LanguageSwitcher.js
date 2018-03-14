@@ -7,11 +7,9 @@ import PropTypes from 'prop-types'
 const A = styled('a')`
   text-decoration: underline;
   position: relative;
-  top: 1em;
   right: 0.3em;
   font-family: Helvetica, Arial, sans-serif;
-  color: #284162;
-  padding: 1em 1em;
+  color: white;
   background-color: none;
   &:visited {
     color: #7834bc;

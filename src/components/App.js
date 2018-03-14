@@ -11,6 +11,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Banner from './Banner'
 import AlphaBanner from './AlphaBanner'
+import FederalBanner from './FederalBanner'
 import Footer from './Footer'
 import SignatureBlock from './SignatureBlock'
 
@@ -93,15 +94,20 @@ injectGlobal`
   #index-page {
     width: 100%;
     background-color: #fdd262;
+    padding: 60px;
   }
+
+  #index-page p{
+    margin-top: 0px;
+  }
+
 `
 
 const App = ({ lang }) => (
   <I18nProvider language={lang} catalogs={catalogs} development={dev}>
     <div>
       <AlphaBanner />
-      <GoCSignature flag="#000" lang={lang} />
-      <LanguageSwitcher />
+      <FederalBanner />
       <Switcher />
       <Footer />
     </div>

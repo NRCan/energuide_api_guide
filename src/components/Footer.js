@@ -6,13 +6,14 @@ import { Trans } from 'lingui-react'
 const footer = css`
   background-color: #000;
   color: black;
-  padding-left: 60px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 30px 60px 30px 60px;
+  display: flex;
+  justify-content: space-between;
 `
 
 const Link = styled.a`
   color: white;
+  margin-top: 10px;
 `
 
 const Footer = () => (
