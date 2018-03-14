@@ -2,6 +2,9 @@ import React from 'react'
 import styled, { css } from 'react-emotion'
 import { GoCSignature } from '@cdssnc/gcui'
 import Link, { NavLink } from 'redux-first-router-link'
+import LanguageSwitcher from './LanguageSwitcher'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 const breakpoints = {
   small: 576,
@@ -38,16 +41,18 @@ const frlink = css`
   color: white;
 `
 
-const FederalBanner = () => (
+const FederalBanner = ({lang}) => (
   <section className={container}>
     <div>
-      <GoCSignature width="10em" flag="#FFF" text="#FFF" />
+      <GoCSignature lang={lang} width="10em" flag="#FFF" text="#FFF" />
     </div>
 
-    <Link href="https://www.canada.ca/fr.html">
-      <a className={frlink}>Francais</a>
-    </Link>
+    <LanguageSwitcher />
   </section>
 )
 
-export default FederalBanner
+const mapStateToProps = state => ({
+  lang: state.language,
+})
+
+export default connect(mapStateToProps)(FederalBanner)

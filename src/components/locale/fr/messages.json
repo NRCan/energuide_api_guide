@@ -62,7 +62,7 @@
     ]
   },
   "Test the API": {
-    "translation": "",
+    "translation": "Testez l'API",
     "origin": [
       [
         "src/components/Home.js",
@@ -71,7 +71,7 @@
     ]
   },
   "Access the API": {
-    "translation": "",
+    "translation": "Accéder à l'API",
     "origin": [
       [
         "src/components/Home.js",
@@ -80,7 +80,7 @@
     ]
   },
   "What is an API?": {
-    "translation": "",
+    "translation": "Qu'est-ce qu'une API?",
     "origin": [
       [
         "src/components/Home.js",
@@ -89,7 +89,7 @@
     ]
   },
   "An <0>Application Programming Interface</0>, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
-    "translation": "",
+    "translation": "Une interface de programmation d'application, ou API, est un ensemble de routines, de protocoles et d'outils pour la construction de logiciels. De nombreuses applications peuvent se parler et fournir une réponse.",
     "origin": [
       [
         "src/components/Home.js",
@@ -98,7 +98,7 @@
     ]
   },
   "What are the benefits of the EnerGuide API?": {
-    "translation": "",
+    "translation": "Quels sont les avantages de l'API EnerGuide?",
     "origin": [
       [
         "src/components/Home.js",
@@ -107,7 +107,7 @@
     ]
   },
   "View open data": {
-    "translation": "",
+    "translation": "Afficher les données ouvertes",
     "origin": [
       [
         "src/components/Home.js",
@@ -116,7 +116,7 @@
     ]
   },
   "The EnerGuide API will help make energy consumption data accessible for everyone.": {
-    "translation": "",
+    "translation": "L'API ÉnerGuide aidera à rendre les données sur la consommation d'énergie accessibles à tous.",
     "origin": [
       [
         "src/components/Home.js",
@@ -129,7 +129,7 @@
     ]
   },
   "Query specific data": {
-    "translation": "",
+    "translation": "Requête de données spécifiques",
     "origin": [
       [
         "src/components/Home.js",
@@ -138,7 +138,7 @@
     ]
   },
   "You can choose to access the granular data that you need. You will benefit from the ability to extract data data that is specific to your needs.": {
-    "translation": "",
+    "translation": "Vous pouvez choisir d'accéder aux données granulaires dont vous avez besoin. Vous bénéficierez de la capacité d'extraire des données de données spécifiques à vos besoins.",
     "origin": [
       [
         "src/components/Home.js",
@@ -147,7 +147,7 @@
     ]
   },
   "Access current data": {
-    "translation": "",
+    "translation": "Accéder aux données actuelles",
     "origin": [
       [
         "src/components/Home.js",
@@ -156,7 +156,7 @@
     ]
   },
   "How can I use the EnerGuide API?": {
-    "translation": "",
+    "translation": "Comment puis-je utiliser l'API EnerGuide?",
     "origin": [
       [
         "src/components/Home.js",
@@ -165,7 +165,7 @@
     ]
   },
   "Developers and data analysts can allow users to query specific information from large data sets. They set the rules that will guide the user to what they need.": {
-    "translation": "",
+    "translation": "Les développeurs et les analystes de données peuvent permettre aux utilisateurs d'interroger des informations spécifiques à partir de grands ensembles de données. Ils définissent les règles qui guideront l'utilisateur à ce dont ils ont besoin.",
     "origin": [
       [
         "src/components/Home.js",
@@ -174,7 +174,7 @@
     ]
   },
   "To see how it can be used,": {
-    "translation": "",
+    "translation": "Pour voir comment il peut être utilisé, ",
     "origin": [
       [
         "src/components/Home.js",
@@ -183,7 +183,7 @@
     ]
   },
   "test the API": {
-    "translation": "",
+    "translation": "testez l'API",
     "origin": [
       [
         "src/components/Home.js",
@@ -192,7 +192,7 @@
     ]
   },
   "Ready to use the Energuide API?": {
-    "translation": "",
+    "translation": "Prêt à utiliser l'API EnerGuide?",
     "origin": [
       [
         "src/components/Home.js",
@@ -201,7 +201,7 @@
     ]
   },
   "Read the documentation": {
-    "translation": "",
+    "translation": "Lire la documentation",
     "origin": [
       [
         "src/components/Home.js",
