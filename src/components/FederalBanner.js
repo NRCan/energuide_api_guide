@@ -1,7 +1,6 @@
 import React from 'react'
-import styled, { css } from 'react-emotion'
+import { css } from 'react-emotion'
 import { GoCSignature } from '@cdssnc/gcui'
-import Link, { NavLink } from 'redux-first-router-link'
 import LanguageSwitcher from './LanguageSwitcher'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -36,12 +35,7 @@ const container = css`
   `)};
 `
 
-const frlink = css`
-  text-align: right;
-  color: white;
-`
-
-const FederalBanner = ({lang}) => (
+const FederalBanner = ({ lang }) => (
   <section className={container}>
     <div>
       <GoCSignature lang={lang} width="10em" flag="#FFF" text="#FFF" />
@@ -50,6 +44,10 @@ const FederalBanner = ({lang}) => (
     <LanguageSwitcher />
   </section>
 )
+
+FederalBanner.propTypes = {
+  lang: PropTypes.string,
+}
 
 const mapStateToProps = state => ({
   lang: state.language,

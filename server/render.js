@@ -30,9 +30,6 @@ export default ({ clientStats }) => async (req, res, next) => {
   const chunkNames = flushChunkNames()
   const { js, styles, cssHash } = flushChunks(clientStats, { chunkNames })
 
-  console.log('REQUESTED PATH:', req.path)
-  console.log('CHUNK NAMES RENDERED', chunkNames)
-
   return res.send(
     `<!doctype html>
       <html>
