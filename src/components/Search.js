@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
 import Form from './Form'
+import InfoIcon from './InfoIcon'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 
@@ -95,7 +96,7 @@ class Search extends Component {
               <label htmlFor="search-by-1">
                 <Trans>Location&nbsp;</Trans>
                 <abbr title="A location refers to a region or neighbourhood. You will be searching by the first three digits of any postal code.">
-                  (i)
+                  <InfoIcon />
                 </abbr>
               </label>
 
@@ -108,7 +109,7 @@ class Search extends Component {
               <label htmlFor="search-by-2">
                 <Trans>File number&nbsp;</Trans>
                 <abbr title="A file number refers to an individual home. This number is provided to the homeowner through EnerGuide.">
-                  (i)
+                  <InfoIcon />
                 </abbr>
               </label>
             </fieldset>
