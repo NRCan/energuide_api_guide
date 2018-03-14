@@ -19,8 +19,8 @@ You're going to need `npm` installed globally, and preferably `yarn` as well.
 
 1. Clone repo
 2. Install dependencies with `yarn`
-3. Run the app locally with `yarn dev`
-4. [http://localhost:3000/](http://localhost:3000/search)
+3. Run the app locally with `yarn start`
+4. [http://localhost:3003/](http://localhost:3003/)
 
 Nice! You're now at the bleeding edge of Canadian Government tech. Treat yourself to a congratulatory Timbit.
 

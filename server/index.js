@@ -34,6 +34,6 @@ if (DEV) {
   app.use(serverRender({ clientStats, outputPath }))
 }
 
-app.listen(3000, () => {
-  console.log('Listening @ http://localhost:3000/') // eslint-disable-line no-console
+app.listen(3003, () => {
+  console.log('Listening @ http://localhost:3003/') // eslint-disable-line no-console
 })
