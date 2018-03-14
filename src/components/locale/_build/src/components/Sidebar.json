@@ -1,0 +1,18 @@
+{
+  "Home": {
+    "origin": [
+      [
+        "src/components/Sidebar.js",
+        13
+      ]
+    ]
+  },
+  "Thank you": {
+    "origin": [
+      [
+        "src/components/Sidebar.js",
+        17
+      ]
+    ]
+  }
+}

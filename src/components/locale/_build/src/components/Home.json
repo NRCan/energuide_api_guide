@@ -1,0 +1,166 @@
+{
+  "Natural Resources Canada": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        17
+      ]
+    ]
+  },
+  "EnerGuide API": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        20
+      ]
+    ]
+  },
+  "What is the EnerGuide API?": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        25
+      ]
+    ]
+  },
+  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        28
+      ]
+    ]
+  },
+  "Test the API": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        35
+      ]
+    ]
+  },
+  "Access the API": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        38
+      ]
+    ]
+  },
+  "What is an API?": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        45
+      ]
+    ]
+  },
+  "An <0>Application Programming Interface</0>, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        48
+      ]
+    ]
+  },
+  "What are the benefits of the EnerGuide API?": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        58
+      ]
+    ]
+  },
+  "View open data": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        61
+      ]
+    ]
+  },
+  "The EnerGuide API will help make energy consumption data accessible for everyone.": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        64
+      ],
+      [
+        "src/components/Home.js",
+        83
+      ]
+    ]
+  },
+  "Query specific data": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        70
+      ]
+    ]
+  },
+  "You can choose to access the granular data that you need. You will benefit from the ability to extract data data that is specific to your needs.": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        73
+      ]
+    ]
+  },
+  "Access current data": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        80
+      ]
+    ]
+  },
+  "How can I use the EnerGuide API?": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        91
+      ]
+    ]
+  },
+  "Developers and data analysts can allow users to query specific information from large data sets. They set the rules that will guide the user to what they need.": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        94
+      ]
+    ]
+  },
+  "To see how it can be used,": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        101
+      ]
+    ]
+  },
+  "test the API": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        104
+      ]
+    ]
+  },
+  "Ready to use the Energuide API?": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        109
+      ]
+    ]
+  },
+  "Read the documentation": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        112
+      ]
+    ]
+  }
+}

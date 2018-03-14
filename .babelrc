@@ -1,0 +1,26 @@
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-2",
+    "lingui-react"
+  ],
+  "plugins": [
+    "emotion",
+    "universal-import",
+    "syntax-dynamic-import",
+    "transform-class-properties"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "dynamic-import-node"
+      ]
+    }
+  }
+}

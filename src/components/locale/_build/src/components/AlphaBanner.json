@@ -1,0 +1,10 @@
+{
+  "Alpha - This is an internal service": {
+    "origin": [
+      [
+        "src/components/AlphaBanner.js",
+        15
+      ]
+    ]
+  }
+}

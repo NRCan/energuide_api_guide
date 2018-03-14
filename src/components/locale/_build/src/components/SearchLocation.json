@@ -1,0 +1,118 @@
+{
+  "EnerGuide API": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        50
+      ]
+    ]
+  },
+  "Search by": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        57
+      ]
+    ]
+  },
+  "Location": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        64
+      ],
+      [
+        "src/components/SearchLocation.js",
+        81
+      ]
+    ]
+  },
+  "Search by location": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        75
+      ]
+    ]
+  },
+  "Search for a region by submitting the first three digits of a postal code.": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        85
+      ]
+    ]
+  },
+  "Search by Location": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        100
+      ]
+    ]
+  },
+  "Search by the type of energy source. Choose all of the parameters that apply.": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        104
+      ]
+    ]
+  },
+  "Oil": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        117
+      ]
+    ]
+  },
+  "Electricity": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        126
+      ]
+    ]
+  },
+  "Natural gas": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        135
+      ]
+    ]
+  },
+  "Search": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        139
+      ]
+    ]
+  },
+  "To see all of the available data,": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        145
+      ]
+    ]
+  },
+  "view the EnerGuide API documentation": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        147
+      ]
+    ]
+  },
+  "on GitHub.": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        149
+      ]
+    ]
+  }
+}
