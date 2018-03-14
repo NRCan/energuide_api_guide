@@ -1,7 +1,5 @@
 import React from 'react'
-import { GoCSignature } from '@cdssnc/gcui'
 import { injectGlobal } from 'emotion'
-import LanguageSwitcher from './LanguageSwitcher'
 import Switcher from './Switcher'
 import { I18nProvider } from 'lingui-react'
 import { unpackCatalog } from 'lingui-i18n'
@@ -9,11 +7,9 @@ import en from './locale/en/messages.js'
 import fr from './locale/fr/messages.js'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import Banner from './Banner'
 import AlphaBanner from './AlphaBanner'
 import FederalBanner from './FederalBanner'
 import Footer from './Footer'
-import SignatureBlock from './SignatureBlock'
 
 const catalogs = { en: unpackCatalog(en), fr: unpackCatalog(fr) }
 

@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const InfoIcon = ({ width = "0.8em", text = "#fff", circle = "#4A4A4A" }) => (
+const InfoIcon = ({ width = '0.8em', text = '#fff', circle = '#4A4A4A' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     id="info"
@@ -26,5 +27,11 @@ const InfoIcon = ({ width = "0.8em", text = "#fff", circle = "#4A4A4A" }) => (
     </g>
   </svg>
 )
+
+InfoIcon.propTypes = {
+  width: PropTypes.string,
+  text: PropTypes.string,
+  circle: PropTypes.string,
+}
 
 export default InfoIcon
