@@ -95,17 +95,13 @@ const Home = () => (
         <h3>
           <Trans>To see how it can be used,&nbsp;</Trans>
           <NavLink to="/search">
-            <a>
-              <Trans>test the API</Trans>
-            </a>
+            <Trans>test the API</Trans>
           </NavLink>
         </h3>
         <h3>
           <Trans>Ready to use the Energuide API?&nbsp;</Trans>
           <NavLink to="https://github.com/cds-snc/nrcan_api">
-            <a>
-              <Trans>Read the documentation</Trans>
-            </a>
+            <Trans>Read the documentation</Trans>
           </NavLink>
         </h3>
       </section>
