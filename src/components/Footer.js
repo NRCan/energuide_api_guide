@@ -18,7 +18,9 @@ const Link = styled.a`
 
 const Footer = () => (
   <footer className={footer}>
-    <Link href="https://www.canada.ca/en/transparency/privacy.html"><Trans>Privacy</Trans></Link>
+    <Link href="https://www.canada.ca/en/transparency/privacy.html">
+      <Trans>Privacy</Trans>
+    </Link>
     <WordMark width="6em" flag="#fff" text="#fff" />
   </footer>
 )

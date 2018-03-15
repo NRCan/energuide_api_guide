@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { css } from 'react-emotion'
 import { GoCSignature } from '@cdssnc/gcui'
 import LanguageSwitcher from './LanguageSwitcher'
 import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
 
 const breakpoints = {
   small: 576,
