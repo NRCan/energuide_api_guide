@@ -17,7 +17,7 @@ export const fontSizes = {
   base: '19px',
   md: '19px',
   lg: '24px',
-  xl: '36px',
+  xl: '48px',
 }
 
 export const colours = {
