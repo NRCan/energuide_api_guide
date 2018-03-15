@@ -128,7 +128,7 @@ const govuk_multiple_choice = css`
 const radio = css`
   ${govuk_multiple_choice};
   padding: 0 0 0 ${spacing.xl}px;
-  margin-bottom: ${spacing.lg}px;
+  margin-bottom: ${spacing.sm}px;
 
   input {
     width: 24px;
@@ -148,12 +148,14 @@ const radio = css`
     border: 2px solid ${colours.grey};
     width: 22px;
     height: 22px;
+    top: 7px;
+    left: 2px;
   }
 
   input[type='radio'] + label::after {
-    border: 8px solid ${colours.blue};
-    top: 5px;
-    left: 5px;
+    border: 6px solid ${colours.blue};
+    top: 12px;
+    left: 7px;
   }
 `
 

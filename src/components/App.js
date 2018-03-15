@@ -26,25 +26,44 @@ injectGlobal`
 		min-height: 100%;
     font-family: "Helvetica", sans-serif;
     overflow-y: scroll;
-    font-size: 1.4em;
+    font-size: ${fontSizes.md};
 	}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  svg {
+    font-size: 1.4em;
+  }
 
 	h1 {
 		font-size: ${fontSizes.xl};
+    margin-bottom: ${spacing.lg}px;
 	}
 
 	h2 {
     font-size: ${fontSizes.lg};
+    margin-bottom: ${spacing.lg}px;
 	}
 
 	h3 {
     font-size: ${fontSizes.md};
+    margin-bottom: 0px;
 	}
 
-	p, a {
-    font-size: ${fontSizes.md};
+  p, a {
 		line-height: 1.45;
 	}
+
+  p {
+    margin-bottom: ${spacing.lg}px;
+  }
+
 
 	a {
 		color: ${colours.blue};

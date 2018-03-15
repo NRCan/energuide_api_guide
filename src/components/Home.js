@@ -3,22 +3,31 @@ import { NavLink } from 'redux-first-router-link'
 import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
+import { css } from 'react-emotion'
+import { spacing } from './styles'
+
+const main = css`
+  section {
+    margin-bottom: ${spacing.xxl}px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+`
 
 const Home = () => (
-  <main>
+  <main role="main" className={main}>
     <header id="index-page">
       <div id="page-header">
-        <p>
+        <h2>
           <Trans>Natural Resources Canada</Trans>
-        </p>
+        </h2>
         <h1>
           <Trans>EnerGuide API</Trans>
         </h1>
       </div>
 
-      <h2>
-        <Trans>What is the EnerGuide API?</Trans>
-      </h2>
       <p>
         <Trans>
           The EnerGuide API allows you to access the housing data provided by
@@ -41,9 +50,9 @@ const Home = () => (
         </h2>
         <p>
           <Trans>
-            An <strong>Application Programming Interface</strong>, or
-            <abbr title="Application Programming Interface">API</abbr>, is a set
-            of routines, protocols and tools for building software. Many
+            An <abbr title="Application Programming Interface">API</abbr>, or{' '}
+            <strong>Application Programming Interface</strong>, is a set of
+            routines, protocols and tools for building software. Many
             applications can talk to each other and deliver a response.
           </Trans>
         </p>

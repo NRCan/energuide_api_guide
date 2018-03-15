@@ -8,12 +8,13 @@ const banner = css`
   color: ${colours.white};
   padding-left: ${spacing.xxl}px;
   padding-right: ${spacing.xxl}px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 12px;
+  padding-bottom: ${spacing.sm}px;
 `
 
 const alpha = css`
   font-size: ${fontSizes.sm};
+  margin-bottom: 0;
 `
 
 const statusBar = css`

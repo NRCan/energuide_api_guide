@@ -6,11 +6,19 @@ import Radio from './forms/Radio'
 import InfoIcon from './InfoIcon'
 import Button from './forms/Button'
 import { Trans } from 'lingui-react'
+import { css } from 'react-emotion'
+import { spacing } from './styles'
+
+const main = css`
+  form {
+    margin-bottom: ${spacing.xl}px;
+  }
+`
 
 class Search extends Component {
   render() {
     return (
-      <main role="main">
+      <main role="main" className={main}>
         <Breadcrumbs>
           <NavLink to="/">
             <Trans>EnerGuide API</Trans>
