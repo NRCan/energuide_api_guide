@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { NavLink } from 'redux-first-router-link'
 import Breadcrumbs from './Breadcrumbs'
-import Radio from './forms/Radio'
 import FieldSet from './forms/FieldSet'
+import Radio from './forms/Radio'
+import Button from './forms/Button'
 import { Trans } from 'lingui-react'
 
 class Search extends Component {
@@ -36,9 +37,9 @@ class Search extends Component {
               <Radio label={<Trans>Location</Trans>} value="location" />
               <Radio label={<Trans>File number</Trans>} value="file-number" />
             </FieldSet>
-            <button type="submit">
+            <Button>
               <Trans>Search</Trans>
-            </button>
+            </Button>
           </form>
 
           <aside>

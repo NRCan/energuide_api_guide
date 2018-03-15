@@ -30,4 +30,5 @@ export const colours = {
   grayLight: '##DBDBDB',
   white: '#FFFFFF',
   black: '#000000',
+  focus: '#ffbf47',
 }
