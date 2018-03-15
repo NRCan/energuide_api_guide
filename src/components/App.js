@@ -10,6 +10,7 @@ import PropTypes from 'prop-types'
 import AlphaBanner from './AlphaBanner'
 import FederalBanner from './FederalBanner'
 import Footer from './Footer'
+import { spacing } from './Sizing'
 
 const catalogs = { en: unpackCatalog(en), fr: unpackCatalog(fr) }
 
@@ -50,6 +51,7 @@ injectGlobal`
 		font-family: "Helvetica", sans-serif;
 		font-size: 19px;
 		line-height: 27px;
+
 	}
 
 	a {
@@ -58,6 +60,7 @@ injectGlobal`
 		line-height: 26px;
 		text-decoration: underline;
 		color: #4A90E2;
+    padding-right: ${spacing.md}px;
 	}
 
 	#fed-id {
@@ -88,13 +91,29 @@ injectGlobal`
 	}
 
   #index-page {
-    width: 100%;
     background-color: #fdd262;
-    padding: 60px;
+    width: 100%;
+    padding: 0px;
+  }
+
+  #container {
+    width: 60%;
+    padding: ${spacing.xxl}px;
   }
 
   #index-page p{
     margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+
+  section {
+    margin: 0px;
+    padding: ${spacing.xs}px ${spacing.xxl}px;
+  }
+
+  .bottom-link {
+    padding-left: ${spacing.xs}px;
   }
 
 `
