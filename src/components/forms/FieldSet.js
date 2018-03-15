@@ -1,5 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { css } from 'react-emotion'
+
+/*
+ * Hide only visually, but have it
+ * available for screenreaders
+ */
+const visuallyhidden = css`
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+`
+
+const fieldset = css`
+  border: none;
+
+  legend {
+    ${visuallyhidden};
+  }
+`
 
 class FieldSet extends React.Component {
   constructor() {
@@ -20,7 +44,7 @@ class FieldSet extends React.Component {
   }
 
   render() {
-    return <fieldset>{this.renderChildren()}</fieldset>
+    return <fieldset className={fieldset}>{this.renderChildren()}</fieldset>
   }
 }
 

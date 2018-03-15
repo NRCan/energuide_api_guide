@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import AlphaBanner from './AlphaBanner'
 import FederalBanner from './FederalBanner'
 import Footer from './Footer'
-import { spacing } from './Sizing'
+import { spacing } from './styles'
 
 const catalogs = { en: unpackCatalog(en), fr: unpackCatalog(fr) }
 
