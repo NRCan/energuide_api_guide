@@ -1,3 +1,5 @@
+import { css } from 'react-emotion'
+
 export const spacingBase = 16
 export const spacing = {
   base: spacingBase,
@@ -11,6 +13,7 @@ export const spacing = {
 }
 
 export const fontSizes = {
+  sm: '16px',
   base: '19px',
   md: '19px',
   lg: '24px',
@@ -32,3 +35,10 @@ export const colours = {
   black: '#000000',
   focus: '#ffbf47',
 }
+
+const borderRadius = 2
+export const roundedEdges = css`
+  -webkit-border-radius: ${borderRadius}px;
+  -moz-border-radius: ${borderRadius}px;
+  border-radius: ${borderRadius}px;
+`

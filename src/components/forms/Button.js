@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'react-emotion'
-import { colours, fontSizes, spacing } from '../styles'
+import { colours, fontSizes, spacing, roundedEdges } from '../styles'
 
 const button = css`
   font-size: ${fontSizes.md};
@@ -11,10 +11,8 @@ const button = css`
   border: 3px solid transparent;
   outline: 0;
   padding: ${spacing.sm}px ${spacing.xl}px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   cursor: pointer;
+  ${roundedEdges};
 
   &:focus {
     outline: 4px solid ${colours.focus};
