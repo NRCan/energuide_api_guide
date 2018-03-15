@@ -3,6 +3,7 @@ import { NavLink } from 'redux-first-router-link'
 import Breadcrumbs from './Breadcrumbs'
 import FieldSet from './forms/FieldSet'
 import Radio from './forms/Radio'
+import InfoIcon from './InfoIcon'
 import Button from './forms/Button'
 import { Trans } from 'lingui-react'
 
@@ -34,8 +35,16 @@ class Search extends Component {
               <legend id="search-by-description">
                 <Trans>Search by Location or File number</Trans>
               </legend>
-              <Radio label={<Trans>Location</Trans>} value="location" />
-              <Radio label={<Trans>File number</Trans>} value="file-number" />
+              <Radio label={<Trans>Location</Trans>} value="location">
+                <abbr title="A location refers to a region or neighbourhood. You will be searching by the first three digits of any postal code.">
+                  <InfoIcon />
+                </abbr>
+              </Radio>
+              <Radio label={<Trans>File number</Trans>} value="file-number">
+                <abbr title="A file number refers to an individual home. This number is provided to the homeowner through EnerGuide.">
+                  <InfoIcon />
+                </abbr>
+              </Radio>
             </FieldSet>
             <Button>
               <Trans>Search</Trans>

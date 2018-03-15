@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import InfoIcon from '../InfoIcon'
 import { css } from 'react-emotion'
 import { colours, fontSizes, spacing } from '../styles'
 
@@ -163,9 +162,7 @@ const Radio = ({ label, value, name, id, children }) => (
     <input type="radio" name={name} id={id} value={value} />
     <label htmlFor={id}>
       {label}
-      <abbr title="A location refers to a region or neighbourhood. You will be searching by the first three digits of any postal code.">
-        <InfoIcon />
-      </abbr>
+      {children}
     </label>
   </div>
 )
