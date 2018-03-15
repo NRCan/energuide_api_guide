@@ -1,26 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'react-emotion'
+import { colours, fontSizes, spacing } from './styles'
 
 const breadcrumb = css`
-  background-color: #ddd;
-  padding: 20px 60px 20px 60px;
+  background-color: ${colours.greyLight};
+  padding: ${spacing.md}px ${spacing.xxl}px;
 
   ol {
     max-width: 960px;
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 19px;
+    font-size: ${fontSizes.md};
 
     li {
       display: inline-block;
+
+      * {
+        padding: 0;
+      }
     }
 
     li:not(:last-child)::after {
       content: '>';
-      padding: 0 10px;
-      color: #444;
+      padding: 0 ${spacing.md}px;
+      color: ${colours.grey};
     }
   }
 `
