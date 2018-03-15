@@ -1,36 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import { css } from 'react-emotion'
 import { GoCSignature } from '@cdssnc/gcui'
 import LanguageSwitcher from './LanguageSwitcher'
 import { connect } from 'react-redux'
-
-const breakpoints = {
-  small: 576,
-  medium: 768,
-  large: 992,
-  xLarge: 1200,
-}
-
-const mediaQuery = Object.keys(breakpoints).reduce((accumulator, label) => {
-  let prefix = typeof breakpoints[label] === 'string' ? '' : 'max-width:'
-  let suffix = typeof breakpoints[label] === 'string' ? '' : 'px'
-  accumulator[label] = cls =>
-    css`
-      @media (${prefix + breakpoints[label] + suffix}) {
-        ${cls};
-      }
-    `
-  return accumulator
-}, {})
+import { css } from 'react-emotion'
+import { colours, spacing, mediaQuery } from './styles'
 
 const container = css`
-  padding: 20px 60px 10px 60px;
+  padding: ${spacing.lg}px ${spacing.xxl}px ${spacing.md}px ${spacing.xxl}px;
   display: flex;
   width: auto;
   justify-content: space-between;
-  background-color: black;
+  background-color: ${colours.black};
   ${mediaQuery.small(css`
     display: block;
   `)};
@@ -39,7 +20,12 @@ const container = css`
 const FederalBanner = ({ lang }) => (
   <section className={container}>
     <div>
-      <GoCSignature lang={lang} width="10em" flag="#FFF" text="#FFF" />
+      <GoCSignature
+        lang={lang}
+        width="10em"
+        flag={colours.white}
+        text={colours.white}
+      />
     </div>
 
     <LanguageSwitcher />

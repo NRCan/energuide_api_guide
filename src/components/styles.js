@@ -42,3 +42,25 @@ export const roundedEdges = css`
   -moz-border-radius: ${borderRadius}px;
   border-radius: ${borderRadius}px;
 `
+
+const breakpoints = {
+  small: 576,
+  medium: 768,
+  large: 992,
+  xLarge: 1200,
+}
+
+export const mediaQuery = Object.keys(breakpoints).reduce(
+  (accumulator, label) => {
+    let prefix = typeof breakpoints[label] === 'string' ? '' : 'max-width:'
+    let suffix = typeof breakpoints[label] === 'string' ? '' : 'px'
+    accumulator[label] = cls =>
+      css`
+        @media (${prefix + breakpoints[label] + suffix}) {
+          ${cls};
+        }
+      `
+    return accumulator
+  },
+  {},
+)
