@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
 import InfoIcon from './InfoIcon'
+import Breadcrumbs from './Breadcrumbs'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 
@@ -41,33 +42,12 @@ class Search extends Component {
   render() {
     return (
       <main role="main">
-        <section>
-          <nav aria-label="Breadcrumb">
-            <ol>
-              <li>
-                <NavLink to="/">
-                  <a>
-                    <Trans>EnerGuide API</Trans>
-                  </a>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search">
-                  <a aria-current="page">
-                    <Trans>Search by</Trans>
-                  </a>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search-location">
-                  <a aria-current="page">
-                    <Trans>Location</Trans>
-                  </a>
-                </NavLink>
-              </li>
-            </ol>
-          </nav>
-        </section>
+        <Breadcrumbs>
+          <NavLink to="/">
+            <Trans>EnerGuide API</Trans>
+          </NavLink>
+          <Trans>Search</Trans>
+        </Breadcrumbs>
 
         <div id="page-body">
           <header>
