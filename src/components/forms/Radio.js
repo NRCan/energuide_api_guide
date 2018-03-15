@@ -33,7 +33,20 @@ const govuk_multiple_choice = css`
     touch-action: manipulation;
   }
 
-  input[type='radio'] + label::before {
+  input:disabled {
+    cursor: default;
+  }
+
+  input:disabled + label {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    cursor: default;
+  }
+`
+
+const govuk_label_pseudo_elements = css`
+  input[type='radio'] + &::before {
     content: '';
     border: 2px solid;
     background: transparent;
@@ -47,7 +60,7 @@ const govuk_multiple_choice = css`
     border-radius: 50%;
   }
 
-  input[type='radio'] + label::after {
+  input[type='radio'] + &::after {
     content: '';
     border: 10px solid;
     width: 0;
@@ -63,7 +76,7 @@ const govuk_multiple_choice = css`
     opacity: 0;
   }
 
-  input[type='checkbox'] + label::before {
+  input[type='checkbox'] + &::before {
     content: '';
     border: 2px solid;
     background: transparent;
@@ -74,7 +87,7 @@ const govuk_multiple_choice = css`
     left: 0;
   }
 
-  input[type='checkbox'] + label::after {
+  input[type='checkbox'] + &::after {
     content: '';
     border: solid;
     border-width: 0 0 5px 5px;
@@ -95,33 +108,22 @@ const govuk_multiple_choice = css`
     opacity: 0;
   }
 
-  input[type='radio']:focus + label::before {
+  input[type='radio']:focus + &::before {
     -webkit-box-shadow: 0 0 0 4px #ffbf47;
     -moz-box-shadow: 0 0 0 4px #ffbf47;
     box-shadow: 0 0 0 4px #ffbf47;
   }
 
-  input[type='checkbox']:focus + label::before {
+  input[type='checkbox']:focus + &::before {
     -webkit-box-shadow: 0 0 0 3px #ffbf47;
     -moz-box-shadow: 0 0 0 3px #ffbf47;
     box-shadow: 0 0 0 3px #ffbf47;
   }
 
-  input:checked + label::after {
+  input:checked + &::after {
     zoom: 1;
     filter: alpha(opacity=100);
     opacity: 1;
-  }
-
-  input:disabled {
-    cursor: default;
-  }
-
-  input:disabled + label {
-    zoom: 1;
-    filter: alpha(opacity=50);
-    opacity: 0.5;
-    cursor: default;
   }
 `
 
@@ -160,9 +162,13 @@ const radio = css`
 `
 
 const Radio = ({ label, value, name, id, children }) => (
-  <div className={radio}>
+  <div
+    className={css`
+      ${govuk_multiple_choice} ${radio};
+    `}
+  >
     <input type="radio" name={name} id={id} value={value} />
-    <label htmlFor={id}>
+    <label htmlFor={id} className={govuk_label_pseudo_elements}>
       {label}
       {children}
     </label>
