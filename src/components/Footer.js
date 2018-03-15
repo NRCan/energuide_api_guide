@@ -1,18 +1,19 @@
 import React from 'react'
-import styled, { css } from 'react-emotion'
 import { WordMark } from '@cdssnc/gcui'
 import { Trans } from 'lingui-react'
+import styled, { css } from 'react-emotion'
+import { colours, spacing } from './styles'
 
 const footer = css`
-  background-color: #000;
-  color: black;
-  padding: 30px 60px 30px 60px;
+  background-color: ${colours.black};
+  padding: ${spacing.xl}px ${spacing.xxl}px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 `
 
 const Link = styled.a`
-  color: white;
+  color: ${colours.white};
   margin-top: 10px;
 `
 
@@ -21,7 +22,7 @@ const Footer = () => (
     <Link href="https://www.canada.ca/en/transparency/privacy.html">
       <Trans>Privacy</Trans>
     </Link>
-    <WordMark width="6em" flag="#fff" text="#fff" />
+    <WordMark width="6em" flag={colours.white} text={colours.white} />
   </footer>
 )
 

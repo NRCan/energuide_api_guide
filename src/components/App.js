@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import AlphaBanner from './AlphaBanner'
 import FederalBanner from './FederalBanner'
 import Footer from './Footer'
-import { spacing } from './Sizing'
+import { colours, spacing, fontSizes } from './styles'
 
 const catalogs = { en: unpackCatalog(en), fr: unpackCatalog(fr) }
 
@@ -19,54 +19,55 @@ const dev =
   process.env.NODE_ENV !== 'production' ? require('lingui-i18n/dev') : undefined
 
 injectGlobal`
-
 	html, body {
     padding: 0;
 		margin: 0;
-		background: #fff;
+		background: ${colours.white};
 		min-height: 100%;
-		font-family: Helvetica, Arial, sans-serif;
-		font-size: 1.4em;
+    font-family: "Helvetica", sans-serif;
+    overflow-y: scroll;
+    font-size: ${fontSizes.md};
 	}
 
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  svg {
+    font-size: 1.4em;
+  }
+
 	h1 {
-		font-family: "Helvetica", sans-serif;
-		font-size: 48px;
-		font-weight: bold;
+		font-size: ${fontSizes.xl};
+    margin-bottom: ${spacing.lg}px;
 	}
 
 	h2 {
-		font-family: "Helvetica", sans-serif;
-		font-size: 24px;
-		font-weight: bold;
+    font-size: ${fontSizes.lg};
+    margin-bottom: ${spacing.lg}px;
 	}
 
 	h3 {
-		font-family: "Helvetica", sans-serif;
-		font-size: 19px;
-		font-weight: bold;
+    font-size: ${fontSizes.md};
+    margin-bottom: 0px;
 	}
 
-	p {
-		font-family: "Helvetica", sans-serif;
-		font-size: 19px;
-		line-height: 27px;
-
+  p, a {
+		line-height: 1.45;
 	}
+
+  p {
+    margin-bottom: ${spacing.lg}px;
+  }
+
 
 	a {
-		font-family: "Helvetica", sans-serif;
-		font-size: 19px;
-		line-height: 26px;
-		text-decoration: underline;
-		color: #4A90E2;
+		color: ${colours.blue};
     padding-right: ${spacing.md}px;
-	}
-
-	#fed-id {
-	padding-top: 40px;
-	padding-bottom: 40px;
-	padding-left: 60px;
 	}
 
 	#info {
@@ -90,32 +91,18 @@ injectGlobal`
 		border: 3px solid #555;
 	}
 
-  #index-page {
-    background-color: #fdd262;
-    width: 100%;
-    padding: 0px;
-  }
-
-  #container {
-    width: 60%;
-    padding: ${spacing.xxl}px;
-  }
-
-  #index-page p{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px;
-  }
-
-  section {
+  #index-page, #page-body {
     margin: 0px;
-    padding: ${spacing.xs}px ${spacing.xxl}px;
+    padding: ${spacing.xl}px ${spacing.xxl}px;
+  }
+
+  #index-page {
+    background-color: ${colours.yellow};
   }
 
   .bottom-link {
     padding-left: ${spacing.xs}px;
   }
-
 `
 
 const App = ({ lang }) => (

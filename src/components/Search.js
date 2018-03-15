@@ -1,73 +1,30 @@
 import React, { Component } from 'react'
 import { NavLink } from 'redux-first-router-link'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { withApollo } from 'react-apollo'
+import Breadcrumbs from './Breadcrumbs'
+import FieldSet from './forms/FieldSet'
+import Radio from './forms/Radio'
 import InfoIcon from './InfoIcon'
-import gql from 'graphql-tag'
+import Button from './forms/Button'
 import { Trans } from 'lingui-react'
+import { css } from 'react-emotion'
+import { spacing } from './styles'
+
+const main = css`
+  form {
+    margin-bottom: ${spacing.xl}px;
+  }
+`
 
 class Search extends Component {
-  static propTypes = {
-    dispatch: PropTypes.func.isRequired,
-  }
-  constructor() {
-    super()
-    this.handleFormData = this.handleFormData.bind(this)
-  }
-
-  async handleFormData(data) {
-    let { client } = this.props
-
-    let response = await client.mutate({
-      mutation: gql`
-        mutation($uci: String!, $reason: String!) {
-          decline(uci: $uci, reason: $reason) {
-            messageID
-            statusCode
-          }
-        }
-      `,
-      variables: data,
-    })
-
-    let { data: { decline } } = response
-
-    console.log('Response from the server:', decline) // eslint-disable-line no-console
-    // TODO: Handle error case
-    this.props.dispatch({ type: 'THANK_YOU' })
-  }
-
   render() {
     return (
-      <main role="main">
-        <section>
-          <nav aria-label="Breadcrumb">
-            <ol>
-              <li>
-                <NavLink to="/">
-                  <a>
-                    <Trans>EnerGuide API</Trans>
-                  </a>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search">
-                  <a aria-current="page">
-                    <Trans>Search by</Trans>
-                  </a>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search-location">
-                  <a aria-current="page">
-                    <Trans>Location</Trans>
-                  </a>
-                </NavLink>
-              </li>
-            </ol>
-          </nav>
-        </section>
+      <main role="main" className={main}>
+        <Breadcrumbs>
+          <NavLink to="/">
+            <Trans>EnerGuide API</Trans>
+          </NavLink>
+          <Trans>Search</Trans>
+        </Breadcrumbs>
 
         <div id="page-body">
           <header>
@@ -82,39 +39,24 @@ class Search extends Component {
             </Trans>
           </p>
           <form aria-labelledby="search-by-description">
-            <fieldset>
+            <FieldSet name="search">
               <legend id="search-by-description">
                 <Trans>Search by Location or File number</Trans>
               </legend>
-              <input
-                type="radio"
-                id="search-by-1"
-                name="search-by"
-                value="location"
-              />
-              <label htmlFor="search-by-1">
-                <Trans>Location&nbsp;</Trans>
+              <Radio label={<Trans>Location</Trans>} value="location">
                 <abbr title="A location refers to a region or neighbourhood. You will be searching by the first three digits of any postal code.">
                   <InfoIcon />
                 </abbr>
-              </label>
-
-              <input
-                type="radio"
-                id="search-by-2"
-                name="search-by"
-                value="file-number"
-              />
-              <label htmlFor="search-by-2">
-                <Trans>File number&nbsp;</Trans>
+              </Radio>
+              <Radio label={<Trans>File number</Trans>} value="file-number">
                 <abbr title="A file number refers to an individual home. This number is provided to the homeowner through EnerGuide.">
                   <InfoIcon />
                 </abbr>
-              </label>
-            </fieldset>
-            <button type="submit">
+              </Radio>
+            </FieldSet>
+            <Button>
               <Trans>Search</Trans>
-            </button>
+            </Button>
           </form>
 
           <aside>
@@ -132,8 +74,4 @@ class Search extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  path: state.location.pathname,
-})
-
-export default withApollo(connect(mapStateToProps)(Search))
+export default Search
