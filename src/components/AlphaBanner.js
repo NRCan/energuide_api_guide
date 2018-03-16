@@ -13,7 +13,7 @@ const banner = css`
 `
 
 const alpha = css`
-  font-size: ${fontSizes.sm};
+  font-size: ${fontSizes.xs};
   margin-bottom: 0;
 `
 
@@ -27,7 +27,7 @@ const statusBar = css`
   bottom: 2px;
   padding: 2px ${spacing.md}px;
   margin-right: ${spacing.md}px;
-  background-color: ${colours.blue};
+  background-color: ${colours.blueAlpha};
   ${roundedEdges};
 `
 
