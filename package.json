@@ -77,7 +77,6 @@
     "bluebird": "^3.5.1",
     "commitizen": "^2.9.6",
     "cross-env": "^5.0.1",
-    "css-loader": "^0.28.10",
     "cz-conventional-changelog": "^2.0.0",
     "enzyme": "~3.3.0",
     "enzyme-adapter-react-16": "~1.1.1",

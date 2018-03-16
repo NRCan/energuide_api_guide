@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
 import { css } from 'react-emotion'
-import { spacing } from './styles'
+import { mediaQuery, spacing } from './styles'
+import CircuitHouse from './CircuitHouse'
 
 const main = css`
   section {
@@ -14,6 +15,20 @@ const main = css`
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+
+  #header-container {
+    width: 50%;
+    ${mediaQuery.medium(css`
+      width: 100%;
+    `)};
+
+    ${mediaQuery.small(css`
+      width: 100%;
+    `)};
+
+    margin-left: 0px;
+    padding: ${spacing.xl}px 0px ${spacing.xl}px 0px;
   }
 `
 
@@ -45,6 +60,8 @@ const Home = () => (
         </a>
       </div>
     </header>
+
+    <CircuitHouse />
 
     <div id="page-body">
       <section>

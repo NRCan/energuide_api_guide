@@ -26,7 +26,6 @@ injectGlobal`
 		background: ${colours.white};
 		min-height: 100%;
     font-family: ${fontWeight.light}, sans serif;
-    font-family: "Helvetica", sans-serif;
     font-size: ${fontSizes.md};
 	}
 

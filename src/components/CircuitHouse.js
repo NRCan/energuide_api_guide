@@ -1,0 +1,34 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import { css } from 'react-emotion'
+import { mediaQuery, spacing } from './styles'
+
+const headerImg = css`
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  padding-top: ${spacing.xl}px;
+`
+
+const headerWidth = css`
+  width: 600px;
+
+  ${mediaQuery.medium(css`
+    width: 0px;
+  `)};
+`
+
+const CircuitHouse = () => (
+  <div className={headerImg}>
+    <img
+      className={headerWidth}
+      src="https://rawgit.com/nmakuch/7bb71ff879fc076c5c201d62b8f248cd/raw/664d2632493d4a325430ad0d0a934f253f6edaaf/CircuitHouse.svg"
+    />
+  </div>
+)
+
+CircuitHouse.propTypes = {
+  width: PropTypes.string,
+}
+
+export default CircuitHouse
