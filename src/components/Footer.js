@@ -6,7 +6,7 @@ import { colours, spacing } from './styles'
 
 const footer = css`
   background-color: ${colours.black};
-  padding: ${spacing.xl}px ${spacing.xxl}px;
+  padding: ${spacing.xl}px ${spacing.xxxl}px;
   display: flex;
   justify-content: space-between;
   position: relative;
