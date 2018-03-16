@@ -13,7 +13,7 @@ const banner = css`
 `
 
 const alpha = css`
-  font-size: ${fontSizes.sm};
+  font-size: ${fontSizes.xs};
   margin-bottom: 0;
 `
 
@@ -27,15 +27,26 @@ const statusBar = css`
   bottom: 2px;
   padding: 2px ${spacing.md}px;
   margin-right: ${spacing.md}px;
-  background-color: ${colours.blue};
+  background-color: ${colours.blueAlpha};
   ${roundedEdges};
+`
+
+const link = css`
+  color: ${colours.white};
+  padding: 0;
 `
 
 const AlphaBanner = () => (
   <div className={banner}>
     <p className={alpha}>
       <Trans>
-        <span className={statusBar}>Alpha</span>This is an internal service.
+        <span className={statusBar}>Alpha</span>This is an internal service.{' '}
+        <a
+          className={link}
+          href="mailto:paul.craig@cds-snc.ca?subject=Hey,%20I%20love%20your%20app!"
+        >
+          To provide feedback, email us
+        </a>.
       </Trans>
     </p>
   </div>
