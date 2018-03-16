@@ -40,6 +40,7 @@ const main = css`
 
   #index-page {
     background-color: ${colours.yellow};
+    padding: ${spacing.xl}px ${spacing.xxxl}px;
     height: 19em;
     ${mediaQuery.large(css`
       height: 20em;
@@ -54,7 +55,7 @@ const main = css`
     `)};
 
     ${mediaQuery.xs(css`
-      height: 24em;
+      height: 23em;
     `)};
   }
 `

@@ -21,10 +21,6 @@ const headerWidth = css`
   ${mediaQuery.medium(css`
     width: 0em;
   `)};
-
-  ${mediaQuery.small(css`
-    width: 0em;
-  `)};
 `
 
 const CircuitHouse = () => (
