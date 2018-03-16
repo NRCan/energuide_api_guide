@@ -101,16 +101,11 @@ injectGlobal`
 
   #index-page {
     background-color: ${colours.yellow};
+    height: 18em;
   }
 
   .bottom-link {
     padding-left: ${spacing.xs}px;
-  }
-
-  #header-container {
-    width: 10px;
-    margin-left:0px;
-    padding: ${spacing.xxl}px 0px ${spacing.xxl}px 0px;
   }
 
 `

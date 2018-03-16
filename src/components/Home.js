@@ -27,6 +27,8 @@ const main = css`
       width: 100%;
     `)};
 
+    position: absolute;
+    z-index: 1;
     margin-left: 0px;
     padding: ${spacing.xl}px 0px ${spacing.xl}px 0px;
   }
