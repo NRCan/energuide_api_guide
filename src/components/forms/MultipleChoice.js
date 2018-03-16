@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
 import { css } from 'react-emotion'
-import { colours, fontSizes, spacing } from '../styles'
+import { colours, fontSizes, spacing, roundedEdges } from '../styles'
 
 const govuk_multiple_choice = css`
   display: block;
@@ -129,7 +129,6 @@ const govuk_label_pseudo_elements = css`
 `
 
 const radio = css`
-  ${govuk_multiple_choice};
   padding: 0 0 0 ${spacing.xl}px;
   margin-bottom: ${spacing.sm}px;
 
@@ -176,7 +175,37 @@ const Radio = ({ label, value, name, id, children }) => (
   </div>
 )
 
-Radio.propTypes = {
+const checkbox = css`
+  label {
+    font-size: 24px;
+  }
+  input[type='checkbox'] + label::before {
+    border: 2px solid ${colours.grey};
+    ${roundedEdges};
+  }
+`
+
+const Checkbox = ({ label, value, name, id, children }) => (
+  <div
+    className={css`
+      ${govuk_multiple_choice} ${checkbox};
+    `}
+  >
+    <input
+      type="checkbox"
+      component="input"
+      name={name}
+      id={id}
+      value={value}
+    />
+    <label htmlFor={id} className={govuk_label_pseudo_elements}>
+      {label}
+      {children}
+    </label>
+  </div>
+)
+
+let defaultProps = {
   label: PropTypes.element.isRequired,
   value: PropTypes.string.isRequired,
   name: PropTypes.string,
@@ -184,4 +213,7 @@ Radio.propTypes = {
   children: PropTypes.any,
 }
 
-export default Radio
+Radio.propTypes = defaultProps
+Checkbox.propTypes = defaultProps
+
+export { Radio, Checkbox }
