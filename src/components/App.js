@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import AlphaBanner from './AlphaBanner'
 import FederalBanner from './FederalBanner'
 import Footer from './Footer'
-import { colours, spacing, fontSizes } from './styles'
+import { fontWeight, colours, spacing, fontSizes } from './styles'
 
 const catalogs = { en: unpackCatalog(en), fr: unpackCatalog(fr) }
 
@@ -20,14 +20,12 @@ const dev =
 
 injectGlobal`
 
-@import url(https://fontlibrary.org/face/hk-grotesk);
-
 	html, body {
     padding: 0;
 		margin: 0;
 		background: ${colours.white};
 		min-height: 100%;
-    font-family: 'HKGroteskLight', sans serif;
+    font-family: ${fontWeight.light}, sans serif;
     overflow-y: scroll;
     font-size: ${fontSizes.md};
 	}
@@ -45,19 +43,19 @@ injectGlobal`
   }
 
 	h1 {
-    font-family: 'HKGroteskBold', sans serif;
+    font-family: ${fontWeight.bold}, sans serif;
 		font-size: ${fontSizes.xl};
     margin-bottom: ${spacing.lg}px;
 	}
 
 	h2 {
-    font-family: 'HKGroteskBold', sans serif;
+    font-family: ${fontWeight.bold}, sans serif;
     font-size: ${fontSizes.lg};
     margin-bottom: ${spacing.lg}px;
 	}
 
 	h3 {
-    font-family: 'HKGroteskBold', sans serif;
+    font-family: ${fontWeight.bold}, sans serif;
     font-size: ${fontSizes.md};
     margin-bottom: 0px;
 	}

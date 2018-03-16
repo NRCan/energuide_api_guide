@@ -13,6 +13,21 @@ export const spacing = {
   xxxl: spacingBase * 5,
 }
 
+export const fontFace = css`
+  @import url(https://fontlibrary.org/face/hk-grotesk);
+`
+
+export const fontWeight = {
+  light: 'HKGroteskLight',
+  lightItal: 'HKGroteskLightItalic',
+  med: 'HKGroteskMedium',
+  medItal: 'HKGroteskMediumItalic',
+  reg: 'HKGroteskRegular',
+  semi: 'HKGroteskSemiBold',
+  bold: 'HKGroteskBold',
+  boldItal: 'HKGroteskSemiBoldItalic',
+}
+
 export const fontSizes = {
   xs: '12px',
   sm: '16px',
