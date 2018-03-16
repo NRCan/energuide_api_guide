@@ -11,10 +11,19 @@ const headerImg = css`
 `
 
 const headerWidth = css`
-  width: 600px;
+  width: 24em;
+
+  ${mediaQuery.large(css`
+    padding-top: 2em;
+    width: 20em;
+  `)};
 
   ${mediaQuery.medium(css`
-    width: 0px;
+    width: 0em;
+  `)};
+
+  ${mediaQuery.small(css`
+    width: 0em;
   `)};
 `
 

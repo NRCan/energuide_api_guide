@@ -4,13 +4,17 @@ import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
 import { css } from 'react-emotion'
-import { mediaQuery, spacing } from './styles'
+import { mediaQuery, spacing, colours } from './styles'
 import CircuitHouse from './CircuitHouse'
 
 const main = css`
   section {
     margin-bottom: ${spacing.xxl}px;
-    width: 50%;
+    width: 70%;
+
+    ${mediaQuery.medium(css`
+      width: 100%;
+    `)};
 
     &:last-of-type {
       margin-bottom: 0;
@@ -18,19 +22,40 @@ const main = css`
   }
 
   #header-container {
-    width: 50%;
-    ${mediaQuery.medium(css`
-      width: 100%;
-    `)};
-
-    ${mediaQuery.small(css`
-      width: 100%;
-    `)};
-
+    width: 45%;
     position: absolute;
     z-index: 1;
     margin-left: 0px;
     padding: ${spacing.xl}px 0px ${spacing.xl}px 0px;
+
+    ${mediaQuery.medium(css`
+      width: 80%;
+    `)};
+
+    ${mediaQuery.small(css`
+      width: 70%;
+      padding: ${spacing.sm}px;
+    `)};
+  }
+
+  #index-page {
+    background-color: ${colours.yellow};
+    height: 19em;
+    ${mediaQuery.large(css`
+      height: 20em;
+    `)};
+
+    ${mediaQuery.medium(css`
+      height: 18.5em;
+    `)};
+
+    ${mediaQuery.small(css`
+      height: 20em;
+    `)};
+
+    ${mediaQuery.xs(css`
+      height: 24em;
+    `)};
   }
 `
 

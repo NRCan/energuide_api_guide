@@ -94,14 +94,9 @@ injectGlobal`
 		border: 3px solid #555;
 	}
 
-  #index-page, #page-body {
+#page-body {
     margin: 0px;
     padding: ${spacing.xl}px ${spacing.xxxl}px;
-  }
-
-  #index-page {
-    background-color: ${colours.yellow};
-    height: 18em;
   }
 
   .bottom-link {

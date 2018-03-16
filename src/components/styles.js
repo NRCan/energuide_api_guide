@@ -76,8 +76,10 @@ export const visuallyhidden = css`
 `
 
 export const breakpoints = {
+  xs: 481,
   small: 576,
-  medium: 768,
+  ms: 600,
+  medium: 764,
   large: 992,
   xLarge: 1200,
   xxl: 1920,
