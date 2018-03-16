@@ -6,13 +6,19 @@ import { spacing, visuallyhidden } from '../styles'
 const fieldset = css`
   border: none;
   margin-bottom: ${spacing.xl}px;
+`
 
+const legendHidden = css`
   legend {
     ${visuallyhidden};
   }
 `
 
 class FieldSet extends React.Component {
+  static defaultProps = {
+    legendHidden: true,
+  }
+
   constructor() {
     super()
     // Bind the method to the component context
@@ -26,12 +32,25 @@ class FieldSet extends React.Component {
   }
 
   render() {
-    return <fieldset className={fieldset}>{this.renderChildren()}</fieldset>
+    return (
+      <fieldset
+        className={css`
+          ${fieldset} ${this.props.legendHidden
+            ? css`
+                ${legendHidden};
+              `
+            : ``};
+        `}
+      >
+        {this.renderChildren()}
+      </fieldset>
+    )
   }
 }
 
 FieldSet.propTypes = {
   children: PropTypes.any.isRequired,
+  legendHidden: PropTypes.bool,
 }
 
 export default FieldSet
