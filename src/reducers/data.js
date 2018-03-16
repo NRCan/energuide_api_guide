@@ -4,7 +4,7 @@ import {
 } from '../actions'
 
 export default (
-  state = { searchLocationData: [], searchFileIdData: [] },
+  state = { searchLocationData: [], searchFileIdData: {} },
   action = {},
 ) => {
   switch (action.type) {
