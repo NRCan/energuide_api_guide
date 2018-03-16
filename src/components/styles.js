@@ -2,7 +2,6 @@ import { css } from 'react-emotion'
 
 export const spacingBase = 16
 export const spacing = {
-  base: spacingBase,
   md: spacingBase,
   sm: spacingBase / 2,
   xs: spacingBase / 3,

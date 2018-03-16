@@ -51,7 +51,7 @@ injectGlobal`
 	h2 {
     font-family: ${fontWeight.bold}, sans serif;
     font-size: ${fontSizes.lg};
-    margin-bottom: ${spacing.lg}px;
+    margin-bottom: 0px;
 	}
 
 	h3 {
@@ -109,7 +109,7 @@ injectGlobal`
   }
 
   #header-container {
-    width: 50%;
+    width: 10px;
     margin-left:0px;
     padding: ${spacing.xxl}px 0px ${spacing.xxl}px 0px;
   }
