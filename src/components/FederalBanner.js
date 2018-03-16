@@ -7,7 +7,7 @@ import { css } from 'react-emotion'
 import { colours, spacing, mediaQuery } from './styles'
 
 const container = css`
-  padding: ${spacing.lg}px ${spacing.xxl}px ${spacing.md}px ${spacing.xxl}px;
+  padding: ${spacing.lg}px ${spacing.xxxl}px ${spacing.md}px ${spacing.xxxl}px;
   display: flex;
   width: auto;
   justify-content: space-between;

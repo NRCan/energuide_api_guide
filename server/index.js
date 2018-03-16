@@ -13,7 +13,6 @@ const outputPath = clientConfig.output.path
 const app = express()
 
 // UNIVERSAL HMR + STATS HANDLING GOODNESS:
-
 if (DEV) {
   const multiCompiler = webpack([clientConfig, serverConfig])
   const clientCompiler = multiCompiler.compilers[0]

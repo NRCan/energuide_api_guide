@@ -9,6 +9,7 @@ import { spacing } from './styles'
 const main = css`
   section {
     margin-bottom: ${spacing.xxl}px;
+    width: 50%;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -19,28 +20,30 @@ const main = css`
 const Home = () => (
   <main role="main" className={main}>
     <header id="index-page">
-      <div id="page-header">
-        <h2>
-          <Trans>Natural Resources Canada</Trans>
-        </h2>
-        <h1>
-          <Trans>EnerGuide API</Trans>
-        </h1>
-      </div>
+      <div id="header-container">
+        <div id="page-header">
+          <h2>
+            <Trans>Natural Resources Canada</Trans>
+          </h2>
+          <h1>
+            <Trans>EnerGuide API</Trans>
+          </h1>
+        </div>
 
-      <p>
-        <Trans>
-          The EnerGuide API allows you to access the housing data provided by
-          Natural Resources Canada. You will have open access the data, and will
-          be able to query to an individual dwelling.
-        </Trans>
-      </p>
-      <NavLink to="/search">
-        <Trans>Test the API</Trans>
-      </NavLink>
-      <a href="https://github.com/cds-snc/nrcan_api">
-        <Trans>Access the API</Trans>
-      </a>
+        <p>
+          <Trans>
+            The EnerGuide API allows you to access the housing data provided by
+            Natural Resources Canada. You will have open access the data, and
+            will be able to query to an individual dwelling.
+          </Trans>
+        </p>
+        <NavLink to="/search">
+          <Trans>Test the API</Trans>
+        </NavLink>
+        <a href="https://github.com/cds-snc/nrcan_api">
+          <Trans>Access the API</Trans>
+        </a>
+      </div>
     </header>
 
     <div id="page-body">

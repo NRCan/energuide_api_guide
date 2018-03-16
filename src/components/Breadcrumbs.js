@@ -5,7 +5,7 @@ import { colours, fontSizes, spacing } from './styles'
 
 const breadcrumb = css`
   background-color: ${colours.greyLight};
-  padding: ${spacing.md}px ${spacing.xxl}px;
+  padding: ${spacing.md}px ${spacing.xxxl}px;
 
   ol {
     max-width: 960px;

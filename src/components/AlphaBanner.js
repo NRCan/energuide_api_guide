@@ -6,8 +6,8 @@ import { colours, spacing, fontSizes, roundedEdges } from './styles'
 const banner = css`
   background-color: ${colours.grey};
   color: ${colours.white};
-  padding-left: ${spacing.xxl}px;
-  padding-right: ${spacing.xxl}px;
+  padding-left: ${spacing.xxxl}px;
+  padding-right: ${spacing.xxxl}px;
   padding-top: 12px;
   padding-bottom: ${spacing.sm}px;
 `
@@ -23,6 +23,7 @@ const statusBar = css`
   color: white;
   position: relative;
   display: inline-block;
+  font-size: ${fontSizes.xs};
   bottom: 2px;
   padding: 2px ${spacing.md}px;
   margin-right: ${spacing.md}px;
