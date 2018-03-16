@@ -31,11 +31,22 @@ const statusBar = css`
   ${roundedEdges};
 `
 
+const link = css`
+  color: ${colours.white};
+  padding: 0;
+`
+
 const AlphaBanner = () => (
   <div className={banner}>
     <p className={alpha}>
       <Trans>
-        <span className={statusBar}>Alpha</span>This is an internal service.
+        <span className={statusBar}>Alpha</span>This is an internal service.{' '}
+        <a
+          className={link}
+          href="mailto:paul.craig@cds-snc.ca?subject=Hey,%20I%20love%20your%20app!"
+        >
+          To provide feedback, email us
+        </a>.
       </Trans>
     </p>
   </div>
