@@ -26,7 +26,7 @@ injectGlobal`
 		background: ${colours.white};
 		min-height: 100%;
     font-family: ${fontWeight.light}, sans serif;
-    overflow-y: scroll;
+    font-family: "Helvetica", sans-serif;
     font-size: ${fontSizes.md};
 	}
 
