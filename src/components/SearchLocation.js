@@ -8,7 +8,12 @@ import { Trans } from 'lingui-react'
 
 class SearchLocation extends Component {
   static propTypes = {
+    saveLocationData: PropTypes.func.isRequired,
     dispatch: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    pristine: PropTypes.bool.isRequired,
+    reset: PropTypes.func.isRequired,
+    submitting: PropTypes.bool.isRequired,
   }
   constructor() {
     super()
@@ -16,25 +21,41 @@ class SearchLocation extends Component {
   }
 
   async handleFormData(data) {
-    let { client } = this.props
+    let { client, save } = this.props
 
-    let response = await client.mutate({
-      mutation: gql`
-        mutation($uci: String!, $reason: String!) {
-          decline(uci: $uci, reason: $reason) {
-            messageID
-            statusCode
+    let response = await client.query({
+      query: gql`
+        query getEvaluationByFileId($houseId: String!) {
+          dwellings(
+            filters: [
+              { field: dwellingHouseId, comparator: eq, value: $houseId }
+            ]
+          ) {
+            results {
+              city
+              yearBuilt
+              houseId
+              evaluations {
+                ersRating
+                evaluationType
+                fileId
+                heating {
+                  energySourceEnglish
+                  energySourceFrench
+                  outputSizeKW
+                }
+              }
+            }
           }
         }
       `,
-      variables: data,
+      variables: { houseId: 189250 },
     })
 
-    let { data: { decline } } = response
+    let { data: { dwellings } } = response
 
-    console.log('Response from the server:', decline) // eslint-disable-line no-console
-    // TODO: Handle error case
-    this.props.dispatch({ type: 'THANK_YOU' })
+    console.log('Response from the server:', dwellings) // eslint-disable-line no-console
+    save(dwellings)
   }
 
   render() {
@@ -45,23 +66,17 @@ class SearchLocation extends Component {
             <ol>
               <li>
                 <NavLink to="/">
-                  <a>
-                    <Trans>EnerGuide API</Trans>
-                  </a>
+                  <Trans>EnerGuide API</Trans>
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/search">
-                  <a aria-current="page">
-                    <Trans>Search by</Trans>
-                  </a>
+                  <Trans>Search by</Trans>
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/search-location">
-                  <a aria-current="page">
-                    <Trans>Location</Trans>
-                  </a>
+                  <Trans>Location</Trans>
                 </NavLink>
               </li>
             </ol>

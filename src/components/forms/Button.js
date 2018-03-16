@@ -30,8 +30,8 @@ const button = css`
   }
 `
 
-const Button = ({ children }) => (
-  <button className={button} type="submit">
+const Button = ({ disabled = false, children }) => (
+  <button className={button} type="submit" disabled={disabled}>
     {children}
   </button>
 )
@@ -39,6 +39,7 @@ const Button = ({ children }) => (
 /* validation to make sure only one child is passed in */
 Button.propTypes = {
   children: PropTypes.element.isRequired,
+  disabled: PropTypes.any,
 }
 
 export default Button
