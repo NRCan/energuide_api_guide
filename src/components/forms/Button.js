@@ -8,7 +8,7 @@ const button = css`
   font-weight: 700;
   color: ${colours.white};
   background-color: ${colours.blue};
-  border: 3px solid transparent;
+  border: 5px solid transparent;
   outline: 0;
   padding: ${spacing.sm}px ${spacing.xl}px;
   cursor: pointer;
@@ -25,8 +25,17 @@ const button = css`
     background-color: ${colours.blueDark};
   }
 
-  &:active {
-    opacity: 0.8;
+  &:active,
+  &:disabled {
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    &:hover {
+      cursor: not-allowed;
+      background-color: ${colours.blue};
+    }
   }
 `
 
