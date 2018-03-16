@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Field } from 'redux-form'
 import { css } from 'react-emotion'
 import { colours, fontSizes, spacing } from '../styles'
 
@@ -167,7 +168,7 @@ const Radio = ({ label, value, name, id, children }) => (
       ${govuk_multiple_choice} ${radio};
     `}
   >
-    <input type="radio" name={name} id={id} value={value} />
+    <Field type="radio" component="input" name={name} id={id} value={value} />
     <label htmlFor={id} className={govuk_label_pseudo_elements}>
       {label}
       {children}

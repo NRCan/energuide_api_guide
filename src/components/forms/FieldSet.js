@@ -21,12 +21,7 @@ class FieldSet extends React.Component {
 
   renderChildren() {
     return React.Children.map(this.props.children, (child, i) => {
-      return child.type.name === 'Radio' || child.type.name === 'Checkbox'
-        ? React.cloneElement(child, {
-            name: this.props.name,
-            id: `${this.props.name}-${i}`,
-          })
-        : child
+      return child
     })
   }
 
@@ -36,7 +31,6 @@ class FieldSet extends React.Component {
 }
 
 FieldSet.propTypes = {
-  name: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
 }
 
