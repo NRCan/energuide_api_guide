@@ -7,9 +7,10 @@ import { compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import FieldSet from './forms/FieldSet'
+import TextInput from './forms/TextInput'
 import Button from './forms/Button'
 import { css } from 'react-emotion'
-import { colours, spacing, fontSizes, roundedEdges } from './styles'
+import { colours, spacing } from './styles'
 import DataTable from './DataTable'
 import { injectGlobal } from 'emotion'
 import { saveLocationData } from '../actions'
@@ -432,20 +433,6 @@ const form = css`
     margin-bottom: ${spacing.xl}px;
   }
 `
-const text_input = css`
-  font-size: ${fontSizes.md};
-  border: 3px solid ${colours.grey}};
-  outline: 0;
-  padding: ${spacing.sm}px;
-  width: 300px;
-  margin-bottom: ${spacing.xl}px;
-  ${roundedEdges};
-
-  &:focus {
-    outline: 3px solid ${colours.focus};
-    outline-offset: 0px;
-  }
-`
 
 class SearchLocation extends Component {
   static propTypes = {
@@ -541,28 +528,24 @@ class SearchLocation extends Component {
             aria-labelledby="search-by-location-description"
             className={form}
           >
-            <h2>
-              <label htmlFor="location" id="location-label">
-                <Trans>Location</Trans>
-              </label>
-            </h2>
-            <p id="location-details">
-              <Trans>
-                Search for a region by submitting the first three digits of a
-                postal code.
-              </Trans>
-            </p>
-            <Field
-              type="text"
-              component="input"
+            <TextInput
               name="location"
               id="location"
-              aria-labelledby="location-label location-details"
-              className={text_input}
-            />
-
+              labelledby="location-label location-details"
+            >
+              <h2>
+                <label htmlFor="location" id="location-label">
+                  <Trans>Location</Trans>
+                </label>
+              </h2>
+              <p id="location-details">
+                <Trans>
+                  Search for a region by submitting the first three digits of a
+                  postal code.
+                </Trans>
+              </p>
+            </TextInput>
             <hr />
-
             <FieldSet legendHidden={false}>
               <legend>
                 <h2>
