@@ -79,21 +79,6 @@ injectGlobal`
 		display: inline;
 	}
 
-	input[type=text] {
-		width: 30%;
-		padding: 12px 20px;
-		margin: 8px 0;
-		box-sizing: border-box;
-		border: 3px solid #ccc;
-		-webkit-transition: 0.5s;
-		transition: 0.5s;
-		outline: none;
-	}
-
-	input[type=text]:focus {
-		border: 3px solid #555;
-	}
-
 #page-body {
     margin: 0px;
     padding: ${spacing.xl}px ${spacing.xxxl}px;

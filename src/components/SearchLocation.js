@@ -6,6 +6,10 @@ import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
+import FieldSet from './forms/FieldSet'
+import Button from './forms/Button'
+import { css } from 'react-emotion'
+import { colours, spacing, fontSizes, roundedEdges } from './styles'
 import DataTable from './DataTable'
 import { injectGlobal } from 'emotion'
 import { saveLocationData } from '../actions'
@@ -417,6 +421,32 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 }
 `
 
+const form = css`
+  h2 {
+    margin-bottom: 0;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 2px ${colours.greyLight} solid;
+    margin-bottom: ${spacing.xl}px;
+  }
+`
+const text_input = css`
+  font-size: ${fontSizes.md};
+  border: 3px solid ${colours.grey}};
+  outline: 0;
+  padding: ${spacing.sm}px;
+  width: 300px;
+  margin-bottom: ${spacing.xl}px;
+  ${roundedEdges};
+
+  &:focus {
+    outline: 3px solid ${colours.focus};
+    outline-offset: 0px;
+  }
+`
+
 class SearchLocation extends Component {
   static propTypes = {
     save: PropTypes.func.isRequired,
@@ -426,6 +456,7 @@ class SearchLocation extends Component {
     reset: PropTypes.func.isRequired,
     submitting: PropTypes.bool.isRequired,
   }
+
   constructor() {
     super()
     this.handleFormData = this.handleFormData.bind(this)
@@ -507,7 +538,8 @@ class SearchLocation extends Component {
           </header>
           <form
             onSubmit={handleSubmit(this.handleFormData)}
-            aria-labelledby="search-by-description"
+            aria-labelledby="search-by-location-description"
+            className={form}
           >
             <h2>
               <label htmlFor="location" id="location-label">
@@ -525,12 +557,17 @@ class SearchLocation extends Component {
               component="input"
               name="location"
               id="location"
+              aria-labelledby="location-label location-details"
+              className={text_input}
             />
-            <fieldset>
+
+            <hr />
+
+            <FieldSet legendHidden={false}>
               <legend>
-                <h3>
-                  <Trans>Search by Location</Trans>
-                </h3>
+                <h2>
+                  <Trans>Filters</Trans>
+                </h2>
               </legend>
               <p>
                 <Trans>
@@ -566,10 +603,10 @@ class SearchLocation extends Component {
               <label htmlFor="energy-source-3">
                 <Trans>Natural gas</Trans>
               </label>
-            </fieldset>
-            <button type="submit" disabled={pristine || submitting}>
+            </FieldSet>
+            <Button disabled={pristine || submitting}>
               <Trans>Search</Trans>
-            </button>
+            </Button>
           </form>
 
           {data.length > 0 && <DataTable data={data} />}
