@@ -2,8 +2,7 @@ import React from 'react'
 import { WordMark } from '@cdssnc/gcui'
 import { Trans } from 'lingui-react'
 import styled, { css } from 'react-emotion'
-import { colours, spacing } from './styles'
-import { fontWeight } from './styles'
+import { colours, spacing, fontSizes } from './styles'
 
 const footer = css`
   background-color: ${colours.black};
@@ -11,12 +10,12 @@ const footer = css`
   display: flex;
   justify-content: space-between;
   position: relative;
-  font-family: ${fontWeight.bold}, sans serif;
 `
 
 const Link = styled.a`
   color: ${colours.white};
-  margin-top: 10px;
+  margin-top: ${spacing.lg}px;
+  font-size: ${fontSizes.sm};
 `
 
 const Footer = () => (
