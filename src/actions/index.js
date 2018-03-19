@@ -9,7 +9,13 @@ export const SAVE_LOCATION_LOOKUP_RESULTS = 'SAVE_LOCATION_LOOKUP_RESULTS'
 
 export const saveLocationData = data => ({
   type: SAVE_LOCATION_LOOKUP_RESULTS,
-  data,
+  data: data.map(datum => ({
+    yearBuilt: datum.yearBuilt,
+    city: datum.city,
+    region: datum.region,
+    forwardSortationArea: datum.forwardSortationArea,
+    heating: datum.evaluations[0].heating.energySourceEnglish,
+  })),
 })
 
 export const SAVE_FILEID_LOOKUP_RESULTS = 'SAVE_FILEID_LOOKUP_RESULTS'
