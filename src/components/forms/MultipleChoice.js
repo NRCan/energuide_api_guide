@@ -128,7 +128,7 @@ const govuk_label_pseudo_elements = css`
   }
 `
 
-const radio = css`
+const cds_multiple_choice = css`
   padding: 0 0 0 ${spacing.xl}px;
   margin-bottom: ${spacing.sm}px;
 
@@ -139,25 +139,30 @@ const radio = css`
 
   label {
     padding: 0;
+    height: ${spacing.xl}px;
     font-size: ${fontSizes.lg};
 
     span {
-      padding: 0 ${spacing.sm}px;
+      padding: 0 ${spacing.xs}px;
     }
   }
+`
+
+const radio = css`
+  ${cds_multiple_choice};
 
   input[type='radio'] + label::before {
     border: 2px solid ${colours.grey};
     width: 22px;
     height: 22px;
     top: 7px;
-    left: 2px;
+    left: 0;
   }
 
   input[type='radio'] + label::after {
     border: 6px solid ${colours.blue};
     top: 12px;
-    left: 7px;
+    left: 5px;
   }
 `
 
@@ -176,12 +181,23 @@ const Radio = ({ label, value, name, id, children }) => (
 )
 
 const checkbox = css`
-  label {
-    font-size: 24px;
-  }
+  ${cds_multiple_choice};
+
   input[type='checkbox'] + label::before {
     border: 2px solid ${colours.grey};
+    width: 22px;
+    height: 22px;
+    top: 2px;
+    left: 0;
     ${roundedEdges};
+  }
+
+  input[type='checkbox'] + label::after {
+    border-width: 0 0 3px 3px;
+    width: 14px;
+    height: 7px;
+    top: 8px;
+    left: 4px;
   }
 `
 
@@ -191,7 +207,7 @@ const Checkbox = ({ label, value, name, id, children }) => (
       ${govuk_multiple_choice} ${checkbox};
     `}
   >
-    <input
+    <Field
       type="checkbox"
       component="input"
       name={name}

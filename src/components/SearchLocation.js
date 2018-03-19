@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'redux-first-router-link'
-import { Field, reduxForm } from 'redux-form'
+import { reduxForm } from 'redux-form'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
@@ -8,6 +8,7 @@ import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import FieldSet from './forms/FieldSet'
 import TextInput from './forms/TextInput'
+import { Checkbox } from './forms/MultipleChoice'
 import Button from './forms/Button'
 import { css } from 'react-emotion'
 import { colours, spacing } from './styles'
@@ -558,34 +559,24 @@ class SearchLocation extends Component {
                   parameters that apply.
                 </Trans>
               </p>
-              <Field
-                component="input"
-                type="checkbox"
-                id="energy-source-1"
+              <Checkbox
+                label={<Trans>Oil</Trans>}
+                value="oil"
                 name="energy-source"
+                id="energy-source-0"
               />
-
-              <label htmlFor="energy-source-1">
-                <Trans>Oil</Trans>
-              </label>
-              <Field
-                component="input"
-                type="checkbox"
+              <Checkbox
+                label={<Trans>Electricity</Trans>}
+                value="electricity"
+                name="energy-source"
+                id="energy-source-1"
+              />
+              <Checkbox
+                label={<Trans>Natural gas</Trans>}
+                value="natural-gas"
+                name="energy-source"
                 id="energy-source-2"
-                name="electricity"
               />
-              <label htmlFor="energy-source-2">
-                <Trans>Electricity</Trans>
-              </label>
-              <Field
-                id="energy-source-3"
-                name="gas"
-                component="input"
-                type="checkbox"
-              />
-              <label htmlFor="energy-source-3">
-                <Trans>Natural gas</Trans>
-              </label>
             </FieldSet>
             <Button disabled={pristine || submitting}>
               <Trans>Search</Trans>
