@@ -67,11 +67,28 @@ injectGlobal`
     margin-bottom: ${spacing.lg}px;
   }
 
-
 	a {
 		color: ${colours.blue};
     padding-right: ${spacing.md}px;
 	}
+
+  form  {
+    margin-bottom: ${spacing.xl}px;
+
+    h2 {
+      margin-bottom: ${spacing.sm}px;
+    }
+
+    p {
+      margin-bottom: ${spacing.md}px;
+    }
+
+    hr {
+      border: none;
+      border-bottom: 2px ${colours.greyLight} solid;
+      margin-bottom: ${spacing.xl}px;
+    }
+  }
 
 	#info {
 		top: 5px;

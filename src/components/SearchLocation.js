@@ -10,8 +10,6 @@ import FieldSet from './forms/FieldSet'
 import TextInput from './forms/TextInput'
 import { Checkbox } from './forms/MultipleChoice'
 import Button from './forms/Button'
-import { css } from 'react-emotion'
-import { colours, spacing } from './styles'
 import DataTable from './DataTable'
 import { injectGlobal } from 'emotion'
 import { saveLocationData } from '../actions'
@@ -423,18 +421,6 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 }
 `
 
-const form = css`
-  h2 {
-    margin-bottom: 0;
-  }
-
-  hr {
-    border: none;
-    border-bottom: 2px ${colours.greyLight} solid;
-    margin-bottom: ${spacing.xl}px;
-  }
-`
-
 class SearchLocation extends Component {
   static propTypes = {
     save: PropTypes.func.isRequired,
@@ -527,7 +513,6 @@ class SearchLocation extends Component {
           <form
             onSubmit={handleSubmit(this.handleFormData)}
             aria-labelledby="search-by-location-description"
-            className={form}
           >
             <TextInput
               name="location"

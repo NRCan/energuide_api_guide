@@ -10,14 +10,6 @@ import InfoIcon from './InfoIcon'
 import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
-import { css } from 'react-emotion'
-import { spacing } from './styles'
-
-const main = css`
-  form {
-    margin-bottom: ${spacing.xl}px;
-  }
-`
 
 class Search extends Component {
   static propTypes = {
@@ -45,7 +37,7 @@ class Search extends Component {
   render() {
     let { handleSubmit, pristine, submitting } = this.props
     return (
-      <main role="main" className={main}>
+      <main role="main">
         <Breadcrumbs>
           <NavLink to="/">
             <Trans>EnerGuide API</Trans>
