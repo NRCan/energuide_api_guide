@@ -536,19 +536,19 @@ class SearchLocation extends Component {
               <Checkbox
                 label={<Trans>Oil</Trans>}
                 value="oil"
-                name="energy-source"
+                name="oil"
                 id="energy-source-0"
               />
               <Checkbox
                 label={<Trans>Electricity</Trans>}
                 value="electricity"
-                name="energy-source"
+                name="electricity"
                 id="energy-source-1"
               />
               <Checkbox
                 label={<Trans>Natural gas</Trans>}
                 value="natural-gas"
-                name="energy-source"
+                name="naturalGas"
                 id="energy-source-2"
               />
             </FieldSet>
