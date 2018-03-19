@@ -75,9 +75,8 @@ const Home = () => (
 
         <p>
           <Trans>
-            The EnerGuide API allows you to access the housing data provided by
-            Natural Resources Canada. You will have open access the data, and
-            will be able to query to an individual dwelling.
+            The EnerGuide API allows you to access the housing data provided by Natural Resource Canada. You will have open access to the data, with granularity to search to a individual dwelling level.
+
           </Trans>
         </p>
         <NavLink to="/search">
@@ -100,8 +99,9 @@ const Home = () => (
           <Trans>
             An <abbr title="Application Programming Interface">API</abbr>, or{' '}
             <strong>Application Programming Interface</strong>, is a set of
-            routines, protocols and tools for building software. Many
-            applications can talk to each other and deliver a response.
+            routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
+
+
           </Trans>
         </p>
       </section>
@@ -110,12 +110,12 @@ const Home = () => (
           <Trans>What are the benefits of the EnerGuide API?</Trans>
         </h2>
         <h3>
-          <Trans>View open data</Trans>
+          <Trans>View open source data</Trans>
         </h3>
         <p>
           <Trans>
-            The EnerGuide API will help make energy consumption data accessible
-            for everyone.
+            The EnerGuide API will help make housing evaluation data accessible for everyone.
+
           </Trans>
         </p>
         <h3>
@@ -123,9 +123,8 @@ const Home = () => (
         </h3>
         <p>
           <Trans>
-            You can choose to access the granular data that you need. You will
-            benefit from the ability to extract data data that is specific to
-            your needs.
+            You can choose to access the granular data that you need. 
+
           </Trans>
         </p>
         <h3>
@@ -133,8 +132,8 @@ const Home = () => (
         </h3>
         <p>
           <Trans>
-            The EnerGuide API will help make energy consumption data accessible
-            for everyone.
+            As new housing evaluations are added to the EnerGuide API, the data will be updated and available for you to use.  
+
           </Trans>
         </p>
       </section>
@@ -144,9 +143,8 @@ const Home = () => (
         </h2>
         <p>
           <Trans>
-            Developers and data analysts can allow users to query specific
-            information from large data sets. They set the rules that will guide
-            the user to what they need.{' '}
+           To learn how to use the API, we have provided the documentation on Github. The documentation will show all of the data types available under the EnerGuide API. 
+
           </Trans>
         </p>
         <h3>
