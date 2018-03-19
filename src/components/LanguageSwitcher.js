@@ -1,16 +1,16 @@
 import React from 'react'
-import styled from 'react-emotion'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { setLanguage } from '../actions'
-import PropTypes from 'prop-types'
+import styled from 'react-emotion'
+import { fontSizes } from './styles'
 
 const A = styled('a')`
+  font-size: ${fontSizes.sm};
   text-decoration: underline;
   position: relative;
   right: 0.3em;
-  font-family: Helvetica, Arial, sans-serif;
   color: white;
-  background-color: none;
   &:visited {
     color: #7834bc;
   }
