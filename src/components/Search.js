@@ -26,10 +26,10 @@ class Search extends Component {
   }
 
   async handleFormData(data) {
-    if (data.searchBy == 'location') {
+    if (data.search == 'location') {
       this.props.dispatch({ type: 'LOCATION' })
     }
-    if (data.searchBy == 'file-number') {
+    if (data.search == 'file-number') {
       this.props.dispatch({ type: 'FILEID' })
     }
   }
@@ -59,17 +59,17 @@ class Search extends Component {
           </p>
           <form
             onSubmit={handleSubmit(this.handleFormData)}
-            aria-labelledby="search-by-description"
+            aria-labelledby="search-description"
           >
             <FieldSet>
-              <legend id="search-by-description">
+              <legend id="search-description">
                 <Trans>Search by Location or File number</Trans>
               </legend>
               <Radio
                 label={<Trans>Location</Trans>}
                 value="location"
-                name="searchBy"
-                id="searchBy-0"
+                name="search"
+                id="search-0"
               >
                 <abbr title="A location refers to a region or neighbourhood. You will be searching by the first three digits of any postal code.">
                   <InfoIcon />
@@ -78,8 +78,8 @@ class Search extends Component {
               <Radio
                 label={<Trans>File number</Trans>}
                 value="file-number"
-                name="searchBy"
-                id="searchBy-1"
+                name="search"
+                id="search-1"
               >
                 <abbr title="A file number refers to an individual home. This number is provided to the homeowner through EnerGuide.">
                   <InfoIcon />
@@ -112,6 +112,6 @@ const mapStateToProps = state => ({
 
 export default compose(
   withApollo,
-  reduxForm({ form: 'searchBy' }),
+  reduxForm({ form: 'search' }),
   connect(mapStateToProps),
 )(Search)
