@@ -75,15 +75,16 @@ const Home = () => (
 
         <p>
           <Trans>
-            The EnerGuide API allows you to access the housing data provided by Natural Resource Canada. You will have open access to the data, with granularity to search to a individual dwelling level.
-
+            The EnerGuide API allows you to access the housing data provided by
+            Natural Resource Canada. You will have open access to the data, with
+            granularity to search to a individual dwelling level.
           </Trans>
         </p>
         <NavLink to="/search">
           <Trans>Test the API</Trans>
         </NavLink>
-        <a href="https://github.com/cds-snc/nrcan_api">
-          <Trans>Access the API</Trans>
+        <a href="https://github.com/cds-snc/nrcan_api/blob/master/api/docs.md">
+          <Trans>View the documentation</Trans>
         </a>
       </div>
     </header>
@@ -99,9 +100,9 @@ const Home = () => (
           <Trans>
             An <abbr title="Application Programming Interface">API</abbr>, or{' '}
             <strong>Application Programming Interface</strong>, is a set of
-            routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
-
-
+            routines, protocols and tools for building software. An API makes it
+            easier to develop a computer program by providing all the building
+            blocks, which are then put together by the programmer.
           </Trans>
         </p>
       </section>
@@ -114,8 +115,8 @@ const Home = () => (
         </h3>
         <p>
           <Trans>
-            The EnerGuide API will help make housing evaluation data accessible for everyone.
-
+            The EnerGuide API will help make housing evaluation data accessible
+            for everyone.
           </Trans>
         </p>
         <h3>
@@ -123,8 +124,7 @@ const Home = () => (
         </h3>
         <p>
           <Trans>
-            You can choose to access the granular data that you need. 
-
+            You can choose to access the granular data that you need.
           </Trans>
         </p>
         <h3>
@@ -132,8 +132,8 @@ const Home = () => (
         </h3>
         <p>
           <Trans>
-            As new housing evaluations are added to the EnerGuide API, the data will be updated and available for you to use.  
-
+            As new housing evaluations are added to the EnerGuide API, the data
+            will be updated and available for you to use.
           </Trans>
         </p>
       </section>
@@ -143,8 +143,9 @@ const Home = () => (
         </h2>
         <p>
           <Trans>
-           To learn how to use the API, we have provided the documentation on Github. The documentation will show all of the data types available under the EnerGuide API. 
-
+            To learn how to use the API, we have provided the documentation on
+            Github. The documentation will show all of the data types available
+            under the EnerGuide API.
           </Trans>
         </p>
         <h3>
@@ -155,8 +156,8 @@ const Home = () => (
         </h3>
         <h3>
           <Trans>Ready to use the Energuide API?</Trans>{' '}
-          <NavLink to="https://github.com/cds-snc/nrcan_api">
-            <Trans>Read the documentation</Trans>
+          <NavLink to="https://github.com/cds-snc/nrcan_api/blob/master/api/docs.md">
+            <Trans>View the documentation</Trans>
           </NavLink>
         </h3>
       </section>
