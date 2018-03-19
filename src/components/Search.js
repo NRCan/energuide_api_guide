@@ -42,12 +42,7 @@ class Search extends Component {
           <NavLink to="/">
             <Trans>EnerGuide API</Trans>
           </NavLink>
-          <NavLink to="/search">
-            <Trans>Search</Trans>
-          </NavLink>
-          <NavLink to="/search-location">
-            <Trans>Location</Trans>
-          </NavLink>
+          <Trans>Search</Trans>
         </Breadcrumbs>
 
         <div id="page-body">

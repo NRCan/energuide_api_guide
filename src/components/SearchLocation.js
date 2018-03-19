@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
+import Breadcrumbs from './Breadcrumbs'
 import FieldSet from './forms/FieldSet'
 import TextInput from './forms/TextInput'
 import { Checkbox } from './forms/MultipleChoice'
@@ -482,27 +483,15 @@ class SearchLocation extends Component {
     let { data, handleSubmit, pristine, submitting } = this.props
     return (
       <main role="main">
-        <section>
-          <nav aria-label="Breadcrumb">
-            <ol>
-              <li>
-                <NavLink to="/">
-                  <Trans>EnerGuide API</Trans>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search">
-                  <Trans>Search by</Trans>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search-location">
-                  <Trans>Location</Trans>
-                </NavLink>
-              </li>
-            </ol>
-          </nav>
-        </section>
+        <Breadcrumbs>
+          <NavLink to="/">
+            <Trans>EnerGuide API</Trans>
+          </NavLink>
+          <NavLink to="/search">
+            <Trans>Search</Trans>
+          </NavLink>
+          <Trans>Location</Trans>
+        </Breadcrumbs>
 
         <div id="page-body">
           <header>
