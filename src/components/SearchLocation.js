@@ -516,7 +516,7 @@ class SearchLocation extends Component {
           <NavLink to="/search">
             <Trans>Search</Trans>
           </NavLink>
-          <Trans>Location</Trans>
+          <Trans>Search by location</Trans>
         </Breadcrumbs>
 
         <div id="page-body">
