@@ -438,23 +438,51 @@ class SearchLocation extends Component {
   }
 
   async handleFormData(data) {
-    let { client, save } = this.props
-
-    let response = await client.query({
-      query: gql`
-        query POCSearchLocation($fsa: String!, $heatSource: String!) {
-          dwellings(
-            filters: [
-              {
+    let args = []
+    let filters = []
+    let variables = {}
+    Object.entries(data).forEach(([key, value]) => {
+      switch (key) {
+        case 'location':
+          filters.push(`{
                 field: dwellingForwardSortationArea
                 comparator: eq
-                value: $fsa
-              }
+                value: $location
+              }`)
+          args.push('$location: String!')
+          variables.location = value
+          break
+        case 'oil':
+          filters.push(`
               {
                 field: heatingEnergySourceEnglish
                 comparator: eq
-                value: $heatSource
+                value: $oil
               }
+          `)
+          args.push('$oil: String!')
+          variables.oil = 'Oil'
+          break
+        case 'naturalGas':
+          filters.push(`
+              {
+                field: heatingEnergySourceEnglish
+                comparator: eq
+                value: $naturalGas
+              }
+          `)
+          args.push('$naturalGas: String!')
+          variables.naturalGas = 'Natural Gas'
+          break
+      }
+    })
+    let { client, save } = this.props
+    let response = await client.query({
+      query: gql`
+        query POCSearchLocation(${args}) {
+          dwellings(
+            filters: [
+              ${filters}
             ]
           ) {
             results {
@@ -467,16 +495,14 @@ class SearchLocation extends Component {
           }
         }
       `,
-      variables: {
-        fsa: 'T1L',
-        heatSource: 'Natural Gas',
-      },
+      variables,
     })
 
     let { data: { dwellings } } = response
 
-    console.log('Response from the server:', dwellings) // eslint-disable-line no-console
-    save(dwellings.results)
+    if (dwellings.results) {
+      save(dwellings.results)
+    } // TODO: Redirect for empty results
   }
 
   render() {
