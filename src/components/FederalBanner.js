@@ -12,7 +12,7 @@ const container = css`
   width: auto;
   justify-content: space-between;
   background-color: ${colours.black};
-  ${mediaQuery.small(css`
+  ${mediaQuery.medium(css`
     display: block;
   `)};
 `

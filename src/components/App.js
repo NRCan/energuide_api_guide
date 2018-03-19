@@ -26,7 +26,6 @@ injectGlobal`
 		background: ${colours.white};
 		min-height: 100%;
     font-family: ${fontWeight.light}, sans serif;
-    font-family: "Helvetica", sans-serif;
     font-size: ${fontSizes.md};
 	}
 
@@ -51,7 +50,7 @@ injectGlobal`
 	h2 {
     font-family: ${fontWeight.bold}, sans serif;
     font-size: ${fontSizes.lg};
-    margin-bottom: ${spacing.lg}px;
+    margin-bottom: 0px;
 	}
 
 	h3 {
@@ -95,23 +94,13 @@ injectGlobal`
 		border: 3px solid #555;
 	}
 
-  #index-page, #page-body {
+#page-body {
     margin: 0px;
     padding: ${spacing.xl}px ${spacing.xxxl}px;
   }
 
-  #index-page {
-    background-color: ${colours.yellow};
-  }
-
   .bottom-link {
     padding-left: ${spacing.xs}px;
-  }
-
-  #header-container {
-    width: 50%;
-    margin-left:0px;
-    padding: ${spacing.xxl}px 0px ${spacing.xxl}px 0px;
   }
 
 `

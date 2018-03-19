@@ -2,7 +2,6 @@ import { css } from 'react-emotion'
 
 export const spacingBase = 16
 export const spacing = {
-  base: spacingBase,
   md: spacingBase,
   sm: spacingBase / 2,
   xs: spacingBase / 3,
@@ -31,8 +30,8 @@ export const fontWeight = {
 export const fontSizes = {
   xs: '12px',
   sm: '16px',
-  base: '19px',
-  md: '19px',
+  base: '20px',
+  md: '20px',
   lg: '24px',
   xl: '48px',
 }
@@ -76,11 +75,14 @@ export const visuallyhidden = css`
   width: 1px;
 `
 
-const breakpoints = {
+export const breakpoints = {
+  xs: 481,
   small: 576,
-  medium: 768,
+  ms: 600,
+  medium: 764,
   large: 992,
   xLarge: 1200,
+  xxl: 1920,
 }
 
 export const mediaQuery = Object.keys(breakpoints).reduce(
@@ -89,7 +91,7 @@ export const mediaQuery = Object.keys(breakpoints).reduce(
     let suffix = typeof breakpoints[label] === 'string' ? '' : 'px'
     accumulator[label] = cls =>
       css`
-        @media (${prefix + breakpoints[label] + suffix}) {
+        @media screen and (${prefix + breakpoints[label] + suffix}) {
           ${cls};
         }
       `

@@ -4,16 +4,59 @@ import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
 import { css } from 'react-emotion'
-import { spacing } from './styles'
+import { mediaQuery, spacing, colours } from './styles'
+import CircuitHouse from './CircuitHouse'
 
 const main = css`
   section {
     margin-bottom: ${spacing.xxl}px;
-    width: 50%;
+    width: 70%;
+
+    ${mediaQuery.medium(css`
+      width: 100%;
+    `)};
 
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+
+  #header-container {
+    width: 45%;
+    position: absolute;
+    z-index: 1;
+    margin-left: 0px;
+    padding: ${spacing.xl}px 0px ${spacing.xl}px 0px;
+
+    ${mediaQuery.medium(css`
+      width: 80%;
+    `)};
+
+    ${mediaQuery.small(css`
+      width: 70%;
+      padding: ${spacing.sm}px;
+    `)};
+  }
+
+  #index-page {
+    background-color: ${colours.yellow};
+    padding: ${spacing.xl}px ${spacing.xxxl}px;
+    height: 19em;
+    ${mediaQuery.large(css`
+      height: 20em;
+    `)};
+
+    ${mediaQuery.medium(css`
+      height: 18.5em;
+    `)};
+
+    ${mediaQuery.small(css`
+      height: 20em;
+    `)};
+
+    ${mediaQuery.xs(css`
+      height: 23em;
+    `)};
   }
 `
 
@@ -45,6 +88,8 @@ const Home = () => (
         </a>
       </div>
     </header>
+
+    <CircuitHouse />
 
     <div id="page-body">
       <section>
@@ -105,13 +150,13 @@ const Home = () => (
           </Trans>
         </p>
         <h3>
-          <Trans>To see how it can be used,&nbsp;</Trans>
+          <Trans>To see how it can be used,</Trans>{' '}
           <NavLink to="/search">
             <Trans>test the API</Trans>
           </NavLink>
         </h3>
         <h3>
-          <Trans>Ready to use the Energuide API?&nbsp;</Trans>
+          <Trans>Ready to use the Energuide API?</Trans>{' '}
           <NavLink to="https://github.com/cds-snc/nrcan_api">
             <Trans>Read the documentation</Trans>
           </NavLink>
