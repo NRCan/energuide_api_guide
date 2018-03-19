@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
 import { css } from 'react-emotion'
-import { colours, fontSizes, spacing } from '../styles'
+import { colours, fontSizes, spacing, roundedEdges } from '../styles'
 
 const govuk_multiple_choice = css`
   display: block;
@@ -128,8 +128,7 @@ const govuk_label_pseudo_elements = css`
   }
 `
 
-const radio = css`
-  ${govuk_multiple_choice};
+const cds_multiple_choice = css`
   padding: 0 0 0 ${spacing.xl}px;
   margin-bottom: ${spacing.sm}px;
 
@@ -140,25 +139,30 @@ const radio = css`
 
   label {
     padding: 0;
+    height: ${spacing.xl}px;
     font-size: ${fontSizes.lg};
 
     span {
-      padding: 0 ${spacing.sm}px;
+      padding: 0 ${spacing.xs}px;
     }
   }
+`
+
+const radio = css`
+  ${cds_multiple_choice};
 
   input[type='radio'] + label::before {
     border: 2px solid ${colours.grey};
     width: 22px;
     height: 22px;
     top: 7px;
-    left: 2px;
+    left: 0;
   }
 
   input[type='radio'] + label::after {
     border: 6px solid ${colours.blue};
     top: 12px;
-    left: 7px;
+    left: 5px;
   }
 `
 
@@ -176,7 +180,48 @@ const Radio = ({ label, value, name, id, children }) => (
   </div>
 )
 
-Radio.propTypes = {
+const checkbox = css`
+  ${cds_multiple_choice};
+
+  input[type='checkbox'] + label::before {
+    border: 2px solid ${colours.grey};
+    width: 22px;
+    height: 22px;
+    top: 2px;
+    left: 0;
+    ${roundedEdges};
+  }
+
+  input[type='checkbox'] + label::after {
+    border-width: 0 0 3px 3px;
+    width: 14px;
+    height: 7px;
+    top: 8px;
+    left: 4px;
+  }
+`
+
+const Checkbox = ({ label, value, name, id, children }) => (
+  <div
+    className={css`
+      ${govuk_multiple_choice} ${checkbox};
+    `}
+  >
+    <Field
+      type="checkbox"
+      component="input"
+      name={name}
+      id={id}
+      value={value}
+    />
+    <label htmlFor={id} className={govuk_label_pseudo_elements}>
+      {label}
+      {children}
+    </label>
+  </div>
+)
+
+let defaultProps = {
   label: PropTypes.element.isRequired,
   value: PropTypes.string.isRequired,
   name: PropTypes.string,
@@ -184,4 +229,7 @@ Radio.propTypes = {
   children: PropTypes.any,
 }
 
-export default Radio
+Radio.propTypes = defaultProps
+Checkbox.propTypes = defaultProps
+
+export { Radio, Checkbox }

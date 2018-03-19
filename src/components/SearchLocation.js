@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import { NavLink } from 'redux-first-router-link'
-import { Field, reduxForm } from 'redux-form'
+import { reduxForm } from 'redux-form'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
+import Breadcrumbs from './Breadcrumbs'
+import FieldSet from './forms/FieldSet'
+import TextInput from './forms/TextInput'
+import { Checkbox } from './forms/MultipleChoice'
+import Button from './forms/Button'
 import DataTable from './DataTable'
 import { injectGlobal } from 'emotion'
 import { saveLocationData } from '../actions'
@@ -426,6 +431,7 @@ class SearchLocation extends Component {
     reset: PropTypes.func.isRequired,
     submitting: PropTypes.bool.isRequired,
   }
+
   constructor() {
     super()
     this.handleFormData = this.handleFormData.bind(this)
@@ -477,27 +483,15 @@ class SearchLocation extends Component {
     let { data, handleSubmit, pristine, submitting } = this.props
     return (
       <main role="main">
-        <section>
-          <nav aria-label="Breadcrumb">
-            <ol>
-              <li>
-                <NavLink to="/">
-                  <Trans>EnerGuide API</Trans>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search">
-                  <Trans>Search by</Trans>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search-location">
-                  <Trans>Location</Trans>
-                </NavLink>
-              </li>
-            </ol>
-          </nav>
-        </section>
+        <Breadcrumbs>
+          <NavLink to="/">
+            <Trans>EnerGuide API</Trans>
+          </NavLink>
+          <NavLink to="/search">
+            <Trans>Search</Trans>
+          </NavLink>
+          <Trans>Location</Trans>
+        </Breadcrumbs>
 
         <div id="page-body">
           <header>
@@ -507,30 +501,31 @@ class SearchLocation extends Component {
           </header>
           <form
             onSubmit={handleSubmit(this.handleFormData)}
-            aria-labelledby="search-by-description"
+            aria-labelledby="search-by-location-description"
           >
-            <h2>
-              <label htmlFor="location" id="location-label">
-                <Trans>Location</Trans>
-              </label>
-            </h2>
-            <p id="location-details">
-              <Trans>
-                Search for a region by submitting the first three digits of a
-                postal code.
-              </Trans>
-            </p>
-            <Field
-              type="text"
-              component="input"
+            <TextInput
               name="location"
               id="location"
-            />
-            <fieldset>
+              labelledby="location-label location-details"
+            >
+              <h2>
+                <label htmlFor="location" id="location-label">
+                  <Trans>Location</Trans>
+                </label>
+              </h2>
+              <p id="location-details">
+                <Trans>
+                  Search for a region by submitting the first three digits of a
+                  postal code.
+                </Trans>
+              </p>
+            </TextInput>
+            <hr />
+            <FieldSet legendHidden={false}>
               <legend>
-                <h3>
-                  <Trans>Search by Location</Trans>
-                </h3>
+                <h2>
+                  <Trans>Filters</Trans>
+                </h2>
               </legend>
               <p>
                 <Trans>
@@ -538,38 +533,28 @@ class SearchLocation extends Component {
                   parameters that apply.
                 </Trans>
               </p>
-              <Field
-                component="input"
-                type="checkbox"
-                id="energy-source-1"
-                name="energy-source"
+              <Checkbox
+                label={<Trans>Oil</Trans>}
+                value="oil"
+                name="oil"
+                id="energy-source-0"
               />
-
-              <label htmlFor="energy-source-1">
-                <Trans>Oil</Trans>
-              </label>
-              <Field
-                component="input"
-                type="checkbox"
-                id="energy-source-2"
+              <Checkbox
+                label={<Trans>Electricity</Trans>}
+                value="electricity"
                 name="electricity"
+                id="energy-source-1"
               />
-              <label htmlFor="energy-source-2">
-                <Trans>Electricity</Trans>
-              </label>
-              <Field
-                id="energy-source-3"
-                name="gas"
-                component="input"
-                type="checkbox"
+              <Checkbox
+                label={<Trans>Natural gas</Trans>}
+                value="natural-gas"
+                name="naturalGas"
+                id="energy-source-2"
               />
-              <label htmlFor="energy-source-3">
-                <Trans>Natural gas</Trans>
-              </label>
-            </fieldset>
-            <button type="submit" disabled={pristine || submitting}>
+            </FieldSet>
+            <Button disabled={pristine || submitting}>
               <Trans>Search</Trans>
-            </button>
+            </Button>
           </form>
 
           {data.length > 0 && <DataTable data={data} />}

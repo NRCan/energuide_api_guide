@@ -67,31 +67,33 @@ injectGlobal`
     margin-bottom: ${spacing.lg}px;
   }
 
-
 	a {
 		color: ${colours.blue};
     padding-right: ${spacing.md}px;
 	}
 
+  form  {
+    margin-bottom: ${spacing.xl}px;
+
+    h2 {
+      margin-bottom: ${spacing.sm}px;
+    }
+
+    p {
+      margin-bottom: ${spacing.md}px;
+    }
+
+    hr {
+      border: none;
+      border-bottom: 2px ${colours.greyLight} solid;
+      margin-bottom: ${spacing.xl}px;
+    }
+  }
+
 	#info {
 		top: 5px;
 		left: 5px;
 		display: inline;
-	}
-
-	input[type=text] {
-		width: 30%;
-		padding: 12px 20px;
-		margin: 8px 0;
-		box-sizing: border-box;
-		border: 3px solid #ccc;
-		-webkit-transition: 0.5s;
-		transition: 0.5s;
-		outline: none;
-	}
-
-	input[type=text]:focus {
-		border: 3px solid #555;
 	}
 
 #page-body {
