@@ -150,13 +150,13 @@ const Home = () => (
           </Trans>
         </p>
         <h3>
-          <Trans>To see how it can be used,</Trans>
+          <Trans>To see how it can be used,</Trans>{' '}
           <NavLink to="/search">
             <Trans>test the API</Trans>
           </NavLink>
         </h3>
         <h3>
-          <Trans>Ready to use the Energuide API?</Trans>
+          <Trans>Ready to use the Energuide API?</Trans>{' '}
           <NavLink to="https://github.com/cds-snc/nrcan_api">
             <Trans>Read the documentation</Trans>
           </NavLink>
