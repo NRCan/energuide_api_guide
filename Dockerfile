@@ -1,9 +1,12 @@
-FROM node:9.8-alpine
+FROM node:carbon
 MAINTAINER Mike Williamson <mike.williamson@tbs-sct.gc.ca>
 
 WORKDIR /app
-USER node
+#USER node
 ADD . .
 
-EXPOSE 3000
+RUN yarn install && yarn build
+USER node
+
+EXPOSE 3003
 CMD yarn serve
