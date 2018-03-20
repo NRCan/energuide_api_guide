@@ -451,7 +451,7 @@ class SearchLocation extends Component {
     deleteFormData() // clear any previous data
     flash() // clear any previous flash messages
 
-    let clientFilter = { heatingType: 'any' }
+    let clientFilter = { heatingType: 'all' }
     let args = []
     let filters = []
     let variables = {}
@@ -514,7 +514,7 @@ class SearchLocation extends Component {
             variables.naturalGas = 'Natural Gas'
             clientFilter.heatingType = 'Natural Gas'
             break
-          case 'any':
+          case 'all':
             // No need for a filter in this case.
             break
         }
@@ -618,8 +618,8 @@ class SearchLocation extends Component {
                 </Trans>
               </p>
               <Radio
-                label={<Trans>Any</Trans>}
-                value="any"
+                label={<Trans>All</Trans>}
+                value="all"
                 name="heatingType"
                 id="energy-source-3"
               >
@@ -709,7 +709,7 @@ export default compose(
   withApollo,
   reduxForm({
     form: 'searchByLocation',
-    initialValues: { heatingType: 'any' },
+    initialValues: { heatingType: 'all' },
   }),
   connect(mapStateToProps, mapDispatchToProps),
 )(SearchLocation)
