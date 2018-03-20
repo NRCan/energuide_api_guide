@@ -24,7 +24,7 @@ injectGlobal`
     padding: 0;
 		margin: 0;
 		background: ${theme.colour.white};
-		min-height: 100%;
+		height: 100%;
     font-family: ${theme.weight.l}, sans serif;
     font-size: ${theme.font.md};
 	}
@@ -41,7 +41,12 @@ injectGlobal`
     font-size: 1.4em;
   }
 
-  p, a {
+  strong {
+    font-family: ${theme.weight.b};
+    font-size: ${theme.font.md}px;
+  }
+
+  p, {
 		line-height: 1.45;
 	}
 
@@ -49,10 +54,9 @@ injectGlobal`
     margin-bottom: ${theme.spacing.lg}px;
   }
 
-	a {
-		color: ${theme.colour.blue};
-    padding-right: ${theme.spacing.md}px;
-	}
+  li {
+    padding-bottom: 10px;
+  }
 
   form  {
     margin-bottom: ${theme.spacing.xl}px;
@@ -76,6 +80,13 @@ injectGlobal`
     padding-left: ${theme.spacing.xs}px;
   }
 
+  #pageWrap {
+    min-height: calc(100vh - 104px);
+  }
+
+  #foot {
+  }
+
 `
 
 const App = ({ lang }) => (
@@ -86,12 +97,12 @@ const App = ({ lang }) => (
       href="https://fontlibrary.org/face/hk-grotesk"
       type="text/css"
     />
-    <div>
+    <div id="pageWrap">
       <AlphaBanner />
       <FederalBanner />
       <Switcher />
-      <Footer />
     </div>
+    <Footer id="foot" />
   </I18nProvider>
 )
 

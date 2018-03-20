@@ -23,7 +23,8 @@ const FederalBanner = ({ lang }) => (
     <div>
       <GoCSignature
         lang={lang}
-        width="10em"
+        width="250px"
+        height="24px"
         flag={theme.colour.white}
         text={theme.colour.white}
       />
