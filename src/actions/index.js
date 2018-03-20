@@ -12,7 +12,10 @@ export const saveLocationData = (data, { heatingType }) => {
     type: SAVE_LOCATION_LOOKUP_RESULTS,
     data: data.reduce((output, datum) => {
       datum.evaluations.map(evaluation => {
-        if (evaluation.heating.energySourceEnglish === heatingType) {
+        if (
+          evaluation.heating.energySourceEnglish === heatingType ||
+          heatingType === 'all'
+        ) {
           output.push({
             yearBuilt: datum.yearBuilt,
             city: datum.city,
