@@ -33,8 +33,8 @@ export const breakpoints = {
   ms: 600,
   medium: 764,
   large: 992,
-  xLarge: 1200,
-  xxl: 1920,
+  xLarge: 1500,
+  xxl: 3000,
 }
 
 export const theme = {
@@ -112,9 +112,7 @@ export const Header2 = styled.h2`
   font-size: ${theme.font.lg};
   margin-bottom: ${theme.spacing.md}px;
 
-  ${mediaQuery.medium(css`
-    color: blue;
-  `)};
+  ${mediaQuery.medium(css``)};
 `
 
 export const Header3 = styled.h3`
@@ -123,9 +121,7 @@ export const Header3 = styled.h3`
   font-size: ${theme.font.md};
   margin-bottom: 0px;
 
-  ${mediaQuery.medium(css`
-    color: blue;
-  `)};
+  ${mediaQuery.medium(css``)};
 `
 
 export const IndexHeader = styled.header`
@@ -172,20 +168,60 @@ export const HeaderContainer = styled.div`
 `
 
 export const Section = styled.section`
-  padding-left: ${theme.spacing.xxxl}px;
   margin-bottom: ${theme.spacing.xxl}px;
+  padding-left: ${theme.spacing.xxxl}px;
   width: 60%;
   &:first-of-type {
-    margin-top: ${theme.spacing.xxl}px;
+    margin-top: ${theme.spacing.xl}px;
   }
 
   ${mediaQuery.medium(css`
-    width: 100%;
+    width: 90%;
+  `)};
+
+  ${mediaQuery.small(css`
+    width: 85%;
   `)};
 `
 export const PageBody = styled.div`
   margin: 0px;
-  padding: ${theme.spacing.xxl}px ${theme.spacing.xxxl}px;
+  padding: 0px;
   padding-right: 0;
-  width: 70%;
+  width: 100%;
+`
+
+export const UseTheGuide = styled.div`
+  padding-top: ${theme.spacing.md}px;
+  background-color: #f8f8f8;
+`
+
+export const SearchContainer = styled.div`
+  ${mediaQuery.xxl(css`
+    padding-left: ${theme.spacing.xxxl}px;
+    padding-top: ${theme.spacing.xxxl}px;
+  `)};
+
+  ${mediaQuery.xLarge(css`
+    padding-bottom: 4em;
+  `)};
+`
+
+export const LocationContainer = styled.div`
+  padding: ${theme.spacing.xxxl}px ${theme.spacing.xxxl}px
+    ${theme.spacing.xxl}px ${theme.spacing.xxxl}px};
+`
+
+export const ContainerFourOh = styled.div`
+  text-align: center;
+
+  ${mediaQuery.xxl(css`
+    width: 100%;
+    height: 40em;
+    padding-top: 12em;
+  `)};
+
+  ${mediaQuery.xLarge(css`
+    height: 26em;
+    padding-top: 10em;
+  `)};
 `

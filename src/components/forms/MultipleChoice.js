@@ -138,13 +138,12 @@ const cds_multiple_choice = css`
   }
 
   label {
-    display: inline-block;
     padding: 0;
     height: ${theme.spacing.xl}px;
     font-size: ${theme.font.lg};
 
     span {
-      padding: 0 ${theme.spacing.sm}px 0 ${theme.spacing.xs}px;
+      padding: 0 ${theme.spacing.xs}px;
     }
   }
 `
@@ -156,13 +155,13 @@ const radio = css`
     border: 2px solid ${theme.colour.grey};
     width: 22px;
     height: 22px;
-    top: 2px;
+    top: 7px;
     left: 0;
   }
 
   input[type='radio'] + label::after {
     border: 6px solid ${theme.colour.blue};
-    top: 7px;
+    top: 12px;
     left: 5px;
   }
 `
@@ -176,8 +175,8 @@ const Radio = ({ label, value, name, id, children }) => (
     <Field type="radio" component="input" name={name} id={id} value={value} />
     <label htmlFor={id} className={govuk_label_pseudo_elements}>
       {label}
+      {children}
     </label>
-    {children}
   </div>
 )
 

@@ -6,11 +6,19 @@ import Breadcrumbs from './Breadcrumbs'
 import FieldSet from './forms/FieldSet'
 import { Radio } from './forms/MultipleChoice'
 import Button from './forms/Button'
-import TooltipIcon from './TooltipIcon'
+import InfoIcon from './InfoIcon'
 import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
-import { Header1, Header3, PageBody } from './styles'
+import { css } from 'react-emotion'
+import { theme, Header1, SearchContainer } from './styles'
+import FooterLinks from './FooterLinks'
+
+const main = css`
+  form {
+    margin-bottom: ${theme.spacing.xxl}px;
+  }
+`
 
 class Search extends Component {
   static propTypes = {
@@ -46,10 +54,12 @@ class Search extends Component {
           <Trans>Search</Trans>
         </Breadcrumbs>
 
-        <PageBody>
-          <Header1>
-            <Trans>Which parameter would you like to search by?</Trans>
-          </Header1>
+        <SearchContainer>
+          <header>
+            <Header1>
+              <Trans>Which parameter would you like to search by?</Trans>
+            </Header1>
+          </header>
           <p>
             <Trans>
               To test the API, you are able to search by Location or File
@@ -70,7 +80,9 @@ class Search extends Component {
                 name="search"
                 id="search-0"
               >
-                <TooltipIcon dataTip="A location refers to a region or neighbourhood.<br/>You will be searching by the first three digits of any postal code." />
+                <abbr title="A location refers to a region or neighbourhood. You will be searching by the first three digits of any postal code.">
+                  <InfoIcon />
+                </abbr>
               </Radio>
               <Radio
                 label={<Trans>File number</Trans>}
@@ -78,24 +90,17 @@ class Search extends Component {
                 name="search"
                 id="search-1"
               >
-                <TooltipIcon dataTip="A file number refers to an individual home.<br/>This number is provided to the homeowner through EnerGuide." />
+                <abbr title="A file number refers to an individual home. This number is provided to the homeowner through EnerGuide.">
+                  <InfoIcon />
+                </abbr>
               </Radio>
             </FieldSet>
             <Button disabled={pristine || submitting}>
               <Trans>Search</Trans>
             </Button>
           </form>
-
-          <aside>
-            <Header3>
-              <Trans>To see all of the available data,&nbsp;</Trans>
-              <a href="https://github.com/cds-snc/nrcan_api">
-                <Trans>view the EnerGuide API documentation</Trans>
-              </a>
-              <Trans>&nbsp;on GitHub.</Trans>
-            </Header3>
-          </aside>
-        </PageBody>
+        </SearchContainer>
+        <FooterLinks />
       </main>
     )
   }
