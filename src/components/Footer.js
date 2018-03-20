@@ -23,7 +23,12 @@ const Footer = () => (
     <Link href="https://www.canada.ca/en/transparency/privacy.html">
       <Trans>Privacy</Trans>
     </Link>
-    <WordMark width="6em" flag={theme.colour.white} text={theme.colour.white} />
+    <WordMark
+      width="134px"
+      height="32px"
+      flag={theme.colour.white}
+      text={theme.colour.white}
+    />
   </footer>
 )
 
