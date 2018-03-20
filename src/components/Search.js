@@ -71,7 +71,7 @@ class Search extends Component {
                 id="search-0"
               >
                 <abbr title="A location refers to a region or neighbourhood. You will be searching by the first three digits of any postal code.">
-                  <InfoIcon />
+                  <InfoIcon width="22px" />
                 </abbr>
               </Radio>
               <Radio
@@ -81,7 +81,7 @@ class Search extends Component {
                 id="search-1"
               >
                 <abbr title="A file number refers to an individual home. This number is provided to the homeowner through EnerGuide.">
-                  <InfoIcon />
+                  <InfoIcon width="22px" />
                 </abbr>
               </Radio>
             </FieldSet>
