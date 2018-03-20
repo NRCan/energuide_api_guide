@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
-import { Field, reduxForm } from 'redux-form'
+import { reduxForm } from 'redux-form'
 import { NavLink } from 'redux-first-router-link'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import Breadcrumbs from './Breadcrumbs'
+import TextInput from './forms/TextInput'
+import Button from './forms/Button'
 import { compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import { saveFileIdData } from '../actions'
+import { css } from 'react-emotion'
+
+const main = css`
+  .id-span {
+    letter-spacing: -0.04em;
+  }
+`
 
 class SearchFileID extends Component {
   static propTypes = {
@@ -64,58 +74,54 @@ class SearchFileID extends Component {
   render() {
     let { data, handleSubmit, pristine, submitting } = this.props
     return (
-      <main role="main">
-        <section>
-          <nav aria-label="Breadcrumb">
-            <ol>
-              <li>
-                <NavLink to="/">
-                  <Trans>EnerGuide API</Trans>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search">
-                  <Trans>Search by</Trans>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/search-location">
-                  <Trans>Location</Trans>
-                </NavLink>
-              </li>
-            </ol>
-          </nav>
-        </section>
+      <main role="main" className={main}>
+        <Breadcrumbs>
+          <NavLink to="/">
+            <Trans>EnerGuide API</Trans>
+          </NavLink>
+          <NavLink to="/search">
+            <Trans>Search</Trans>
+          </NavLink>
+          <Trans>
+            Search by file <span className="id-span">ID</span>
+          </Trans>
+        </Breadcrumbs>
 
         <div id="page-body">
           <header>
             <h1 id="search-by-fileid-description">
-              <Trans>Search by file ID</Trans>
+              <Trans>
+                Search by file <span className="id-span">ID</span>
+              </Trans>
             </h1>
           </header>
           <form
             onSubmit={handleSubmit(this.handleFormData)}
             aria-labelledby="search-by-description"
           >
-            <h2>
-              <label htmlFor="fileid" id="fileid-label">
-                <Trans>File ID</Trans>
-              </label>
-            </h2>
-            <p id="location-details">
-              <Trans>Search by the file id on your Energuide evaluation.</Trans>
-            </p>
-            <Field
-              id="fildId"
+            <TextInput
               name="fileId"
-              component="input"
-              type="text"
-              value=""
-            />
+              id="fileId"
+              labelledby="fileId-label fileId-details"
+            >
+              <h2>
+                <label htmlFor="fileId" id="fileId-label">
+                  <Trans>
+                    File <span className="id-span">ID</span>
+                  </Trans>
+                </label>
+              </h2>
+              <p id="fileId-details">
+                <Trans>
+                  Search by the file <span className="id-span">ID</span> on your
+                  Energuide evaluation.
+                </Trans>
+              </p>
+            </TextInput>
 
-            <button type="submit" disabled={pristine || submitting}>
+            <Button disabled={pristine || submitting}>
               <Trans>Search</Trans>
-            </button>
+            </Button>
           </form>
 
           <div>{this.showData(data)}</div>
