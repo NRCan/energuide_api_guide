@@ -6,7 +6,7 @@ WORKDIR /app
 #USER node
 ADD . .
 
-RUN yarn install && yarn build:client && yarn build:server
+RUN yarn install && yarn build
 USER node
 
 EXPOSE 3003
