@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        44
+        52
       ]
     ]
   },
@@ -11,11 +11,11 @@
     "origin": [
       [
         "src/components/Search.js",
-        46
+        54
       ],
       [
         "src/components/Search.js",
-        85
+        99
       ]
     ]
   },
@@ -23,7 +23,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        51
+        60
       ]
     ]
   },
@@ -31,7 +31,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        54
+        64
       ]
     ]
   },
@@ -39,7 +39,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        65
+        75
       ]
     ]
   },
@@ -47,7 +47,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        68
+        78
       ]
     ]
   },
@@ -55,31 +55,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        76
-      ]
-    ]
-  },
-  "To see all of the available data,": {
-    "origin": [
-      [
-        "src/components/Search.js",
-        91
-      ]
-    ]
-  },
-  "view the EnerGuide API documentation": {
-    "origin": [
-      [
-        "src/components/Search.js",
-        93
-      ]
-    ]
-  },
-  "on GitHub.": {
-    "origin": [
-      [
-        "src/components/Search.js",
-        95
+        88
       ]
     ]
   }

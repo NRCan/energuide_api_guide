@@ -1,0 +1,62 @@
+{
+  "EnerGuide API": {
+    "origin": [
+      [
+        "src/components/Results.js",
+        21
+      ]
+    ]
+  },
+  "Search": {
+    "origin": [
+      [
+        "src/components/Results.js",
+        24
+      ]
+    ]
+  },
+  "Search by location": {
+    "origin": [
+      [
+        "src/components/Results.js",
+        27
+      ]
+    ]
+  },
+  "Results": {
+    "origin": [
+      [
+        "src/components/Results.js",
+        29
+      ],
+      [
+        "src/components/Results.js",
+        34
+      ]
+    ]
+  },
+  "To see all of the available data,": {
+    "origin": [
+      [
+        "src/components/Results.js",
+        42
+      ]
+    ]
+  },
+  "view the EnerGuide API documentation": {
+    "origin": [
+      [
+        "src/components/Results.js",
+        44
+      ]
+    ]
+  },
+  "on GitHub.": {
+    "origin": [
+      [
+        "src/components/Results.js",
+        46
+      ]
+    ]
+  }
+}

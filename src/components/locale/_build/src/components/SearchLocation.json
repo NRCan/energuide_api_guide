@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        554
+        560
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        565
+        571
       ]
     ]
   },
@@ -19,11 +19,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        568
+        574
       ],
       [
         "src/components/SearchLocation.js",
-        665
+        648
       ]
     ]
   },
@@ -31,11 +31,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        570
+        576
       ],
       [
         "src/components/SearchLocation.js",
-        576
+        582
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        590
+        596
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        594
+        600
       ]
     ]
   },
@@ -59,19 +59,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        604
+        610
       ]
     ]
   },
-  "Search by the type of energy source. Choose the parameter that applies.": {
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        608
-      ]
-    ]
-  },
-  "Any": {
+  "Search by the type of energy source.": {
     "origin": [
       [
         "src/components/SearchLocation.js",
@@ -79,27 +71,11 @@
       ]
     ]
   },
-  "Oil": {
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        624
-      ]
-    ]
-  },
   "Electricity": {
     "origin": [
       [
         "src/components/SearchLocation.js",
-        634
-      ]
-    ]
-  },
-  "Propane": {
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        644
+        617
       ]
     ]
   },
@@ -107,31 +83,31 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        654
+        623
       ]
     ]
   },
-  "To see all of the available data,": {
+  "Propane": {
     "origin": [
       [
         "src/components/SearchLocation.js",
-        673
+        629
       ]
     ]
   },
-  "view the EnerGuide API documentation": {
+  "Oil": {
     "origin": [
       [
         "src/components/SearchLocation.js",
-        675
+        635
       ]
     ]
   },
-  "on GitHub.": {
+  "All": {
     "origin": [
       [
         "src/components/SearchLocation.js",
-        677
+        641
       ]
     ]
   }

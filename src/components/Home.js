@@ -78,12 +78,11 @@ const Home = () => (
             </Header2>
             <p>
               <Trans>
-                An <abbr title="Application Programming Interface">API</abbr>,
-                or <strong>Application Programming Interface</strong>, is a set
-                of routines, protocols and tools for building software. An API
-                makes it easier to develop a computer program by providing all
-                the building blocks, which are then put together by the
-                programmer.
+                An API, or <strong>Application Programming Interface</strong>,
+                is a set of routines, protocols and tools for building software.
+                An API makes it easier to develop a computer program by
+                providing all the building blocks, which are then put together
+                by the programmer.
               </Trans>
             </p>
           </Section>
