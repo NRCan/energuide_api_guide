@@ -72,12 +72,6 @@ injectGlobal`
     }
   }
 
-	#info {
-		top: 5px;
-		left: 5px;
-		display: inline;
-	}
-
   .bottom-link {
     padding-left: ${theme.spacing.xs}px;
   }
