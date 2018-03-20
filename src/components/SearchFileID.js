@@ -11,7 +11,8 @@ import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import { saveFileIdData } from '../actions'
 import { css } from 'react-emotion'
-import { Header1, Header2, Header3, PageBody } from './styles'
+import { Header1, Header2, SearchContainer } from './styles'
+import FooterLinks from './FooterLinks'
 
 const main = css`
   .id-span {
@@ -88,7 +89,7 @@ class SearchFileID extends Component {
           </Trans>
         </Breadcrumbs>
 
-        <PageBody>
+        <SearchContainer>
           <header>
             <Header1 id="search-by-fileid-description">
               <Trans>
@@ -126,17 +127,8 @@ class SearchFileID extends Component {
           </form>
 
           <div>{this.showData(data)}</div>
-
-          <aside>
-            <Header3>
-              <Trans>To see all of the available data,&nbsp;</Trans>
-              <a href="https://github.com/cds-snc/nrcan_api">
-                <Trans>view the EnerGuide API documentation</Trans>
-              </a>
-              <Trans>&nbsp;on GitHub.</Trans>
-            </Header3>
-          </aside>
-        </PageBody>
+        </SearchContainer>
+        <FooterLinks />
       </main>
     )
   }
