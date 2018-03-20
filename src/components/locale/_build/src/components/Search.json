@@ -3,59 +3,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        50
-      ]
-    ]
-  },
-  "Search by": {
-    "origin": [
-      [
-        "src/components/Search.js",
-        57
-      ]
-    ]
-  },
-  "Location": {
-    "origin": [
-      [
-        "src/components/Search.js",
-        64
-      ],
-      [
-        "src/components/Search.js",
-        96
-      ]
-    ]
-  },
-  "Which parameter would you like to search by?": {
-    "origin": [
-      [
-        "src/components/Search.js",
-        75
-      ]
-    ]
-  },
-  "To test the API, you are able to search by Location or File number.": {
-    "origin": [
-      [
-        "src/components/Search.js",
-        79
-      ]
-    ]
-  },
-  "Search by Location or File number": {
-    "origin": [
-      [
-        "src/components/Search.js",
-        87
-      ]
-    ]
-  },
-  "File number": {
-    "origin": [
-      [
-        "src/components/Search.js",
-        109
+        44
       ]
     ]
   },
@@ -63,7 +11,51 @@
     "origin": [
       [
         "src/components/Search.js",
-        116
+        46
+      ],
+      [
+        "src/components/Search.js",
+        85
+      ]
+    ]
+  },
+  "Which parameter would you like to search by?": {
+    "origin": [
+      [
+        "src/components/Search.js",
+        51
+      ]
+    ]
+  },
+  "To test the API, you are able to search by Location or File number.": {
+    "origin": [
+      [
+        "src/components/Search.js",
+        54
+      ]
+    ]
+  },
+  "Search by Location or File number": {
+    "origin": [
+      [
+        "src/components/Search.js",
+        65
+      ]
+    ]
+  },
+  "Location": {
+    "origin": [
+      [
+        "src/components/Search.js",
+        68
+      ]
+    ]
+  },
+  "File number": {
+    "origin": [
+      [
+        "src/components/Search.js",
+        76
       ]
     ]
   },
@@ -71,7 +63,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        122
+        91
       ]
     ]
   },
@@ -79,7 +71,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        124
+        93
       ]
     ]
   },
@@ -87,7 +79,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        126
+        95
       ]
     ]
   }

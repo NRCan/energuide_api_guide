@@ -12,10 +12,10 @@ import FieldSet from './forms/FieldSet'
 import TextInput from './forms/TextInput'
 import { Radio } from './forms/MultipleChoice'
 import Button from './forms/Button'
-import DataTable from './DataTable'
+import Flash from './Flash' // eslint-disable-line import/no-named-as-default
 import { injectGlobal } from 'emotion'
 import { Header1, Header2, Header3, PageBody } from './styles'
-import { saveLocationData, deleteLocationData } from '../actions'
+import { setFlash, saveLocationData, deleteLocationData } from '../actions'
 
 injectGlobal`
 .fixedDataTableCellGroupLayout_cellGroup {
@@ -440,9 +440,16 @@ class SearchLocation extends Component {
   }
 
   async handleFormData(data) {
-    let { client, save, deleteFormData } = this.props
+    let {
+      navigateToResultsPage,
+      client,
+      save,
+      flash,
+      deleteFormData,
+    } = this.props
 
-    deleteFormData()
+    deleteFormData() // clear any previous data
+    flash() // clear any previous flash messages
 
     let clientFilter = { heatingType: 'any' }
     let args = []
@@ -542,18 +549,22 @@ class SearchLocation extends Component {
     })
 
     if (response.errors) {
-      console.log(response.errors) // eslint-disable-line
+      flash(response.errors, 'error')
     } else {
       let { data: { dwellings } } = response
 
-      if (dwellings.results) {
+      if (dwellings.results.length > 0) {
         save(dwellings.results, clientFilter)
-      } // TODO: Redirect for empty results
+        navigateToResultsPage()
+      } else {
+        deleteLocationData()
+        flash(<Trans>No results found</Trans>, 'warn')
+      }
     }
   }
 
   render() {
-    let { data, handleSubmit, pristine, submitting } = this.props
+    let { handleSubmit, pristine, submitting } = this.props
     return (
       <main role="main">
         <Breadcrumbs>
@@ -565,7 +576,7 @@ class SearchLocation extends Component {
           </NavLink>
           <Trans>Search by location</Trans>
         </Breadcrumbs>
-
+        <Flash />
         <PageBody>
           <header>
             <Header1 id="search-by-location-description">
@@ -661,9 +672,6 @@ class SearchLocation extends Component {
               <Trans>Search</Trans>
             </Button>
           </form>
-
-          {data.length > 0 && <DataTable data={data} />}
-
           <aside>
             <Header3>
               <Trans>To see all of the available data,&nbsp;</Trans>
@@ -683,6 +691,10 @@ const mapDispatchToProps = dispatch => {
   return {
     save: (data, filter) => {
       dispatch(saveLocationData(data, filter))
+    },
+    navigateToResultsPage: () => dispatch({ type: 'RESULTS' }),
+    flash: (message, priority) => {
+      dispatch(setFlash(message, priority))
     },
     deleteFormData: () => dispatch(deleteLocationData()),
   }

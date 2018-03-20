@@ -48,3 +48,11 @@ export const deleteLocationData = () => ({
   type: DELETE_LOCATION_LOOKUP_RESULTS,
   data: [],
 })
+
+export const FLASH = 'FLASH'
+
+export const setFlash = (message = null, priority = null) => ({
+  type: FLASH,
+  message,
+  priority,
+})

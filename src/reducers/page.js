@@ -7,6 +7,7 @@ const components = {
   SEARCH: 'Search',
   LOCATION: 'SearchLocation',
   FILEID: 'SearchFileID',
+  RESULTS: 'Results',
   [NOT_FOUND]: 'NotFound',
 }
 
