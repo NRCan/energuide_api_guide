@@ -531,7 +531,6 @@ class SearchLocation extends Component {
           ) {
             results {
               yearBuilt
-              city
               region
               forwardSortationArea
                 evaluations {

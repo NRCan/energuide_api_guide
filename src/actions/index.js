@@ -18,7 +18,6 @@ export const saveLocationData = (data, { heatingType }) => {
         ) {
           output.push({
             yearBuilt: datum.yearBuilt,
-            city: datum.city,
             region: datum.region,
             forwardSortationArea: datum.forwardSortationArea,
             rating: evaluation.ersRating,
