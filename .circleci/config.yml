@@ -35,25 +35,18 @@ jobs:
       - run: yarn test
   deploy:
     docker:
-      # latest LTS version of node
-      - image: circleci/node:carbon
-
-    environment:
-      - PATH: "/opt/yarn/yarn-v1.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-
+      - image: docker
     working_directory: ~/repo
-
     steps:
       - checkout
-      -
-        run:
+      - setup_remote_docker
+      - run:
+          name: "Deploy Proof of Concept (v2) to Azure"
           command: |
-              yarn install
-              yarn add now
-              URL=$(./node_modules/now/download/dist/now --token ${NOW_TOKEN} --public --npm)
-              ./node_modules/now/download/dist/now --token ${NOW_TOKEN} alias set ${URL} poc
-              ./node_modules/now/download/dist/now --token ${NOW_TOKEN} rm proof-of-concept-v2 --safe --yes
-          name: "Deploy Proof of Concept (v2) to now.sh"
+           docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+           docker build  -t "${DOCKER_REGISTRY}/${NAMESPACE}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}" -t "${DOCKER_REGISTRY}/${NAMESPACE}/${CIRCLE_PROJECT_REPONAME}:latest" .
+           docker push "${DOCKER_REGISTRY}/${NAMESPACE}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}"
+           docker push "${DOCKER_REGISTRY}/${NAMESPACE}/${CIRCLE_PROJECT_REPONAME}:latest"
 
 workflows:
   version: 2
@@ -65,4 +58,5 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only:
+                - master
