@@ -7,7 +7,6 @@ import Breadcrumbs from './Breadcrumbs'
 import TextInput from './forms/TextInput'
 import Button from './forms/Button'
 import { compose, withApollo } from 'react-apollo'
-import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import { saveFileIdData } from '../actions'
 import { css } from 'react-emotion'
@@ -37,44 +36,16 @@ class SearchFileID extends Component {
   }
 
   async handleFormData(data) {
-    let { client, save } = this.props
-
-    let response = await client.query({
-      query: gql`
-        query POCSearchByFileId($houseId: Int!) {
-          dwelling(houseId: $houseId) {
-            houseId
-            yearBuilt
-            evaluations {
-              fileId
-              ersRating
-            }
-          }
-        }
-      `,
-      variables: { houseId: data.fileId },
+    let { save } = this.props
+    save(data)
+    this.props.dispatch({
+      type: 'RESULTSFILEID',
+      payload: { fileId: data.fileId },
     })
-
-    let { data: { dwelling } } = response
-    const display = {
-      houseId: dwelling.houseId,
-      yearBuilt: dwelling.yearBuilt,
-      ersRating: dwelling.evaluations[0].ersRating,
-    }
-    save(display)
-  }
-
-  showData(data) {
-    let elements = Object.entries(data).map(datum => (
-      <p key={datum.toString()}>
-        {datum[0]}: {datum[1]}
-      </p>
-    ))
-    return elements
   }
 
   render() {
-    let { data, handleSubmit, pristine, submitting } = this.props
+    let { handleSubmit, pristine, submitting } = this.props
     return (
       <main role="main" className={main}>
         <Breadcrumbs>
@@ -125,8 +96,6 @@ class SearchFileID extends Component {
               <Trans>Search</Trans>
             </Button>
           </form>
-
-          <div>{this.showData(data)}</div>
         </SearchContainer>
         <FooterLinks />
       </main>
@@ -149,6 +118,8 @@ const mapStateToProps = state => ({
 
 export default compose(
   withApollo,
-  reduxForm({ form: 'searchByfileId' }),
+  reduxForm({
+    form: 'searchFileId',
+  }),
   connect(mapStateToProps, mapDispatchToProps),
 )(SearchFileID)
