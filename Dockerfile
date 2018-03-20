@@ -1,6 +1,6 @@
 FROM node:carbon
 MAINTAINER Mike Williamson <mike.williamson@tbs-sct.gc.ca>
-LABEL Description="Government of Canada NRCAN Proof of Concept"
+LABEL Description="Government of Canada NRCAN Proof of Concept" Vendor="Canadian Digital Service"
 
 WORKDIR /app
 #USER node
