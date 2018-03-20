@@ -15,7 +15,6 @@ import Flash from './Flash' // eslint-disable-line import/no-named-as-default
 import { injectGlobal } from 'emotion'
 import { Header1, Header2, LocationContainer } from './styles'
 import { setFlash, saveLocationData, deleteLocationData } from '../actions'
-import { saveLocationData } from '../actions'
 import FooterLinks from './FooterLinks'
 
 injectGlobal`

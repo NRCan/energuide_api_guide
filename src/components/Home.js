@@ -19,10 +19,6 @@ import {
 } from './styles'
 import CircuitHouse from './CircuitHouse'
 
-const main = css`
-  margin-bottom: ${theme.spacingXlarge3}px;
-`
-
 const headerLink = css`
   color: ${theme.colour.blue};
   padding-right: ${theme.spacing.md}px;
@@ -38,7 +34,7 @@ const noSpaceLink = css`
 const Home = () => (
   <ThemeProvider theme={theme}>
     <div id="pageWrap">
-      <main role="main" className={main}>
+      <main role="main">
         <IndexHeader>
           <HeaderContainer>
             <div id="page-header">
@@ -61,7 +57,7 @@ const Home = () => (
               <Trans>Test the API</Trans>
             </NavLink>
             <a
-              href="https://github.com/cds-snc/nrcan_api"
+              href="https://github.com/cds-snc/nrcan_api/blob/master/api/docs.md"
               className={headerLink}
             >
               <Trans>View the documentation</Trans>
@@ -125,12 +121,12 @@ const Home = () => (
               </Header2>
               <p>
                 <Trans>
-                  To learn how to use the API, we have provided the{' '}
+                  To learn how to use the API,{' '}
                   <a
-                    href="https://github.com/cds-snc/nrcan_api"
+                    href="https://github.com/cds-snc/nrcan_api/blob/master/api/docs.md"
                     className={noSpaceLink}
                   >
-                    <Trans>documentation on Github.</Trans>
+                    <Trans>we have provided the documentation on Github.</Trans>
                   </a>
                   The documentation will show all of the data types available
                   under the EnerGuide API.

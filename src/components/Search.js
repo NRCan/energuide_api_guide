@@ -6,7 +6,7 @@ import Breadcrumbs from './Breadcrumbs'
 import FieldSet from './forms/FieldSet'
 import { Radio } from './forms/MultipleChoice'
 import Button from './forms/Button'
-import InfoIcon from './InfoIcon'
+import TooltipIcon from './TooltipIcon'
 import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
@@ -80,9 +80,7 @@ class Search extends Component {
                 name="search"
                 id="search-0"
               >
-                <abbr title="A location refers to a region or neighbourhood. You will be searching by the first three digits of any postal code.">
-                  <InfoIcon />
-                </abbr>
+                <TooltipIcon dataTip="A location refers to a region or neighbourhood.<br/>You will be searching by the first three digits of any postal code." />
               </Radio>
               <Radio
                 label={<Trans>File number</Trans>}
@@ -90,9 +88,7 @@ class Search extends Component {
                 name="search"
                 id="search-1"
               >
-                <abbr title="A file number refers to an individual home. This number is provided to the homeowner through EnerGuide.">
-                  <InfoIcon />
-                </abbr>
+                <TooltipIcon dataTip="A file number refers to an individual home.<br/>This number is provided to the homeowner through EnerGuide." />
               </Radio>
             </FieldSet>
             <Button disabled={pristine || submitting}>

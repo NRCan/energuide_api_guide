@@ -50,6 +50,8 @@ export const theme = {
     gray: '#4A4A4A',
     greyLight: '#DBDBDB',
     grayLight: '#DBDBDB',
+    greyVeryLight: '#F8F8F8',
+    grayVeryLight: '#F8F8F8',
     white: '#FFFFFF',
     black: '#000000',
     focus: '#ffbf47',
@@ -111,8 +113,6 @@ export const Header2 = styled.h2`
   font-family: ${theme.weight.b}, sans-serif;
   font-size: ${theme.font.lg};
   margin-bottom: ${theme.spacing.md}px;
-
-  ${mediaQuery.medium(css``)};
 `
 
 export const Header3 = styled.h3`
@@ -120,8 +120,6 @@ export const Header3 = styled.h3`
   font-family: ${theme.weight.b}, sans-serif;
   font-size: ${theme.font.md};
   margin-bottom: 0px;
-
-  ${mediaQuery.medium(css``)};
 `
 
 export const IndexHeader = styled.header`
@@ -192,7 +190,7 @@ export const PageBody = styled.div`
 
 export const UseTheGuide = styled.div`
   padding-top: ${theme.spacing.md}px;
-  background-color: #f8f8f8;
+  background-color: ${theme.colour.greyVeryLight};
 `
 
 export const SearchContainer = styled.div`

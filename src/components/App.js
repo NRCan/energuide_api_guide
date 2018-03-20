@@ -48,9 +48,6 @@ injectGlobal`
 
   p, {
 		line-height: 1.45;
-	}
-
-  p {
     margin-bottom: ${theme.spacing.lg}px;
   }
 
@@ -83,10 +80,6 @@ injectGlobal`
   #pageWrap {
     min-height: calc(100vh - 104px);
   }
-
-  #foot {
-  }
-
 `
 
 const App = ({ lang }) => (
@@ -102,7 +95,7 @@ const App = ({ lang }) => (
       <FederalBanner />
       <Switcher />
     </div>
-    <Footer id="foot" />
+    <Footer />
   </I18nProvider>
 )
 
