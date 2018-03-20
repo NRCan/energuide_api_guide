@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'react-emotion'
-import { spacing, visuallyhidden } from '../styles'
+import { theme, visuallyhidden } from '../styles'
 
 const fieldset = css`
   border: none;
-  margin-bottom: ${spacing.xl}px;
+  margin-bottom: ${theme.spacing.xl}px;
 `
 
 const legendHidden = css`

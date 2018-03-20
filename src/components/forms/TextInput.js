@@ -2,19 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
 import { css } from 'react-emotion'
-import { colours, fontSizes, spacing, roundedEdges } from '../styles'
+import { theme, roundedEdges } from '../styles'
 
 const text_input = css`
-  font-size: ${fontSizes.md};
-  border: 3px solid ${colours.grey}};
+  font-size: ${theme.font.md};
+  border: 3px solid ${theme.colour.grey}};
   outline: 0;
-  padding: ${spacing.sm}px;
+  padding: ${theme.spacing.sm}px;
   width: 300px;
-  margin-bottom: ${spacing.xl}px;
+  margin-bottom: ${theme.spacing.xl}px;
   ${roundedEdges};
 
   &:focus {
-    outline: 3px solid ${colours.focus};
+    outline: 3px solid ${theme.colour.focus};
     outline-offset: 0px;
   }
 `

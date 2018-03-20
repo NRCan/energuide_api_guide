@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { setLanguage } from '../actions'
 import styled from 'react-emotion'
-import { fontSizes } from './styles'
+import { theme } from './styles'
 
 const A = styled('a')`
-  font-size: ${fontSizes.sm};
+  font-size: ${theme.font.sm};
   text-decoration: underline;
   position: relative;
   right: 0.3em;
-  color: white;
+  color: ${theme.colour.white};
   &:visited {
     color: #7834bc;
   }

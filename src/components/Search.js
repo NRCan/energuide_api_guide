@@ -10,6 +10,7 @@ import InfoIcon from './InfoIcon'
 import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
+import { Header1, Header3, PageBody } from './styles'
 
 class Search extends Component {
   static propTypes = {
@@ -45,12 +46,10 @@ class Search extends Component {
           <Trans>Search</Trans>
         </Breadcrumbs>
 
-        <div id="page-body">
-          <header>
-            <h1>
-              <Trans>Which parameter would you like to search by?</Trans>
-            </h1>
-          </header>
+        <PageBody>
+          <Header1>
+            <Trans>Which parameter would you like to search by?</Trans>
+          </Header1>
           <p>
             <Trans>
               To test the API, you are able to search by Location or File
@@ -92,15 +91,15 @@ class Search extends Component {
           </form>
 
           <aside>
-            <h3>
+            <Header3>
               <Trans>To see all of the available data,&nbsp;</Trans>
               <a href="https://github.com/cds-snc/nrcan_api">
                 <Trans>view the EnerGuide API documentation</Trans>
               </a>
               <Trans>&nbsp;on GitHub.</Trans>
-            </h3>
+            </Header3>
           </aside>
-        </div>
+        </PageBody>
       </main>
     )
   }

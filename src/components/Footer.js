@@ -2,20 +2,20 @@ import React from 'react'
 import { WordMark } from '@cdssnc/gcui'
 import { Trans } from 'lingui-react'
 import styled, { css } from 'react-emotion'
-import { colours, spacing, fontSizes } from './styles'
+import { theme } from './styles'
 
 const footer = css`
-  background-color: ${colours.black};
-  padding: ${spacing.xl}px ${spacing.xxxl}px;
+  background-color: ${theme.colour.black};
+  padding: ${theme.spacing.xl}px ${theme.spacing.xxxl}px;
   display: flex;
   justify-content: space-between;
   position: relative;
 `
 
 const Link = styled.a`
-  color: ${colours.white};
-  margin-top: ${spacing.lg}px;
-  font-size: ${fontSizes.sm};
+  color: ${theme.colour.white};
+  margin-top: ${theme.spacing.lg}px;
+  font-size: ${theme.font.sm};
 `
 
 const Footer = () => (
@@ -23,7 +23,7 @@ const Footer = () => (
     <Link href="https://www.canada.ca/en/transparency/privacy.html">
       <Trans>Privacy</Trans>
     </Link>
-    <WordMark width="6em" flag={colours.white} text={colours.white} />
+    <WordMark width="6em" flag={theme.colour.white} text={theme.colour.white} />
   </footer>
 )
 
