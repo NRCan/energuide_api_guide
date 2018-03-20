@@ -41,12 +41,12 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: "Deploy Proof of Concept (v2) to Azure"
           command: |
            docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
            docker build  -t "${DOCKER_REGISTRY}/${NAMESPACE}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}" -t "${DOCKER_REGISTRY}/${NAMESPACE}/${CIRCLE_PROJECT_REPONAME}:latest" .
            docker push "${DOCKER_REGISTRY}/${NAMESPACE}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}"
            docker push "${DOCKER_REGISTRY}/${NAMESPACE}/${CIRCLE_PROJECT_REPONAME}:latest"
-           name: "Deploy Proof of Concept (v2) to Azure"
 
 workflows:
   version: 2
