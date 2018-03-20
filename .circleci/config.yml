@@ -58,4 +58,4 @@ workflows:
             - build
           filters:
             branches:
-              only: deploy_to_azure
+              only: master
