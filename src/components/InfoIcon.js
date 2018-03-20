@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { theme } from './styles'
 
-const InfoIcon = ({ width = '0.8em', text = '#fff', circle = '#4A4A4A' }) => (
+const InfoIcon = ({ width = '0.8em', text = null, circle = null }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     id="info"
@@ -11,16 +12,22 @@ const InfoIcon = ({ width = '0.8em', text = '#fff', circle = '#4A4A4A' }) => (
   >
     <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
       <g>
-        <circle r="10" cy="10" cx="10" fill={circle} id="Oval" />
+        <circle
+          r="10"
+          cy="10"
+          cx="10"
+          fill={circle || theme.colour.grey}
+          id="Oval"
+        />
         <text
-          fill={text}
+          fill={text || theme.colour.white}
           fontWeight="normal"
-          fontSize="20"
-          fontFamily="Helvetica"
+          fontSize="16"
+          fontFamily={theme.weight.m}
           id="i"
         >
-          <tspan id="tspan9" y="17" x="8">
-            i
+          <tspan id="tspan9" y="15.5" x="6">
+            ?
           </tspan>
         </text>
       </g>
