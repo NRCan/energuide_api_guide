@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
 import { css } from 'react-emotion'
-import { colours, fontSizes, spacing, roundedEdges } from '../styles'
+import { theme, roundedEdges } from '../styles'
 
 const govuk_multiple_choice = css`
   display: block;
@@ -129,8 +129,8 @@ const govuk_label_pseudo_elements = css`
 `
 
 const cds_multiple_choice = css`
-  padding: 0 0 0 ${spacing.xl}px;
-  margin-bottom: ${spacing.sm}px;
+  padding: 0 0 0 ${theme.spacing.xl}px;
+  margin-bottom: ${theme.spacing.sm}px;
 
   input {
     width: 24px;
@@ -139,11 +139,11 @@ const cds_multiple_choice = css`
 
   label {
     padding: 0;
-    height: ${spacing.xl}px;
-    font-size: ${fontSizes.lg};
+    height: ${theme.spacing.xl}px;
+    font-size: ${theme.font.lg};
 
     span {
-      padding: 0 ${spacing.xs}px;
+      padding: 0 ${theme.spacing.xs}px;
     }
   }
 `
@@ -152,7 +152,7 @@ const radio = css`
   ${cds_multiple_choice};
 
   input[type='radio'] + label::before {
-    border: 2px solid ${colours.grey};
+    border: 2px solid ${theme.colour.grey};
     width: 22px;
     height: 22px;
     top: 7px;
@@ -160,7 +160,7 @@ const radio = css`
   }
 
   input[type='radio'] + label::after {
-    border: 6px solid ${colours.blue};
+    border: 6px solid ${theme.colour.blue};
     top: 12px;
     left: 5px;
   }
@@ -184,7 +184,7 @@ const checkbox = css`
   ${cds_multiple_choice};
 
   input[type='checkbox'] + label::before {
-    border: 2px solid ${colours.grey};
+    border: 2px solid ${theme.colour.grey};
     width: 22px;
     height: 22px;
     top: 2px;

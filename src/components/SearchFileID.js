@@ -11,6 +11,7 @@ import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import { saveFileIdData } from '../actions'
 import { css } from 'react-emotion'
+import { Header1, Header2, Header3, PageBody } from './styles'
 
 const main = css`
   .id-span {
@@ -87,13 +88,13 @@ class SearchFileID extends Component {
           </Trans>
         </Breadcrumbs>
 
-        <div id="page-body">
+        <PageBody>
           <header>
-            <h1 id="search-by-fileid-description">
+            <Header1 id="search-by-fileid-description">
               <Trans>
                 Search by file <span className="id-span">ID</span>
               </Trans>
-            </h1>
+            </Header1>
           </header>
           <form
             onSubmit={handleSubmit(this.handleFormData)}
@@ -104,13 +105,13 @@ class SearchFileID extends Component {
               id="fileId"
               labelledby="fileId-label fileId-details"
             >
-              <h2>
+              <Header2>
                 <label htmlFor="fileId" id="fileId-label">
                   <Trans>
                     File <span className="id-span">ID</span>
                   </Trans>
                 </label>
-              </h2>
+              </Header2>
               <p id="fileId-details">
                 <Trans>
                   Search by the file <span className="id-span">ID</span> on your
@@ -127,15 +128,15 @@ class SearchFileID extends Component {
           <div>{this.showData(data)}</div>
 
           <aside>
-            <h3>
+            <Header3>
               <Trans>To see all of the available data,&nbsp;</Trans>
               <a href="https://github.com/cds-snc/nrcan_api">
                 <Trans>view the EnerGuide API documentation</Trans>
               </a>
               <Trans>&nbsp;on GitHub.</Trans>
-            </h3>
+            </Header3>
           </aside>
-        </div>
+        </PageBody>
       </main>
     )
   }

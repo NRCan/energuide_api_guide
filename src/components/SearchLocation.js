@@ -14,6 +14,7 @@ import Button from './forms/Button'
 import DataTable from './DataTable'
 import { injectGlobal } from 'emotion'
 import { saveLocationData } from '../actions'
+import { Header1, Header2, Header3, PageBody } from './styles'
 
 injectGlobal`
 .fixedDataTableCellGroupLayout_cellGroup {
@@ -519,11 +520,11 @@ class SearchLocation extends Component {
           <Trans>Search by location</Trans>
         </Breadcrumbs>
 
-        <div id="page-body">
+        <PageBody>
           <header>
-            <h1 id="search-by-location-description">
+            <Header1 id="search-by-location-description">
               <Trans>Search by location</Trans>
-            </h1>
+            </Header1>
           </header>
           <form
             onSubmit={handleSubmit(this.handleFormData)}
@@ -534,11 +535,11 @@ class SearchLocation extends Component {
               id="location"
               labelledby="location-label location-details"
             >
-              <h2>
+              <Header2>
                 <label htmlFor="location" id="location-label">
                   <Trans>Location</Trans>
                 </label>
-              </h2>
+              </Header2>
               <p id="location-details">
                 <Trans>
                   Search for a region by submitting the first three digits of a
@@ -549,9 +550,9 @@ class SearchLocation extends Component {
             <hr />
             <FieldSet legendHidden={false}>
               <legend>
-                <h2>
+                <Header2>
                   <Trans>Filters</Trans>
-                </h2>
+                </Header2>
               </legend>
               <p>
                 <Trans>
@@ -586,15 +587,15 @@ class SearchLocation extends Component {
           {data.length > 0 && <DataTable data={data} />}
 
           <aside>
-            <h3>
+            <Header3>
               <Trans>To see all of the available data,&nbsp;</Trans>
               <a href="https://github.com/cds-snc/nrcan_api">
                 <Trans>view the EnerGuide API documentation</Trans>
               </a>
               <Trans>&nbsp;on GitHub.</Trans>
-            </h3>
+            </Header3>
           </aside>
-        </div>
+        </PageBody>
       </main>
     )
   }

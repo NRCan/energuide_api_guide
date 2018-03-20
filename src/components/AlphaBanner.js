@@ -1,19 +1,19 @@
 import React from 'react'
 import { Trans } from 'lingui-react'
 import { css } from 'react-emotion'
-import { colours, spacing, fontSizes, roundedEdges } from './styles'
+import { theme, roundedEdges } from './styles'
 
 const banner = css`
-  background-color: ${colours.grey};
-  color: ${colours.white};
-  padding-left: ${spacing.xxxl}px;
-  padding-right: ${spacing.xxxl}px;
+  background-color: ${theme.colour.grey};
+  color: ${theme.colour.white};
+  padding-left: ${theme.spacing.xxxl}px;
+  padding-right: ${theme.spacing.xxxl}px;
   padding-top: 12px;
-  padding-bottom: ${spacing.sm}px;
+  padding-bottom: ${theme.spacing.sm}px;
 `
 
 const alpha = css`
-  font-size: ${fontSizes.xs};
+  font-size: ${theme.font.xs};
   margin-bottom: 0;
 `
 
@@ -23,16 +23,16 @@ const statusBar = css`
   color: white;
   position: relative;
   display: inline-block;
-  font-size: ${fontSizes.xs};
+  font-size: ${theme.font.xs};
   bottom: 2px;
-  padding: 2px ${spacing.md}px;
-  margin-right: ${spacing.md}px;
-  background-color: ${colours.blueAlpha};
+  padding: 2px ${theme.spacing.md}px;
+  margin-right: ${theme.spacing.md}px;
+  background-color: ${theme.colour.blueAlpha};
   ${roundedEdges};
 `
 
 const link = css`
-  color: ${colours.white};
+  color: ${theme.colour.white};
   padding: 0;
 `
 

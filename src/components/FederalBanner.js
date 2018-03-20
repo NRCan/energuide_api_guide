@@ -4,14 +4,15 @@ import { GoCSignature } from '@cdssnc/gcui'
 import LanguageSwitcher from './LanguageSwitcher'
 import { connect } from 'react-redux'
 import { css } from 'react-emotion'
-import { colours, spacing, mediaQuery } from './styles'
+import { theme, mediaQuery } from './styles'
 
 const container = css`
-  padding: ${spacing.lg}px ${spacing.xxxl}px ${spacing.md}px ${spacing.xxxl}px;
+  padding: ${theme.spacing.lg}px ${theme.spacing.xxxl}px ${theme.spacing.md}px
+    ${theme.spacing.xxxl}px;
   display: flex;
   width: auto;
   justify-content: space-between;
-  background-color: ${colours.black};
+  background-color: ${theme.colour.black};
   ${mediaQuery.medium(css`
     display: block;
   `)};
@@ -23,8 +24,8 @@ const FederalBanner = ({ lang }) => (
       <GoCSignature
         lang={lang}
         width="10em"
-        flag={colours.white}
-        text={colours.white}
+        flag={theme.colour.white}
+        text={theme.colour.white}
       />
     </div>
 
