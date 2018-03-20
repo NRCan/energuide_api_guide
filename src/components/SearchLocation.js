@@ -7,7 +7,6 @@ import { compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import Breadcrumbs from './Breadcrumbs'
-import InfoIcon from './InfoIcon'
 import FieldSet from './forms/FieldSet'
 import TextInput from './forms/TextInput'
 import { Radio } from './forms/MultipleChoice'
@@ -612,61 +611,38 @@ class SearchLocation extends Component {
                 </Header2>
               </legend>
               <p>
-                <Trans>
-                  Search by the type of energy source. Choose the parameter that
-                  applies.
-                </Trans>
+                <Trans>Search by the type of energy source.</Trans>
               </p>
-              <Radio
-                label={<Trans>All</Trans>}
-                value="all"
-                name="heatingType"
-                id="energy-source-3"
-              >
-                <abbr title="Return dwellings regardless of their primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
-              <Radio
-                label={<Trans>Oil</Trans>}
-                value="oil"
-                name="heatingType"
-                id="energy-source-0"
-              >
-                <abbr title="The dwelling uses oil as it's primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
               <Radio
                 label={<Trans>Electricity</Trans>}
                 value="electricity"
                 name="heatingType"
                 id="energy-source-1"
-              >
-                <abbr title="The dwelling uses electricity as it's primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
-              <Radio
-                label={<Trans>Propane</Trans>}
-                value="propane"
-                name="heatingType"
-                id="energy-source-2"
-              >
-                <abbr title="The dwelling uses propane as it's primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
+              />
               <Radio
                 label={<Trans>Natural gas</Trans>}
                 value="natural-gas"
                 name="heatingType"
                 id="energy-source-3"
-              >
-                <abbr title="The dwelling uses natural gas as it's primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
+              />
+              <Radio
+                label={<Trans>Propane</Trans>}
+                value="propane"
+                name="heatingType"
+                id="energy-source-2"
+              />
+              <Radio
+                label={<Trans>Oil</Trans>}
+                value="oil"
+                name="heatingType"
+                id="energy-source-0"
+              />
+              <Radio
+                label={<Trans>All</Trans>}
+                value="all"
+                name="heatingType"
+                id="energy-source-3"
+              />
             </FieldSet>
             <Button disabled={pristine || submitting}>
               <Trans>Search</Trans>
