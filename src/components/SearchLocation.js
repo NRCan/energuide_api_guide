@@ -14,8 +14,8 @@ import { Radio } from './forms/MultipleChoice'
 import Button from './forms/Button'
 import DataTable from './DataTable'
 import { injectGlobal } from 'emotion'
-import { saveLocationData } from '../actions'
 import { Header1, Header2, Header3, PageBody } from './styles'
+import { saveLocationData, deleteLocationData } from '../actions'
 
 injectGlobal`
 .fixedDataTableCellGroupLayout_cellGroup {
@@ -440,71 +440,79 @@ class SearchLocation extends Component {
   }
 
   async handleFormData(data) {
+    let { client, save, deleteFormData } = this.props
+
+    deleteFormData()
+
+    let clientFilter = { heatingType: 'any' }
     let args = []
     let filters = []
     let variables = {}
     Object.entries(data).forEach(([key, value]) => {
-      switch (key) {
-        case 'location':
-          filters.push(`{
+      if (key === 'location') {
+        filters.push(`{
                 field: dwellingForwardSortationArea
                 comparator: eq
                 value: $location
               }`)
-          args.push('$location: String!')
-          variables.location = value
-          break
-        case 'oil':
-          filters.push(`
+        args.push('$location: String!')
+        variables.location = value
+      } else {
+        switch (value) {
+          case 'oil':
+            filters.push(`
               {
                 field: heatingEnergySourceEnglish
                 comparator: eq
                 value: $oil
               }
           `)
-          args.push('$oil: String!')
-          variables.oil = 'Oil Space Heating'
-          break
-        case 'electricity':
-          filters.push(`
+            args.push('$oil: String!')
+            variables.oil = 'Oil Space Heating'
+            clientFilter.heatingType = 'Oil Space Heating'
+            break
+          case 'electricity':
+            filters.push(`
               {
                 field: heatingEnergySourceEnglish
                 comparator: eq
                 value: $electricity
               }
           `)
-          args.push('$electricity: String!')
-          variables.electricity = 'Electric Space Heating'
-          break
-        case 'propane':
-          filters.push(`
+            args.push('$electricity: String!')
+            variables.electricity = 'Electric Space Heating'
+            clientFilter.heatingType = 'Electric Space Heating'
+            break
+          case 'propane':
+            filters.push(`
               {
                 field: heatingEnergySourceEnglish
                 comparator: eq
                 value: $propane
               }
           `)
-          args.push('$propane: String!')
-          variables.propane = 'Propane Space Heating'
-          break
-        case 'naturalGas':
-          filters.push(`
+            args.push('$propane: String!')
+            variables.propane = 'Propane Space Heating'
+            clientFilter.heatingType = 'Propane Space Heating'
+            break
+          case 'natural-gas':
+            filters.push(`
               {
                 field: heatingEnergySourceEnglish
                 comparator: eq
                 value: $naturalGas
               }
           `)
-          args.push('$naturalGas: String!')
-          variables.naturalGas = 'Natural Gas'
-          break
-        case 'any':
-          // No need for a filter in this case.
-          break
+            args.push('$naturalGas: String!')
+            variables.naturalGas = 'Natural Gas'
+            clientFilter.heatingType = 'Natural Gas'
+            break
+          case 'any':
+            // No need for a filter in this case.
+            break
+        }
       }
     })
-
-    let { client, save } = this.props
 
     let response = await client.query({
       query: gql`
@@ -521,6 +529,7 @@ class SearchLocation extends Component {
               region
               forwardSortationArea
                 evaluations {
+                  ersRating
                   heating {
                   energySourceEnglish
                 }
@@ -537,9 +546,8 @@ class SearchLocation extends Component {
     } else {
       let { data: { dwellings } } = response
 
-      console.log(dwellings.results) // eslint-disable-line
       if (dwellings.results) {
-        save(dwellings.results)
+        save(dwellings.results, clientFilter)
       } // TODO: Redirect for empty results
     }
   }
@@ -673,9 +681,10 @@ class SearchLocation extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    save: data => {
-      dispatch(saveLocationData(data))
+    save: (data, filter) => {
+      dispatch(saveLocationData(data, filter))
     },
+    deleteFormData: () => dispatch(deleteLocationData()),
   }
 }
 
