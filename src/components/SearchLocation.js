@@ -7,14 +7,15 @@ import { compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import Breadcrumbs from './Breadcrumbs'
+import InfoIcon from './InfoIcon'
 import FieldSet from './forms/FieldSet'
 import TextInput from './forms/TextInput'
-import { Checkbox } from './forms/MultipleChoice'
+import { Radio } from './forms/MultipleChoice'
 import Button from './forms/Button'
 import DataTable from './DataTable'
 import { injectGlobal } from 'emotion'
-import { saveLocationData } from '../actions'
 import { Header1, Header2, Header3, PageBody } from './styles'
+import { saveLocationData, deleteLocationData } from '../actions'
 
 injectGlobal`
 .fixedDataTableCellGroupLayout_cellGroup {
@@ -439,59 +440,100 @@ class SearchLocation extends Component {
   }
 
   async handleFormData(data) {
+    let { client, save, deleteFormData } = this.props
+
+    deleteFormData()
+
+    let clientFilter = { heatingType: 'any' }
     let args = []
     let filters = []
     let variables = {}
     Object.entries(data).forEach(([key, value]) => {
-      switch (key) {
-        case 'location':
-          filters.push(`{
+      if (key === 'location') {
+        filters.push(`{
                 field: dwellingForwardSortationArea
                 comparator: eq
                 value: $location
               }`)
-          args.push('$location: String!')
-          variables.location = value
-          break
-        case 'oil':
-          filters.push(`
+        args.push('$location: String!')
+        variables.location = value
+      } else {
+        switch (value) {
+          case 'oil':
+            filters.push(`
               {
                 field: heatingEnergySourceEnglish
                 comparator: eq
                 value: $oil
               }
           `)
-          args.push('$oil: String!')
-          variables.oil = 'Oil'
-          break
-        case 'naturalGas':
-          filters.push(`
+            args.push('$oil: String!')
+            variables.oil = 'Oil Space Heating'
+            clientFilter.heatingType = 'Oil Space Heating'
+            break
+          case 'electricity':
+            filters.push(`
+              {
+                field: heatingEnergySourceEnglish
+                comparator: eq
+                value: $electricity
+              }
+          `)
+            args.push('$electricity: String!')
+            variables.electricity = 'Electric Space Heating'
+            clientFilter.heatingType = 'Electric Space Heating'
+            break
+          case 'propane':
+            filters.push(`
+              {
+                field: heatingEnergySourceEnglish
+                comparator: eq
+                value: $propane
+              }
+          `)
+            args.push('$propane: String!')
+            variables.propane = 'Propane Space Heating'
+            clientFilter.heatingType = 'Propane Space Heating'
+            break
+          case 'natural-gas':
+            filters.push(`
               {
                 field: heatingEnergySourceEnglish
                 comparator: eq
                 value: $naturalGas
               }
           `)
-          args.push('$naturalGas: String!')
-          variables.naturalGas = 'Natural Gas'
-          break
+            args.push('$naturalGas: String!')
+            variables.naturalGas = 'Natural Gas'
+            clientFilter.heatingType = 'Natural Gas'
+            break
+          case 'any':
+            // No need for a filter in this case.
+            break
+        }
       }
     })
-    let { client, save } = this.props
+
     let response = await client.query({
       query: gql`
         query POCSearchLocation(${args}) {
           dwellings(
+            limit: 100
             filters: [
               ${filters}
             ]
           ) {
             results {
-              houseId
               yearBuilt
               city
               region
               forwardSortationArea
+                evaluations {
+                  ersRating
+                  heating {
+                  energySourceEnglish
+                }
+              }
             }
           }
         }
@@ -499,11 +541,15 @@ class SearchLocation extends Component {
       variables,
     })
 
-    let { data: { dwellings } } = response
+    if (response.errors) {
+      console.log(response.errors) // eslint-disable-line
+    } else {
+      let { data: { dwellings } } = response
 
-    if (dwellings.results) {
-      save(dwellings.results)
-    } // TODO: Redirect for empty results
+      if (dwellings.results) {
+        save(dwellings.results, clientFilter)
+      } // TODO: Redirect for empty results
+    }
   }
 
   render() {
@@ -556,28 +602,60 @@ class SearchLocation extends Component {
               </legend>
               <p>
                 <Trans>
-                  Search by the type of energy source. Choose all of the
-                  parameters that apply.
+                  Search by the type of energy source. Choose the parameter that
+                  applies.
                 </Trans>
               </p>
-              <Checkbox
+              <Radio
+                label={<Trans>Any</Trans>}
+                value="any"
+                name="heatingType"
+                id="energy-source-3"
+              >
+                <abbr title="Return dwellings regardless of their primary heat source.">
+                  <InfoIcon />
+                </abbr>
+              </Radio>
+              <Radio
                 label={<Trans>Oil</Trans>}
                 value="oil"
-                name="oil"
+                name="heatingType"
                 id="energy-source-0"
-              />
-              <Checkbox
+              >
+                <abbr title="The dwelling uses oil as it's primary heat source.">
+                  <InfoIcon />
+                </abbr>
+              </Radio>
+              <Radio
                 label={<Trans>Electricity</Trans>}
                 value="electricity"
-                name="electricity"
+                name="heatingType"
                 id="energy-source-1"
-              />
-              <Checkbox
+              >
+                <abbr title="The dwelling uses electricity as it's primary heat source.">
+                  <InfoIcon />
+                </abbr>
+              </Radio>
+              <Radio
+                label={<Trans>Propane</Trans>}
+                value="propane"
+                name="heatingType"
+                id="energy-source-2"
+              >
+                <abbr title="The dwelling uses propane as it's primary heat source.">
+                  <InfoIcon />
+                </abbr>
+              </Radio>
+              <Radio
                 label={<Trans>Natural gas</Trans>}
                 value="natural-gas"
-                name="naturalGas"
-                id="energy-source-2"
-              />
+                name="heatingType"
+                id="energy-source-3"
+              >
+                <abbr title="The dwelling uses natural gas as it's primary heat source.">
+                  <InfoIcon />
+                </abbr>
+              </Radio>
             </FieldSet>
             <Button disabled={pristine || submitting}>
               <Trans>Search</Trans>
@@ -603,9 +681,10 @@ class SearchLocation extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    save: data => {
-      dispatch(saveLocationData(data))
+    save: (data, filter) => {
+      dispatch(saveLocationData(data, filter))
     },
+    deleteFormData: () => dispatch(deleteLocationData()),
   }
 }
 
@@ -616,6 +695,9 @@ const mapStateToProps = state => ({
 
 export default compose(
   withApollo,
-  reduxForm({ form: 'searchByLocation' }),
+  reduxForm({
+    form: 'searchByLocation',
+    initialValues: { heatingType: 'any' },
+  }),
   connect(mapStateToProps, mapDispatchToProps),
 )(SearchLocation)
