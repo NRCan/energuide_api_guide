@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 import { NavLink } from 'redux-first-router-link'
-import { reduxForm } from 'redux-form'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { compose, withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
 import Breadcrumbs from './Breadcrumbs'
-import Flash from './Flash' // eslint-disable-line import/no-named-as-default
 import { Header1, Header3, PageBody } from './styles'
 import DataTable from './DataTable'
-import { setFlash, saveLocationData, deleteLocationData } from '../actions'
 
 class SearchLocation extends Component {
   static propTypes = {
@@ -32,7 +28,6 @@ class SearchLocation extends Component {
           </NavLink>
           <Trans>Results</Trans>
         </Breadcrumbs>
-        <Flash />
         <PageBody>
           <header>
             <Header1>
@@ -57,28 +52,8 @@ class SearchLocation extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    save: (data, filter) => {
-      dispatch(saveLocationData(data, filter))
-    },
-    flash: (message, priority) => {
-      dispatch(setFlash(message, priority))
-    },
-    deleteFormData: () => dispatch(deleteLocationData()),
-  }
-}
-
 const mapStateToProps = state => ({
-  path: state.location.pathname,
   data: state.data.searchLocationData,
 })
 
-export default compose(
-  withApollo,
-  reduxForm({
-    form: 'searchByLocation',
-    initialValues: { heatingType: 'any' },
-  }),
-  connect(mapStateToProps, mapDispatchToProps),
-)(SearchLocation)
+export default connect(mapStateToProps)(SearchLocation)
