@@ -1,19 +1,171 @@
 {
+  "<0>Alpha</0>This is an internal service. <1>To provide feedback, email us</1>.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/AlphaBanner.js",
+        42
+      ]
+    ]
+  },
+  "The EnerGuide API allows you to access the housing data provided by Natural Resource Canada. You will have open access to the data, with granularity to search to a individual dwelling level.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        38
+      ]
+    ]
+  },
+  "View the documentation": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        48
+      ],
+      [
+        "src/components/Home.js",
+        121
+      ]
+    ]
+  },
+  "An <0>API</0>, or <1>Application Programming Interface</1>, is a set of routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        61
+      ]
+    ]
+  },
+  "View open source data": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        75
+      ]
+    ]
+  },
+  "The EnerGuide API will help make housing evaluation data accessible for everyone.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        78
+      ]
+    ]
+  },
+  "You can choose to access the granular data that you need.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        87
+      ]
+    ]
+  },
+  "As new housing evaluations are added to the EnerGuide API, the data will be updated and available for you to use.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        95
+      ]
+    ]
+  },
+  "To learn how to use the API, we have provided the documentation on Github. The documentation will show all of the data types available under the EnerGuide API.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        106
+      ]
+    ]
+  },
+  "Search by file <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchFileID.js",
+        86
+      ],
+      [
+        "src/components/SearchFileID.js",
+        94
+      ]
+    ]
+  },
+  "File <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchFileID.js",
+        110
+      ]
+    ]
+  },
+  "Search by the file <0>ID</0> on your Energuide evaluation.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchFileID.js",
+        116
+      ]
+    ]
+  },
+  "No results found": {
+    "translation": "Aucun résultat",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        554
+      ]
+    ]
+  },
+  "Filters": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        604
+      ]
+    ]
+  },
+  "Search by the type of energy source. Choose the parameter that applies.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        608
+      ]
+    ]
+  },
+  "Any": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        614
+      ]
+    ]
+  },
+  "Propane": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        644
+      ]
+    ]
+  },
   "Privacy": {
     "translation": "",
     "origin": [
       [
         "src/components/Footer.js",
-        20
-      ]
-    ]
-  },
-  "Alpha - This is an internal service": {
-    "translation": "Alpha - Ceci est un service interne",
-    "origin": [
-      [
-        "src/components/AlphaBanner.js",
-        15
+        24
       ]
     ]
   },
@@ -22,7 +174,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        17
+        30
       ]
     ]
   },
@@ -31,33 +183,19 @@
     "origin": [
       [
         "src/components/Home.js",
-        20
+        33
       ],
       [
         "src/components/Search.js",
-        50
+        44
+      ],
+      [
+        "src/components/SearchFileID.js",
+        81
       ],
       [
         "src/components/SearchLocation.js",
-        50
-      ]
-    ]
-  },
-  "What is the EnerGuide API?": {
-    "translation": "Qu'est-ce que l'API EnerGuide?",
-    "origin": [
-      [
-        "src/components/Home.js",
-        25
-      ]
-    ]
-  },
-  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.": {
-    "translation": "L'API ÉnerGuide vous permet d'accéder aux données sur le logement fournies par Ressources naturelles Canada. Vous aurez un accès libre aux données, et pourrez interroger un logement individuel.",
-    "origin": [
-      [
-        "src/components/Home.js",
-        28
+        565
       ]
     ]
   },
@@ -66,16 +204,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        35
-      ]
-    ]
-  },
-  "Access the API": {
-    "translation": "Accéder à l'API",
-    "origin": [
-      [
-        "src/components/Home.js",
-        38
+        45
       ]
     ]
   },
@@ -84,16 +213,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        45
-      ]
-    ]
-  },
-  "An <0>Application Programming Interface</0>, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
-    "translation": "Une interface de programmation d'application, ou API, est un ensemble de routines, de protocoles et d'outils pour la construction de logiciels. De nombreuses applications peuvent se parler et fournir une réponse.",
-    "origin": [
-      [
-        "src/components/Home.js",
-        48
+        58
       ]
     ]
   },
@@ -102,29 +222,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        58
-      ]
-    ]
-  },
-  "View open data": {
-    "translation": "Afficher les données ouvertes",
-    "origin": [
-      [
-        "src/components/Home.js",
-        61
-      ]
-    ]
-  },
-  "The EnerGuide API will help make energy consumption data accessible for everyone.": {
-    "translation": "L'API ÉnerGuide aidera à rendre les données sur la consommation d'énergie accessibles à tous.",
-    "origin": [
-      [
-        "src/components/Home.js",
-        64
-      ],
-      [
-        "src/components/Home.js",
-        83
+        72
       ]
     ]
   },
@@ -133,16 +231,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        70
-      ]
-    ]
-  },
-  "You can choose to access the granular data that you need. You will benefit from the ability to extract data data that is specific to your needs.": {
-    "translation": "Vous pouvez choisir d'accéder aux données granulaires dont vous avez besoin. Vous bénéficierez de la capacité d'extraire des données de données spécifiques à vos besoins.",
-    "origin": [
-      [
-        "src/components/Home.js",
-        73
+        84
       ]
     ]
   },
@@ -151,7 +240,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        80
+        92
       ]
     ]
   },
@@ -160,16 +249,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        91
-      ]
-    ]
-  },
-  "Developers and data analysts can allow users to query specific information from large data sets. They set the rules that will guide the user to what they need.": {
-    "translation": "Les développeurs et les analystes de données peuvent permettre aux utilisateurs d'interroger des informations spécifiques à partir de grands ensembles de données. Ils définissent les règles qui guideront l'utilisateur à ce dont ils ont besoin.",
-    "origin": [
-      [
-        "src/components/Home.js",
-        94
+        103
       ]
     ]
   },
@@ -178,7 +258,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        101
+        113
       ]
     ]
   },
@@ -187,7 +267,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        104
+        115
       ]
     ]
   },
@@ -196,29 +276,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        109
-      ]
-    ]
-  },
-  "Read the documentation": {
-    "translation": "Lire la documentation",
-    "origin": [
-      [
-        "src/components/Home.js",
-        112
-      ]
-    ]
-  },
-  "Search by": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        57
-      ],
-      [
-        "src/components/SearchLocation.js",
-        57
+        119
       ]
     ]
   },
@@ -227,19 +285,11 @@
     "origin": [
       [
         "src/components/Search.js",
-        64
-      ],
-      [
-        "src/components/Search.js",
-        96
+        68
       ],
       [
         "src/components/SearchLocation.js",
-        64
-      ],
-      [
-        "src/components/SearchLocation.js",
-        81
+        590
       ]
     ]
   },
@@ -248,7 +298,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        75
+        51
       ]
     ]
   },
@@ -257,7 +307,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        79
+        54
       ]
     ]
   },
@@ -266,7 +316,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        87
+        65
       ]
     ]
   },
@@ -275,7 +325,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        109
+        76
       ]
     ]
   },
@@ -284,11 +334,27 @@
     "origin": [
       [
         "src/components/Search.js",
-        116
+        46
+      ],
+      [
+        "src/components/Search.js",
+        85
+      ],
+      [
+        "src/components/SearchFileID.js",
+        84
+      ],
+      [
+        "src/components/SearchFileID.js",
+        124
       ],
       [
         "src/components/SearchLocation.js",
-        139
+        568
+      ],
+      [
+        "src/components/SearchLocation.js",
+        665
       ]
     ]
   },
@@ -297,11 +363,15 @@
     "origin": [
       [
         "src/components/Search.js",
-        122
+        91
+      ],
+      [
+        "src/components/SearchFileID.js",
+        132
       ],
       [
         "src/components/SearchLocation.js",
-        145
+        673
       ]
     ]
   },
@@ -310,11 +380,15 @@
     "origin": [
       [
         "src/components/Search.js",
-        124
+        93
+      ],
+      [
+        "src/components/SearchFileID.js",
+        134
       ],
       [
         "src/components/SearchLocation.js",
-        147
+        675
       ]
     ]
   },
@@ -323,11 +397,15 @@
     "origin": [
       [
         "src/components/Search.js",
-        126
+        95
+      ],
+      [
+        "src/components/SearchFileID.js",
+        136
       ],
       [
         "src/components/SearchLocation.js",
-        149
+        677
       ]
     ]
   },
@@ -336,7 +414,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        75
+        570
+      ],
+      [
+        "src/components/SearchLocation.js",
+        576
       ]
     ]
   },
@@ -345,25 +427,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        85
-      ]
-    ]
-  },
-  "Search by Location": {
-    "translation": "Recherche par lieu",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        100
-      ]
-    ]
-  },
-  "Search by the type of energy source. Choose all of the parameters that apply.": {
-    "translation": "Recherche par type de source d'énergie. Choisissez tous les paramètres qui s'appliquent.",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        104
+        594
       ]
     ]
   },
@@ -372,7 +436,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        117
+        624
       ]
     ]
   },
@@ -381,7 +445,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        126
+        634
       ]
     ]
   },
@@ -390,7 +454,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        135
+        654
       ]
     ]
   },
@@ -411,6 +475,144 @@
         17
       ]
     ]
+  },
+  "Alpha - This is an internal service": {
+    "translation": "Alpha - Ceci est un service interne",
+    "origin": [
+      [
+        "src/components/AlphaBanner.js",
+        15
+      ]
+    ],
+    "obsolete": true
+  },
+  "What is the EnerGuide API?": {
+    "translation": "Qu'est-ce que l'API EnerGuide?",
+    "origin": [
+      [
+        "src/components/Home.js",
+        25
+      ]
+    ],
+    "obsolete": true
+  },
+  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.": {
+    "translation": "L'API ÉnerGuide vous permet d'accéder aux données sur le logement fournies par Ressources naturelles Canada. Vous aurez un accès libre aux données, et pourrez interroger un logement individuel.",
+    "origin": [
+      [
+        "src/components/Home.js",
+        28
+      ]
+    ],
+    "obsolete": true
+  },
+  "Access the API": {
+    "translation": "Accéder à l'API",
+    "origin": [
+      [
+        "src/components/Home.js",
+        38
+      ]
+    ],
+    "obsolete": true
+  },
+  "An <0>Application Programming Interface</0>, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
+    "translation": "Une interface de programmation d'application, ou API, est un ensemble de routines, de protocoles et d'outils pour la construction de logiciels. De nombreuses applications peuvent se parler et fournir une réponse.",
+    "origin": [
+      [
+        "src/components/Home.js",
+        48
+      ]
+    ],
+    "obsolete": true
+  },
+  "View open data": {
+    "translation": "Afficher les données ouvertes",
+    "origin": [
+      [
+        "src/components/Home.js",
+        61
+      ]
+    ],
+    "obsolete": true
+  },
+  "The EnerGuide API will help make energy consumption data accessible for everyone.": {
+    "translation": "L'API ÉnerGuide aidera à rendre les données sur la consommation d'énergie accessibles à tous.",
+    "origin": [
+      [
+        "src/components/Home.js",
+        64
+      ],
+      [
+        "src/components/Home.js",
+        83
+      ]
+    ],
+    "obsolete": true
+  },
+  "You can choose to access the granular data that you need. You will benefit from the ability to extract data data that is specific to your needs.": {
+    "translation": "Vous pouvez choisir d'accéder aux données granulaires dont vous avez besoin. Vous bénéficierez de la capacité d'extraire des données de données spécifiques à vos besoins.",
+    "origin": [
+      [
+        "src/components/Home.js",
+        73
+      ]
+    ],
+    "obsolete": true
+  },
+  "Developers and data analysts can allow users to query specific information from large data sets. They set the rules that will guide the user to what they need.": {
+    "translation": "Les développeurs et les analystes de données peuvent permettre aux utilisateurs d'interroger des informations spécifiques à partir de grands ensembles de données. Ils définissent les règles qui guideront l'utilisateur à ce dont ils ont besoin.",
+    "origin": [
+      [
+        "src/components/Home.js",
+        94
+      ]
+    ],
+    "obsolete": true
+  },
+  "Read the documentation": {
+    "translation": "Lire la documentation",
+    "origin": [
+      [
+        "src/components/Home.js",
+        112
+      ]
+    ],
+    "obsolete": true
+  },
+  "Search by": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Search.js",
+        57
+      ],
+      [
+        "src/components/SearchLocation.js",
+        57
+      ]
+    ],
+    "obsolete": true
+  },
+  "Search by Location": {
+    "translation": "Recherche par lieu",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        100
+      ]
+    ],
+    "obsolete": true
+  },
+  "Search by the type of energy source. Choose all of the parameters that apply.": {
+    "translation": "Recherche par type de source d'énergie. Choisissez tous les paramètres qui s'appliquent.",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        104
+      ]
+    ],
+    "obsolete": true
   },
   "An <0>Application Programming Interface</0>Application Programming Interface, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
     "translation": "",

@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        17
+        30
       ]
     ]
   },
@@ -11,35 +11,11 @@
     "origin": [
       [
         "src/components/Home.js",
-        20
+        33
       ]
     ]
   },
-  "What is the EnerGuide API?": {
-    "origin": [
-      [
-        "src/components/Home.js",
-        25
-      ]
-    ]
-  },
-  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.": {
-    "origin": [
-      [
-        "src/components/Home.js",
-        28
-      ]
-    ]
-  },
-  "Test the API": {
-    "origin": [
-      [
-        "src/components/Home.js",
-        35
-      ]
-    ]
-  },
-  "Access the API": {
+  "The EnerGuide API allows you to access the housing data provided by Natural Resource Canada. You will have open access to the data, with granularity to search to a individual dwelling level.": {
     "origin": [
       [
         "src/components/Home.js",
@@ -47,7 +23,7 @@
       ]
     ]
   },
-  "What is an API?": {
+  "Test the API": {
     "origin": [
       [
         "src/components/Home.js",
@@ -55,15 +31,19 @@
       ]
     ]
   },
-  "An <0>Application Programming Interface</0>, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
+  "View the documentation": {
     "origin": [
       [
         "src/components/Home.js",
         48
+      ],
+      [
+        "src/components/Home.js",
+        121
       ]
     ]
   },
-  "What are the benefits of the EnerGuide API?": {
+  "What is an API?": {
     "origin": [
       [
         "src/components/Home.js",
@@ -71,7 +51,7 @@
       ]
     ]
   },
-  "View open data": {
+  "An <0>API</0>, or <1>Application Programming Interface</1>, is a set of routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.": {
     "origin": [
       [
         "src/components/Home.js",
@@ -79,15 +59,27 @@
       ]
     ]
   },
-  "The EnerGuide API will help make energy consumption data accessible for everyone.": {
+  "What are the benefits of the EnerGuide API?": {
     "origin": [
       [
         "src/components/Home.js",
-        64
-      ],
+        72
+      ]
+    ]
+  },
+  "View open source data": {
+    "origin": [
       [
         "src/components/Home.js",
-        83
+        75
+      ]
+    ]
+  },
+  "The EnerGuide API will help make housing evaluation data accessible for everyone.": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        78
       ]
     ]
   },
@@ -95,15 +87,15 @@
     "origin": [
       [
         "src/components/Home.js",
-        70
+        84
       ]
     ]
   },
-  "You can choose to access the granular data that you need. You will benefit from the ability to extract data data that is specific to your needs.": {
+  "You can choose to access the granular data that you need.": {
     "origin": [
       [
         "src/components/Home.js",
-        73
+        87
       ]
     ]
   },
@@ -111,7 +103,15 @@
     "origin": [
       [
         "src/components/Home.js",
-        80
+        92
+      ]
+    ]
+  },
+  "As new housing evaluations are added to the EnerGuide API, the data will be updated and available for you to use.": {
+    "origin": [
+      [
+        "src/components/Home.js",
+        95
       ]
     ]
   },
@@ -119,15 +119,15 @@
     "origin": [
       [
         "src/components/Home.js",
-        91
+        103
       ]
     ]
   },
-  "Developers and data analysts can allow users to query specific information from large data sets. They set the rules that will guide the user to what they need.": {
+  "To learn how to use the API, we have provided the documentation on Github. The documentation will show all of the data types available under the EnerGuide API.": {
     "origin": [
       [
         "src/components/Home.js",
-        94
+        106
       ]
     ]
   },
@@ -135,7 +135,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        101
+        113
       ]
     ]
   },
@@ -143,7 +143,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        104
+        115
       ]
     ]
   },
@@ -151,15 +151,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        109
-      ]
-    ]
-  },
-  "Read the documentation": {
-    "origin": [
-      [
-        "src/components/Home.js",
-        112
+        119
       ]
     ]
   }

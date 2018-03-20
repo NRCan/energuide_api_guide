@@ -7,15 +7,14 @@ import { compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import Breadcrumbs from './Breadcrumbs'
-import InfoIcon from './InfoIcon'
 import FieldSet from './forms/FieldSet'
 import TextInput from './forms/TextInput'
 import { Radio } from './forms/MultipleChoice'
 import Button from './forms/Button'
-import DataTable from './DataTable'
+import Flash from './Flash' // eslint-disable-line import/no-named-as-default
 import { injectGlobal } from 'emotion'
 import { Header1, Header2, Header3, PageBody } from './styles'
-import { saveLocationData, deleteLocationData } from '../actions'
+import { setFlash, saveLocationData, deleteLocationData } from '../actions'
 
 injectGlobal`
 .fixedDataTableCellGroupLayout_cellGroup {
@@ -440,11 +439,18 @@ class SearchLocation extends Component {
   }
 
   async handleFormData(data) {
-    let { client, save, deleteFormData } = this.props
+    let {
+      navigateToResultsPage,
+      client,
+      save,
+      flash,
+      deleteFormData,
+    } = this.props
 
-    deleteFormData()
+    deleteFormData() // clear any previous data
+    flash() // clear any previous flash messages
 
-    let clientFilter = { heatingType: 'any' }
+    let clientFilter = { heatingType: 'all' }
     let args = []
     let filters = []
     let variables = {}
@@ -507,7 +513,7 @@ class SearchLocation extends Component {
             variables.naturalGas = 'Natural Gas'
             clientFilter.heatingType = 'Natural Gas'
             break
-          case 'any':
+          case 'all':
             // No need for a filter in this case.
             break
         }
@@ -525,7 +531,6 @@ class SearchLocation extends Component {
           ) {
             results {
               yearBuilt
-              city
               region
               forwardSortationArea
                 evaluations {
@@ -542,18 +547,22 @@ class SearchLocation extends Component {
     })
 
     if (response.errors) {
-      console.log(response.errors) // eslint-disable-line
+      flash(response.errors, 'error')
     } else {
       let { data: { dwellings } } = response
 
-      if (dwellings.results) {
+      if (dwellings.results.length > 0) {
         save(dwellings.results, clientFilter)
-      } // TODO: Redirect for empty results
+        navigateToResultsPage()
+      } else {
+        deleteLocationData()
+        flash(<Trans>No results found</Trans>, 'warn')
+      }
     }
   }
 
   render() {
-    let { data, handleSubmit, pristine, submitting } = this.props
+    let { handleSubmit, pristine, submitting } = this.props
     return (
       <main role="main">
         <Breadcrumbs>
@@ -565,7 +574,7 @@ class SearchLocation extends Component {
           </NavLink>
           <Trans>Search by location</Trans>
         </Breadcrumbs>
-
+        <Flash />
         <PageBody>
           <header>
             <Header1 id="search-by-location-description">
@@ -601,69 +610,43 @@ class SearchLocation extends Component {
                 </Header2>
               </legend>
               <p>
-                <Trans>
-                  Search by the type of energy source. Choose the parameter that
-                  applies.
-                </Trans>
+                <Trans>Search by the type of energy source.</Trans>
               </p>
-              <Radio
-                label={<Trans>Any</Trans>}
-                value="any"
-                name="heatingType"
-                id="energy-source-3"
-              >
-                <abbr title="Return dwellings regardless of their primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
-              <Radio
-                label={<Trans>Oil</Trans>}
-                value="oil"
-                name="heatingType"
-                id="energy-source-0"
-              >
-                <abbr title="The dwelling uses oil as it's primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
               <Radio
                 label={<Trans>Electricity</Trans>}
                 value="electricity"
                 name="heatingType"
                 id="energy-source-1"
-              >
-                <abbr title="The dwelling uses electricity as it's primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
-              <Radio
-                label={<Trans>Propane</Trans>}
-                value="propane"
-                name="heatingType"
-                id="energy-source-2"
-              >
-                <abbr title="The dwelling uses propane as it's primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
+              />
               <Radio
                 label={<Trans>Natural gas</Trans>}
                 value="natural-gas"
                 name="heatingType"
                 id="energy-source-3"
-              >
-                <abbr title="The dwelling uses natural gas as it's primary heat source.">
-                  <InfoIcon />
-                </abbr>
-              </Radio>
+              />
+              <Radio
+                label={<Trans>Propane</Trans>}
+                value="propane"
+                name="heatingType"
+                id="energy-source-2"
+              />
+              <Radio
+                label={<Trans>Oil</Trans>}
+                value="oil"
+                name="heatingType"
+                id="energy-source-0"
+              />
+              <Radio
+                label={<Trans>All</Trans>}
+                value="all"
+                name="heatingType"
+                id="energy-source-3"
+              />
             </FieldSet>
             <Button disabled={pristine || submitting}>
               <Trans>Search</Trans>
             </Button>
           </form>
-
-          {data.length > 0 && <DataTable data={data} />}
-
           <aside>
             <Header3>
               <Trans>To see all of the available data,&nbsp;</Trans>
@@ -684,6 +667,10 @@ const mapDispatchToProps = dispatch => {
     save: (data, filter) => {
       dispatch(saveLocationData(data, filter))
     },
+    navigateToResultsPage: () => dispatch({ type: 'RESULTS' }),
+    flash: (message, priority) => {
+      dispatch(setFlash(message, priority))
+    },
     deleteFormData: () => dispatch(deleteLocationData()),
   }
 }
@@ -697,7 +684,7 @@ export default compose(
   withApollo,
   reduxForm({
     form: 'searchByLocation',
-    initialValues: { heatingType: 'any' },
+    initialValues: { heatingType: 'all' },
   }),
   connect(mapStateToProps, mapDispatchToProps),
 )(SearchLocation)

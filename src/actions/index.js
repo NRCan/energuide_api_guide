@@ -12,10 +12,12 @@ export const saveLocationData = (data, { heatingType }) => {
     type: SAVE_LOCATION_LOOKUP_RESULTS,
     data: data.reduce((output, datum) => {
       datum.evaluations.map(evaluation => {
-        if (evaluation.heating.energySourceEnglish === heatingType) {
+        if (
+          evaluation.heating.energySourceEnglish === heatingType ||
+          heatingType === 'all'
+        ) {
           output.push({
             yearBuilt: datum.yearBuilt,
-            city: datum.city,
             region: datum.region,
             forwardSortationArea: datum.forwardSortationArea,
             rating: evaluation.ersRating,
@@ -47,4 +49,12 @@ export const DELETE_LOCATION_LOOKUP_RESULTS = 'DELETE_LOCATION_LOOKUP_RESULTS'
 export const deleteLocationData = () => ({
   type: DELETE_LOCATION_LOOKUP_RESULTS,
   data: [],
+})
+
+export const FLASH = 'FLASH'
+
+export const setFlash = (message = null, priority = null) => ({
+  type: FLASH,
+  message,
+  priority,
 })
