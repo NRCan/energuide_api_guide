@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'react-emotion'
-import { theme } from './styles'
+import { theme, mediaQuery } from './styles'
 
 const breadcrumb = css`
   background-color: ${theme.colour.greyLight};
@@ -14,11 +14,19 @@ const breadcrumb = css`
     padding: 0;
     font-size: ${theme.font.md};
 
+    ${mediaQuery.small(css`
+      font-size: ${theme.font.sm};
+    `)};
+
     li {
       display: inline-block;
 
       * {
         padding: 0;
+      }
+
+      > a:focus {
+        outline-color: ${theme.colour.visited};
       }
     }
 

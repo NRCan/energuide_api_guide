@@ -593,7 +593,7 @@ class SearchLocation extends Component {
             >
               <Header2>
                 <label htmlFor="location" id="location-label">
-                  <Trans>Location</Trans>
+                  <Trans>Location</Trans> (eg. L4C)
                 </label>
               </Header2>
               <p id="location-details">
@@ -660,7 +660,7 @@ const mapDispatchToProps = dispatch => {
     save: (data, filter) => {
       dispatch(saveLocationData(data, filter))
     },
-    navigateToResultsPage: () => dispatch({ type: 'RESULTS' }),
+    navigateToResultsPage: () => dispatch({ type: 'RESULTSLOCATION' }),
     flash: (message, priority) => {
       dispatch(setFlash(message, priority))
     },

@@ -54,10 +54,12 @@ injectGlobal`
 
   p {
     margin-bottom: ${theme.spacing.lg}px;
+    line-height: 1.4;
   }
 
-  li {
-    padding-bottom: 10px;
+  a:focus {
+    outline: 2px solid ${theme.colour.focus};
+    outline-offset: 1px;
   }
 
   form  {
@@ -86,9 +88,9 @@ injectGlobal`
     min-height: calc(100vh - 104px);
   }
 
-  #foot {
+  .id-span {
+    letter-spacing: -0.04em;
   }
-
 `
 
 const App = ({ lang }) => (

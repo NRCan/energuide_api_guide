@@ -62,8 +62,8 @@ class Search extends Component {
           </header>
           <p className={para}>
             <Trans>
-              To test the API, you are able to search by Location or File
-              number.
+              To test the API, you are able to search by Location or File{' '}
+              <span className="id-span">ID</span>.
             </Trans>
           </p>
           <form
@@ -72,7 +72,9 @@ class Search extends Component {
           >
             <FieldSet>
               <legend id="search-description">
-                <Trans>Search by Location or File number</Trans>
+                <Trans>
+                  Search by Location or File <span className="id-span">ID</span>
+                </Trans>
               </legend>
               <Radio
                 label={<Trans>Location</Trans>}
@@ -83,12 +85,16 @@ class Search extends Component {
                 <TooltipIcon dataTip="A location refers to a region or neighbourhood.<br/>You will be searching by the first three digits of any postal code." />
               </Radio>
               <Radio
-                label={<Trans>File number</Trans>}
+                label={
+                  <Trans>
+                    File <span className="id-span">ID</span>
+                  </Trans>
+                }
                 value="file-number"
                 name="search"
                 id="search-1"
               >
-                <TooltipIcon dataTip="A file number refers to an individual home.<br/>This number is provided to the homeowner through EnerGuide." />
+                <TooltipIcon dataTip="A file ID refers to an individual home.<br/>This ID is provided to the homeowner through EnerGuide." />
               </Radio>
             </FieldSet>
             <Button disabled={pristine || submitting}>

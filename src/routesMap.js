@@ -3,5 +3,6 @@ export default {
   SEARCH: '/search',
   LOCATION: '/search-location',
   FILEID: '/search-fileid',
-  RESULTS: '/results',
+  RESULTSLOCATION: '/results-location',
+  RESULTSFILEID: '/results-fileid/:fileId',
 }

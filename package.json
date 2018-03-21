@@ -48,6 +48,7 @@
     "react-apollo": "^2.0.0",
     "react-dom": "^16.0.0",
     "react-emotion": "^9.0.2",
+    "react-promise": "^2.0.2",
     "react-redux": "^5.0.5",
     "react-tooltip": "^3.4.0",
     "react-universal-component": "^2.5.0",

@@ -1,9 +1,17 @@
-export default (state = 'Catcher', action = {}) => {
+export default (state = 'EnerGuide API Proof of Concept', action = {}) => {
   switch (action.type) {
     case 'HOME':
-      return 'Home'
-    case 'THANK_YOU':
-      return 'Thank you'
+      return `Home | EnerGuide API Proof of Concept`
+    case 'SEARCH':
+      return `Search | EnerGuide API Proof of Concept`
+    case 'LOCATION':
+      return `Search by location | EnerGuide API Proof of Concept`
+    case 'FILEID':
+      return `Search by file ID | EnerGuide API Proof of Concept`
+    case 'RESULTSLOCATION':
+      return `Results for location | EnerGuide API Proof of Concept`
+    case 'RESULTSFILEID':
+      return 'Results for file ID | EnerGuide API Proof of Concept'
     default:
       return state
   }
