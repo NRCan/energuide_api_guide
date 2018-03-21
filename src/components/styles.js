@@ -212,16 +212,12 @@ export const LocationContainer = styled.div`
 `
 
 export const ContainerFourOh = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const ContainerLoading = styled.div`
   text-align: center;
-
-  ${mediaQuery.xxl(css`
-    width: 100%;
-    height: 40em;
-    padding-top: 12em;
-  `)};
-
-  ${mediaQuery.xLarge(css`
-    height: 26em;
-    padding-top: 10em;
-  `)};
+  padding-top: 10%;
 `
