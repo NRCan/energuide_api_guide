@@ -1,0 +1,62 @@
+{
+  "No results": {
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        75
+      ]
+    ]
+  },
+  "Search for another file <0>ID</0>": {
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        81
+      ],
+      [
+        "src/components/ResultsFileID.js",
+        131
+      ]
+    ]
+  },
+  "File <0>ID</0>": {
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        114
+      ]
+    ]
+  },
+  "EnerGuide API": {
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        147
+      ]
+    ]
+  },
+  "Search": {
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        150
+      ]
+    ]
+  },
+  "Search by file <0>ID</0>": {
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        153
+      ]
+    ]
+  },
+  "Results": {
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        157
+      ]
+    ]
+  }
+}

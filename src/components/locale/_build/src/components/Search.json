@@ -15,7 +15,7 @@
       ],
       [
         "src/components/Search.js",
-        95
+        101
       ]
     ]
   },
@@ -27,7 +27,7 @@
       ]
     ]
   },
-  "To test the API, you are able to search by Location or File number.": {
+  "To test the API, you are able to search by Location or File <0>ID</0>.": {
     "origin": [
       [
         "src/components/Search.js",
@@ -35,7 +35,7 @@
       ]
     ]
   },
-  "Search by Location or File number": {
+  "Search by Location or File <0>ID</0>": {
     "origin": [
       [
         "src/components/Search.js",
@@ -47,15 +47,15 @@
     "origin": [
       [
         "src/components/Search.js",
-        78
+        80
       ]
     ]
   },
-  "File number": {
+  "File <0>ID</0>": {
     "origin": [
       [
         "src/components/Search.js",
-        86
+        89
       ]
     ]
   }

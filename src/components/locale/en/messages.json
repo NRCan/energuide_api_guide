@@ -1,10 +1,77 @@
 {
+  "Get access": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/FooterLinks.js",
+        27
+      ]
+    ]
+  },
+  "No results": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        75
+      ]
+    ]
+  },
+  "Search for another file <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        81
+      ],
+      [
+        "src/components/ResultsFileID.js",
+        131
+      ]
+    ]
+  },
+  "results": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        61
+      ]
+    ]
+  },
+  "Search again by location": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        65
+      ]
+    ]
+  },
+  "To test the API, you are able to search by Location or File <0>ID</0>.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Search.js",
+        64
+      ]
+    ]
+  },
+  "Search by Location or File <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Search.js",
+        75
+      ]
+    ]
+  },
   "Alpha": {
     "translation": "",
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        42
+        46
       ]
     ]
   },
@@ -13,7 +80,7 @@
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        42
+        48
       ]
     ]
   },
@@ -22,7 +89,7 @@
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        47
+        53
       ]
     ]
   },
@@ -40,16 +107,7 @@
     "origin": [
       [
         "src/components/FooterLinks.js",
-        20
-      ]
-    ]
-  },
-  "Get Access": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/FooterLinks.js",
-        23
+        24
       ]
     ]
   },
@@ -58,7 +116,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        46
+        38
       ]
     ]
   },
@@ -67,11 +125,19 @@
     "origin": [
       [
         "src/components/Home.js",
-        49
+        41
       ],
       [
         "src/components/Results.js",
         21
+      ],
+      [
+        "src/components/ResultsFileID.js",
+        147
+      ],
+      [
+        "src/components/ResultsLocation.js",
+        47
       ],
       [
         "src/components/Search.js",
@@ -79,7 +145,7 @@
       ],
       [
         "src/components/SearchFileID.js",
-        82
+        42
       ],
       [
         "src/components/SearchLocation.js",
@@ -92,7 +158,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        54
+        46
       ]
     ]
   },
@@ -101,7 +167,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        61
+        54
       ]
     ]
   },
@@ -110,7 +176,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        67
+        59
       ]
     ]
   },
@@ -119,7 +185,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        77
+        70
       ]
     ]
   },
@@ -128,7 +194,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        80
+        73
       ]
     ]
   },
@@ -137,7 +203,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        91
+        84
       ]
     ]
   },
@@ -146,7 +212,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        94
+        87
       ]
     ]
   },
@@ -155,7 +221,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        97
+        90
       ]
     ]
   },
@@ -164,7 +230,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        103
+        96
       ]
     ]
   },
@@ -173,7 +239,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        106
+        99
       ]
     ]
   },
@@ -182,7 +248,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        111
+        104
       ]
     ]
   },
@@ -191,7 +257,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        114
+        107
       ]
     ]
   },
@@ -200,7 +266,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        123
+        116
       ]
     ]
   },
@@ -209,7 +275,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        126
+        119
       ]
     ]
   },
@@ -221,20 +287,28 @@
         24
       ],
       [
+        "src/components/ResultsFileID.js",
+        150
+      ],
+      [
+        "src/components/ResultsLocation.js",
+        50
+      ],
+      [
         "src/components/Search.js",
         54
       ],
       [
         "src/components/Search.js",
-        95
+        101
       ],
       [
         "src/components/SearchFileID.js",
-        85
+        45
       ],
       [
         "src/components/SearchFileID.js",
-        125
+        86
       ],
       [
         "src/components/SearchLocation.js",
@@ -252,6 +326,10 @@
       [
         "src/components/Results.js",
         27
+      ],
+      [
+        "src/components/ResultsLocation.js",
+        53
       ],
       [
         "src/components/SearchLocation.js",
@@ -273,6 +351,14 @@
       [
         "src/components/Results.js",
         34
+      ],
+      [
+        "src/components/ResultsFileID.js",
+        157
+      ],
+      [
+        "src/components/ResultsLocation.js",
+        55
       ]
     ]
   },
@@ -303,6 +389,40 @@
       ]
     ]
   },
+  "File <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        114
+      ],
+      [
+        "src/components/Search.js",
+        89
+      ],
+      [
+        "src/components/SearchFileID.js",
+        71
+      ]
+    ]
+  },
+  "Search by file <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        153
+      ],
+      [
+        "src/components/SearchFileID.js",
+        47
+      ],
+      [
+        "src/components/SearchFileID.js",
+        55
+      ]
+    ]
+  },
   "Which parameter would you like to search by?": {
     "translation": "",
     "origin": [
@@ -312,65 +432,16 @@
       ]
     ]
   },
-  "To test the API, you are able to search by Location or File number.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        64
-      ]
-    ]
-  },
-  "Search by Location or File number": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        75
-      ]
-    ]
-  },
   "Location": {
     "translation": "",
     "origin": [
       [
         "src/components/Search.js",
-        78
+        80
       ],
       [
         "src/components/SearchLocation.js",
         596
-      ]
-    ]
-  },
-  "File number": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        86
-      ]
-    ]
-  },
-  "Search by file <0>ID</0>": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchFileID.js",
-        87
-      ],
-      [
-        "src/components/SearchFileID.js",
-        95
-      ]
-    ]
-  },
-  "File <0>ID</0>": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchFileID.js",
-        111
       ]
     ]
   },
@@ -379,7 +450,7 @@
     "origin": [
       [
         "src/components/SearchFileID.js",
-        117
+        78
       ]
     ]
   },
@@ -481,6 +552,46 @@
         17
       ]
     ]
+  },
+  "Get Access": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/FooterLinks.js",
+        23
+      ]
+    ],
+    "obsolete": true
+  },
+  "To test the API, you are able to search by Location or File number.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Search.js",
+        64
+      ]
+    ],
+    "obsolete": true
+  },
+  "Search by Location or File number": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Search.js",
+        75
+      ]
+    ],
+    "obsolete": true
+  },
+  "File number": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Search.js",
+        86
+      ]
+    ],
+    "obsolete": true
   },
   "<0>Alpha</0>This is an internal service. <1>To provide feedback, email us</1>.": {
     "translation": "",
