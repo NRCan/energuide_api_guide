@@ -8,7 +8,7 @@ export default (state = 'EnerGuide API Proof of Concept', action = {}) => {
       return `Search by location | EnerGuide API Proof of Concept`
     case 'FILEID':
       return `Search by file ID | EnerGuide API Proof of Concept`
-    case 'RESULTS':
+    case 'RESULTSLOCATION':
       return `Results for location | EnerGuide API Proof of Concept`
     case 'RESULTSFILEID':
       return 'Results for file ID | EnerGuide API Proof of Concept'
