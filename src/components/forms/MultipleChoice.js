@@ -143,7 +143,7 @@ const cds_multiple_choice = css`
     height: ${theme.spacing.xl}px;
     font-size: ${theme.font.lg};
 
-    span {
+    > span {
       padding: 0 ${theme.spacing.sm}px 0 ${theme.spacing.xs}px;
     }
   }

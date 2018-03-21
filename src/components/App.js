@@ -86,9 +86,9 @@ injectGlobal`
     min-height: calc(100vh - 104px);
   }
 
-  #foot {
+  .id-span {
+    letter-spacing: -0.04em;
   }
-
 `
 
 const App = ({ lang }) => (
