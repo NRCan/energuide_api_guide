@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { NavLink } from 'redux-first-router-link'
 import { connect } from 'react-redux'
 import { withApollo } from 'react-apollo'
+import Async from 'react-promise'
+import { Loading } from './Loading'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import Breadcrumbs from './Breadcrumbs'
@@ -11,11 +13,7 @@ import FooterLinks from './FooterLinks'
 import { css } from 'react-emotion'
 import { theme, mediaQuery } from './styles'
 
-const main = css`
-  .id-span {
-    letter-spacing: -0.04em;
-  }
-`
+Async.defaultPending = <Loading />
 
 const marginBottom = css`
   margin-bottom: ${theme.spacing.xl}px;
@@ -88,8 +86,6 @@ function ShowFileID({ dwelling, fileId }) {
     )
   }
 
-  /// 4X94D01219
-
   const returnTheRightEvaluation = evaluations => {
     return evaluations.find(e => e.fileId === fileId)
   }
@@ -144,31 +140,8 @@ ShowFileID.propTypes = {
   fileId: PropTypes.any.isRequired,
 }
 
-class Deferred extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      value: '',
-    }
-  }
-  componentDidMount() {
-    this.props.promise.then(value => {
-      this.setState({ value })
-    })
-  }
-  render() {
-    const then = this.props.then || (value => <span>{value}</span>)
-    return then(this.state.value)
-  }
-}
-
-Deferred.propTypes = {
-  promise: PropTypes.any.isRequired,
-  then: PropTypes.any.isRequired,
-}
-
 const ResultsFileID = props => (
-  <main role="main" className={main}>
+  <main role="main">
     <Breadcrumbs>
       <NavLink to="/">
         <Trans>EnerGuide API</Trans>
@@ -184,7 +157,7 @@ const ResultsFileID = props => (
       <Trans>Results</Trans>
     </Breadcrumbs>
 
-    <Deferred promise={getData(props)} then={v => <div>{v}</div>} />
+    <Async promise={getData(props)} then={val => <div>{val}</div>} />
 
     <FooterLinks />
   </main>

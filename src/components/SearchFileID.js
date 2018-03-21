@@ -8,15 +8,8 @@ import TextInput from './forms/TextInput'
 import Button from './forms/Button'
 import { compose, withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
-import { css } from 'react-emotion'
 import { Header1, Header2, SearchContainer } from './styles'
 import FooterLinks from './FooterLinks'
-
-const main = css`
-  .id-span {
-    letter-spacing: -0.04em;
-  }
-`
 
 class SearchFileID extends Component {
   static propTypes = {
@@ -43,7 +36,7 @@ class SearchFileID extends Component {
   render() {
     let { handleSubmit, pristine, submitting } = this.props
     return (
-      <main role="main" className={main}>
+      <main role="main">
         <Breadcrumbs>
           <NavLink to="/">
             <Trans>EnerGuide API</Trans>
