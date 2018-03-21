@@ -1,68 +1,28 @@
 {
-  "Get Access": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/FooterLinks.js",
-        23
-      ]
-    ]
-  },
-  "An API, or <0>Application Programming Interface</0>, is a set of routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        80
-      ]
-    ]
-  },
-  "To learn how to use the API, we have provided the <0>documentation on Github.</0>The documentation will show all of the data types available under the EnerGuide API.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        126
-      ]
-    ]
-  },
-  "Results": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Results.js",
-        29
-      ],
-      [
-        "src/components/Results.js",
-        34
-      ]
-    ]
-  },
-  "Search by the type of energy source.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        614
-      ]
-    ]
-  },
-  "All": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        641
-      ]
-    ]
-  },
-  "<0>Alpha</0>This is an internal service. <1>To provide feedback, email us</1>.": {
+  "Alpha": {
     "translation": "",
     "origin": [
       [
         "src/components/AlphaBanner.js",
         42
+      ]
+    ]
+  },
+  "This is an internal service.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/AlphaBanner.js",
+        42
+      ]
+    ]
+  },
+  "To provide feedback, email us": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/AlphaBanner.js",
+        47
       ]
     ]
   },
@@ -80,7 +40,16 @@
     "origin": [
       [
         "src/components/FooterLinks.js",
-        21
+        20
+      ]
+    ]
+  },
+  "Get Access": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/FooterLinks.js",
+        23
       ]
     ]
   },
@@ -151,6 +120,15 @@
       [
         "src/components/Home.js",
         77
+      ]
+    ]
+  },
+  "An API, or <0>Application Programming Interface</0>, is a set of routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        80
       ]
     ]
   },
@@ -226,6 +204,15 @@
       ]
     ]
   },
+  "To learn how to use the API, we have provided the <0>documentation on Github.</0>The documentation will show all of the data types available under the EnerGuide API.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Home.js",
+        126
+      ]
+    ]
+  },
   "Search": {
     "translation": "",
     "origin": [
@@ -239,7 +226,7 @@
       ],
       [
         "src/components/Search.js",
-        99
+        95
       ],
       [
         "src/components/SearchFileID.js",
@@ -273,6 +260,19 @@
       [
         "src/components/SearchLocation.js",
         582
+      ]
+    ]
+  },
+  "Results": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Results.js",
+        29
+      ],
+      [
+        "src/components/Results.js",
+        34
       ]
     ]
   },
@@ -348,7 +348,7 @@
     "origin": [
       [
         "src/components/Search.js",
-        88
+        86
       ]
     ]
   },
@@ -410,6 +410,15 @@
       ]
     ]
   },
+  "Search by the type of energy source.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        614
+      ]
+    ]
+  },
   "Electricity": {
     "translation": "",
     "origin": [
@@ -446,6 +455,15 @@
       ]
     ]
   },
+  "All": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        641
+      ]
+    ]
+  },
   "Home": {
     "translation": "",
     "origin": [
@@ -463,6 +481,16 @@
         17
       ]
     ]
+  },
+  "<0>Alpha</0>This is an internal service. <1>To provide feedback, email us</1>.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/AlphaBanner.js",
+        42
+      ]
+    ],
+    "obsolete": true
   },
   "The EnerGuide API allows you to access the housing data provided by Natural Resource Canada. You will have open access to the data, with granularity to search to a individual dwelling level.": {
     "translation": "",

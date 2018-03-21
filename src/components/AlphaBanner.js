@@ -39,15 +39,16 @@ const link = css`
 const AlphaBanner = () => (
   <div className={banner}>
     <p className={alpha}>
-      <Trans>
-        <span className={statusBar}>Alpha</span>This is an internal service.{' '}
-        <a
-          className={link}
-          href="mailto:paul.craig@cds-snc.ca?subject=Hey,%20I%20love%20your%20app!"
-        >
-          To provide feedback, email us
-        </a>.
-      </Trans>
+      <span className={statusBar}>
+        <Trans>Alpha</Trans>
+      </span>
+      <Trans>This is an internal service.</Trans>{' '}
+      <a
+        className={link}
+        href="mailto:paul.craig@cds-snc.ca?subject=Hey,%20I%20love%20your%20app!"
+      >
+        <Trans>To provide feedback, email us</Trans>
+      </a>.
     </p>
   </div>
 )
