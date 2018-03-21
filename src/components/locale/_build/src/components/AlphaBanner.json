@@ -1,9 +1,25 @@
 {
-  "<0>Alpha</0>This is an internal service. <1>To provide feedback, email us</1>.": {
+  "Alpha": {
     "origin": [
       [
         "src/components/AlphaBanner.js",
         42
+      ]
+    ]
+  },
+  "This is an internal service.": {
+    "origin": [
+      [
+        "src/components/AlphaBanner.js",
+        42
+      ]
+    ]
+  },
+  "To provide feedback, email us": {
+    "origin": [
+      [
+        "src/components/AlphaBanner.js",
+        47
       ]
     ]
   }

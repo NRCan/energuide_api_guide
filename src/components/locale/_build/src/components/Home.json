@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        30
+        46
       ]
     ]
   },
@@ -11,15 +11,15 @@
     "origin": [
       [
         "src/components/Home.js",
-        33
+        49
       ]
     ]
   },
-  "The EnerGuide API allows you to access the housing data provided by Natural Resource Canada. You will have open access to the data, with granularity to search to a individual dwelling level.": {
+  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.": {
     "origin": [
       [
         "src/components/Home.js",
-        38
+        54
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        45
+        61
       ]
     ]
   },
@@ -35,11 +35,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        48
-      ],
-      [
-        "src/components/Home.js",
-        121
+        67
       ]
     ]
   },
@@ -47,15 +43,15 @@
     "origin": [
       [
         "src/components/Home.js",
-        58
+        77
       ]
     ]
   },
-  "An <0>API</0>, or <1>Application Programming Interface</1>, is a set of routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.": {
+  "An API, or <0>Application Programming Interface</0>, is a set of routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.": {
     "origin": [
       [
         "src/components/Home.js",
-        61
+        80
       ]
     ]
   },
@@ -63,7 +59,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        72
+        91
       ]
     ]
   },
@@ -71,7 +67,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        75
+        94
       ]
     ]
   },
@@ -79,7 +75,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        78
+        97
       ]
     ]
   },
@@ -87,7 +83,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        84
+        103
       ]
     ]
   },
@@ -95,7 +91,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        87
+        106
       ]
     ]
   },
@@ -103,7 +99,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        92
+        111
       ]
     ]
   },
@@ -111,7 +107,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        95
+        114
       ]
     ]
   },
@@ -119,39 +115,15 @@
     "origin": [
       [
         "src/components/Home.js",
-        103
+        123
       ]
     ]
   },
-  "To learn how to use the API, we have provided the documentation on Github. The documentation will show all of the data types available under the EnerGuide API.": {
+  "To learn how to use the API, we have provided the <0>documentation on Github.</0>The documentation will show all of the data types available under the EnerGuide API.": {
     "origin": [
       [
         "src/components/Home.js",
-        106
-      ]
-    ]
-  },
-  "To see how it can be used,": {
-    "origin": [
-      [
-        "src/components/Home.js",
-        113
-      ]
-    ]
-  },
-  "test the API": {
-    "origin": [
-      [
-        "src/components/Home.js",
-        115
-      ]
-    ]
-  },
-  "Ready to use the Energuide API?": {
-    "origin": [
-      [
-        "src/components/Home.js",
-        119
+        126
       ]
     ]
   }

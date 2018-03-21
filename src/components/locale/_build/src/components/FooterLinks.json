@@ -1,0 +1,18 @@
+{
+  "Ready to use the Energuide API?": {
+    "origin": [
+      [
+        "src/components/FooterLinks.js",
+        20
+      ]
+    ]
+  },
+  "Get Access": {
+    "origin": [
+      [
+        "src/components/FooterLinks.js",
+        23
+      ]
+    ]
+  }
+}
