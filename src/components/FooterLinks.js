@@ -7,10 +7,14 @@ const footerLinks = css`
   list-style-type: none;
   padding-left: ${theme.spacing.xxxl}px;
   padding-bottom: ${theme.spacing.xl}px;
-`
 
-const link = css`
-  color: ${theme.colour.blue};
+  li {
+    padding-bottom: 10px;
+
+    a {
+      color: ${theme.colour.blue};
+    }
+  }
 `
 
 const FooterLinks = () => (
@@ -19,7 +23,7 @@ const FooterLinks = () => (
       <li>
         <Trans>Ready to use the Energuide API?</Trans>
         {'  '}
-        <a className={link} href="http://bit.ly/2u4CxWJ">
+        <a href="http://bit.ly/2u4CxWJ">
           <Trans>Get access</Trans>
         </a>
       </li>

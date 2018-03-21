@@ -21,10 +21,6 @@ import {
 } from './styles'
 import CircuitHouse from './CircuitHouse'
 
-const main = css`
-  margin-bottom: ${theme.spacingXlarge3}px;
-`
-
 const noSpaceLink = css`
   color: ${theme.colour.blue};
   padding-right: ${theme.spacing.xs}px;
@@ -34,7 +30,7 @@ const noSpaceLink = css`
 const Home = () => (
   <ThemeProvider theme={theme}>
     <div id="pageWrap">
-      <main role="main" className={main}>
+      <main role="main">
         <IndexHeader>
           <HeaderContainer>
             <div id="page-header">

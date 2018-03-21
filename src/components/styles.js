@@ -151,6 +151,7 @@ export const Header3 = styled.h3`
   font-family: ${theme.weight.b}, sans-serif;
   font-size: ${theme.font.md};
   margin-bottom: 0px;
+  line-height: 1.4;
 
   ${mediaQuery.small(css`
     font-size: ${theme.font.sm};
@@ -226,19 +227,30 @@ export const UseTheGuide = styled.div`
 `
 
 export const SearchContainer = styled.div`
+  width: 75%;
+
   ${mediaQuery.xxl(css`
     padding-left: ${theme.spacing.xxxl}px;
-    padding-top: ${theme.spacing.xxxl}px;
+    padding-top: ${theme.spacing.xxl}px;
   `)};
 
   ${mediaQuery.xLarge(css`
     padding-bottom: 4em;
   `)};
+
+  ${mediaQuery.small(css`
+    width: 100%;
+  `)};
 `
 
 export const LocationContainer = styled.div`
-  padding: ${theme.spacing.xxxl}px ${theme.spacing.xxxl}px
-    ${theme.spacing.xxl}px ${theme.spacing.xxxl}px};
+  width: 75%;
+  padding-top: ${theme.spacing.xxl}px;
+  padding-left: ${theme.spacing.xxxl}px;
+
+  ${mediaQuery.small(css`
+    width: 100%;
+  `)};
 `
 
 export const ContainerFourOh = styled.div`

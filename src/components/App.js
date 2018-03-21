@@ -54,15 +54,12 @@ injectGlobal`
 
   p {
     margin-bottom: ${theme.spacing.lg}px;
+    line-height: 1.4;
   }
 
   a:focus {
     outline: 2px solid ${theme.colour.focus};
     outline-offset: 1px;
-  }
-
-  li {
-    padding-bottom: 10px;
   }
 
   form  {
