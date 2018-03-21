@@ -53,6 +53,7 @@ export const theme = {
     white: '#FFFFFF',
     black: '#000000',
     focus: '#ffbf47',
+    visited: '#551a8b',
   },
   weight: {
     l: 'HKGroteskLight',
@@ -107,13 +108,20 @@ export const para = css`
 `
 
 export const headerLink = css`
-  color: ${theme.colour.blue};
   padding-right: ${theme.spacing.md}px;
   font-family: ${theme.weight.b}, sans serif;
 
   ${mediaQuery.small(css`
     font-size: 14px;
   `)};
+
+  & > a {
+    color: ${theme.colour.blue};
+
+    &:focus {
+      outline-color: ${theme.colour.visited};
+    }
+  }
 `
 
 export const Header1 = styled.h1`

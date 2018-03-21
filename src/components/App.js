@@ -56,6 +56,11 @@ injectGlobal`
     margin-bottom: ${theme.spacing.lg}px;
   }
 
+  a:focus {
+    outline: 2px solid ${theme.colour.focus};
+    outline-offset: 1px;
+  }
+
   li {
     padding-bottom: 10px;
   }

@@ -20,7 +20,7 @@ const FooterLinks = () => (
         <Trans>Ready to use the Energuide API?</Trans>
         {'  '}
         <a className={link} href="http://bit.ly/2u4CxWJ">
-          <Trans>Get Access</Trans>
+          <Trans>Get access</Trans>
         </a>
       </li>
     </ul>

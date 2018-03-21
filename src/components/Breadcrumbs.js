@@ -20,6 +20,10 @@ const breadcrumb = css`
       * {
         padding: 0;
       }
+
+      > a:focus {
+        outline-color: ${theme.colour.visited};
+      }
     }
 
     li:not(:last-child)::after {
