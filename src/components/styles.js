@@ -70,6 +70,7 @@ export const theme = {
     base: '20px',
     md: '20px',
     lg: '24px',
+    lg2: '32px',
     xl: '48px',
   },
   spacing: {
@@ -99,11 +100,31 @@ export const mediaQuery = Object.keys(breakpoints).reduce(
   {},
 )
 
+export const para = css`
+  ${mediaQuery.small(css`
+    font-size: ${theme.font.xs};
+  `)};
+`
+
+export const headerLink = css`
+  color: ${theme.colour.blue};
+  padding-right: ${theme.spacing.md}px;
+  font-family: ${theme.weight.b}, sans serif;
+
+  ${mediaQuery.small(css`
+    font-size: 14px;
+  `)};
+`
+
 export const Header1 = styled.h1`
   color: ${theme.colour.black};
   font-family: ${theme.weight.b}, sans-serif;
   font-size: ${theme.font.xl};
   margin-bottom: ${theme.spacing.lg}px;
+
+  ${mediaQuery.small(css`
+    font-size: ${theme.font.lg2};
+  `)};
 `
 
 export const Header2 = styled.h2`
@@ -112,7 +133,9 @@ export const Header2 = styled.h2`
   font-size: ${theme.font.lg};
   margin-bottom: ${theme.spacing.md}px;
 
-  ${mediaQuery.medium(css``)};
+  ${mediaQuery.small(css`
+    font-size: ${theme.font.sm};
+  `)};
 `
 
 export const Header3 = styled.h3`
@@ -121,7 +144,9 @@ export const Header3 = styled.h3`
   font-size: ${theme.font.md};
   margin-bottom: 0px;
 
-  ${mediaQuery.medium(css``)};
+  ${mediaQuery.small(css`
+    font-size: ${theme.font.sm};
+  `)};
 `
 
 export const IndexHeader = styled.header`
@@ -138,11 +163,7 @@ export const IndexHeader = styled.header`
   `)};
 
   ${mediaQuery.small(css`
-    height: 20em;
-  `)};
-
-  ${mediaQuery.xs(css`
-    height: 23em;
+    height: 15em;
   `)};
 `
 
@@ -154,11 +175,12 @@ export const HeaderContainer = styled.div`
   padding: ${theme.spacing.xl}px 0px ${theme.spacing.xxl}px 0px;
 
   ${mediaQuery.medium(css`
-    width: 80%;
+    position: static;
+    width: 100%;
   `)};
 
   ${mediaQuery.small(css`
-    width: 70%;
+    width: 100%;
     padding: 8px;
   `)};
 

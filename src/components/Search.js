@@ -11,7 +11,7 @@ import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
 import { css } from 'react-emotion'
-import { theme, Header1, SearchContainer } from './styles'
+import { theme, Header1, SearchContainer, para } from './styles'
 import FooterLinks from './FooterLinks'
 
 const main = css`
@@ -60,7 +60,7 @@ class Search extends Component {
               <Trans>Which parameter would you like to search by?</Trans>
             </Header1>
           </header>
-          <p>
+          <p className={para}>
             <Trans>
               To test the API, you are able to search by Location or File
               number.

@@ -16,17 +16,13 @@ import {
   Section,
   PageBody,
   theme,
+  headerLink,
+  para,
 } from './styles'
 import CircuitHouse from './CircuitHouse'
 
 const main = css`
   margin-bottom: ${theme.spacingXlarge3}px;
-`
-
-const headerLink = css`
-  color: ${theme.colour.blue};
-  padding-right: ${theme.spacing.md}px;
-  font-family: ${theme.weight.b}, sans serif;
 `
 
 const noSpaceLink = css`
@@ -50,7 +46,7 @@ const Home = () => (
               </Header1>
             </div>
 
-            <p>
+            <p className={para}>
               <Trans>
                 The EnerGuide API allows you to access the housing data provided
                 by Natural Resources Canada. You will have open access the data,
@@ -76,7 +72,7 @@ const Home = () => (
             <Header2>
               <Trans>What is an API?</Trans>
             </Header2>
-            <p>
+            <p className={para}>
               <Trans>
                 An API, or <strong>Application Programming Interface</strong>,
                 is a set of routines, protocols and tools for building software.
@@ -93,7 +89,7 @@ const Home = () => (
             <Header3>
               <Trans>View open source data</Trans>
             </Header3>
-            <p>
+            <p className={para}>
               <Trans>
                 The EnerGuide API will help make housing evaluation data
                 accessible for everyone.
@@ -102,7 +98,7 @@ const Home = () => (
             <Header3>
               <Trans>Query specific data</Trans>
             </Header3>
-            <p>
+            <p className={para}>
               <Trans>
                 You can choose to access the granular data that you need.
               </Trans>
@@ -110,7 +106,7 @@ const Home = () => (
             <Header3>
               <Trans>Access current data</Trans>
             </Header3>
-            <p>
+            <p className={para}>
               <Trans>
                 As new housing evaluations are added to the EnerGuide API, the
                 data will be updated and available for you to use.
@@ -122,7 +118,7 @@ const Home = () => (
               <Header2>
                 <Trans>How can I use the EnerGuide API?</Trans>
               </Header2>
-              <p>
+              <p className={para}>
                 <Trans>
                   To learn how to use the API, we have provided the{' '}
                   <a
