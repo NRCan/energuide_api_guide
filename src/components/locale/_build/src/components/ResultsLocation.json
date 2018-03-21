@@ -1,0 +1,50 @@
+{
+  "EnerGuide API": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        47
+      ]
+    ]
+  },
+  "Search": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        50
+      ]
+    ]
+  },
+  "Search by location": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        53
+      ]
+    ]
+  },
+  "Results": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        55
+      ]
+    ]
+  },
+  "results": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        61
+      ]
+    ]
+  },
+  "Search again by location": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        65
+      ]
+    ]
+  }
+}

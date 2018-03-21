@@ -3,15 +3,15 @@
     "origin": [
       [
         "src/components/FooterLinks.js",
-        20
+        24
       ]
     ]
   },
-  "Get Access": {
+  "Get access": {
     "origin": [
       [
         "src/components/FooterLinks.js",
-        23
+        27
       ]
     ]
   }

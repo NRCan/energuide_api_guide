@@ -1,10 +1,77 @@
 {
+  "Get access": {
+    "translation": "Avoir accès",
+    "origin": [
+      [
+        "src/components/FooterLinks.js",
+        27
+      ]
+    ]
+  },
+  "No results": {
+    "translation": "Aucun résultat",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        75
+      ]
+    ]
+  },
+  "Search for another file <0>ID</0>": {
+    "translation": "Rechercher un autre fichier <0> ID </ 0>",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        81
+      ],
+      [
+        "src/components/ResultsFileID.js",
+        131
+      ]
+    ]
+  },
+  "results": {
+    "translation": "résultats",
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        61
+      ]
+    ]
+  },
+  "Search again by location": {
+    "translation": "Rechercher à nouveau par emplacement",
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        65
+      ]
+    ]
+  },
+  "To test the API, you are able to search by Location or File <0>ID</0>.": {
+    "translation": "Pour tester l'API, vous pouvez effectuer une recherche par emplacement ou par fichier <0> ID </ 0>.",
+    "origin": [
+      [
+        "src/components/Search.js",
+        64
+      ]
+    ]
+  },
+  "Search by Location or File <0>ID</0>": {
+    "translation": "Recherche par emplacement ou fichier <0> ID </ 0>",
+    "origin": [
+      [
+        "src/components/Search.js",
+        75
+      ]
+    ]
+  },
   "Alpha": {
-    "translation": "",
+    "translation": "Alpha",
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        42
+        46
       ]
     ]
   },
@@ -13,7 +80,7 @@
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        42
+        48
       ]
     ]
   },
@@ -22,16 +89,7 @@
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        47
-      ]
-    ]
-  },
-  "To see all of the available data,": {
-    "translation": "Pour voir toutes les données disponibles,",
-    "origin": [
-      [
-        "src/components/Results.js",
-        42
+        53
       ]
     ]
   },
@@ -49,16 +107,7 @@
     "origin": [
       [
         "src/components/FooterLinks.js",
-        20
-      ]
-    ]
-  },
-  "Get Access": {
-    "translation": "Accéder",
-    "origin": [
-      [
-        "src/components/FooterLinks.js",
-        23
+        24
       ]
     ]
   },
@@ -67,7 +116,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        46
+        38
       ]
     ]
   },
@@ -76,11 +125,19 @@
     "origin": [
       [
         "src/components/Home.js",
-        49
+        41
       ],
       [
         "src/components/Results.js",
         21
+      ],
+      [
+        "src/components/ResultsFileID.js",
+        147
+      ],
+      [
+        "src/components/ResultsLocation.js",
+        47
       ],
       [
         "src/components/Search.js",
@@ -88,7 +145,7 @@
       ],
       [
         "src/components/SearchFileID.js",
-        82
+        42
       ],
       [
         "src/components/SearchLocation.js",
@@ -101,7 +158,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        54
+        46
       ]
     ]
   },
@@ -110,7 +167,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        61
+        54
       ]
     ]
   },
@@ -119,7 +176,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        67
+        59
       ]
     ]
   },
@@ -128,7 +185,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        77
+        70
       ]
     ]
   },
@@ -137,7 +194,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        80
+        73
       ]
     ]
   },
@@ -146,7 +203,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        91
+        84
       ]
     ]
   },
@@ -155,7 +212,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        94
+        87
       ]
     ]
   },
@@ -164,7 +221,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        97
+        90
       ]
     ]
   },
@@ -173,7 +230,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        103
+        96
       ]
     ]
   },
@@ -182,7 +239,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        106
+        99
       ]
     ]
   },
@@ -191,7 +248,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        111
+        104
       ]
     ]
   },
@@ -200,7 +257,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        114
+        107
       ]
     ]
   },
@@ -209,7 +266,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        123
+        116
       ]
     ]
   },
@@ -218,7 +275,7 @@
     "origin": [
       [
         "src/components/Home.js",
-        126
+        119
       ]
     ]
   },
@@ -230,20 +287,28 @@
         24
       ],
       [
+        "src/components/ResultsFileID.js",
+        150
+      ],
+      [
+        "src/components/ResultsLocation.js",
+        50
+      ],
+      [
         "src/components/Search.js",
         54
       ],
       [
         "src/components/Search.js",
-        95
+        101
       ],
       [
         "src/components/SearchFileID.js",
-        85
+        45
       ],
       [
         "src/components/SearchFileID.js",
-        125
+        86
       ],
       [
         "src/components/SearchLocation.js",
@@ -261,6 +326,10 @@
       [
         "src/components/Results.js",
         27
+      ],
+      [
+        "src/components/ResultsLocation.js",
+        53
       ],
       [
         "src/components/SearchLocation.js",
@@ -282,6 +351,23 @@
       [
         "src/components/Results.js",
         34
+      ],
+      [
+        "src/components/ResultsFileID.js",
+        157
+      ],
+      [
+        "src/components/ResultsLocation.js",
+        55
+      ]
+    ]
+  },
+  "To see all of the available data,": {
+    "translation": "Pour voir toutes les données disponibles,",
+    "origin": [
+      [
+        "src/components/Results.js",
+        42
       ]
     ]
   },
@@ -303,6 +389,40 @@
       ]
     ]
   },
+  "File <0>ID</0>": {
+    "translation": "Fichier ID",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        114
+      ],
+      [
+        "src/components/Search.js",
+        89
+      ],
+      [
+        "src/components/SearchFileID.js",
+        71
+      ]
+    ]
+  },
+  "Search by file <0>ID</0>": {
+    "translation": "Recherche par fichier ID ",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        153
+      ],
+      [
+        "src/components/SearchFileID.js",
+        47
+      ],
+      [
+        "src/components/SearchFileID.js",
+        55
+      ]
+    ]
+  },
   "Which parameter would you like to search by?": {
     "translation": "Quel paramètre souhaitez-vous rechercher?",
     "origin": [
@@ -312,65 +432,16 @@
       ]
     ]
   },
-  "To test the API, you are able to search by Location or File number.": {
-    "translation": "Pour tester l'API, vous pouvez effectuer une recherche par emplacement ou par numéro de fichier.",
-    "origin": [
-      [
-        "src/components/Search.js",
-        64
-      ]
-    ]
-  },
-  "Search by Location or File number": {
-    "translation": "Recherche par lieu ou numéro de fichier.",
-    "origin": [
-      [
-        "src/components/Search.js",
-        75
-      ]
-    ]
-  },
   "Location": {
     "translation": "Location",
     "origin": [
       [
         "src/components/Search.js",
-        78
+        80
       ],
       [
         "src/components/SearchLocation.js",
         596
-      ]
-    ]
-  },
-  "File number": {
-    "translation": "Numéro de fichier",
-    "origin": [
-      [
-        "src/components/Search.js",
-        86
-      ]
-    ]
-  },
-  "Search by file <0>ID</0>": {
-    "translation": "Recherche par fichier ID ",
-    "origin": [
-      [
-        "src/components/SearchFileID.js",
-        87
-      ],
-      [
-        "src/components/SearchFileID.js",
-        95
-      ]
-    ]
-  },
-  "File <0>ID</0>": {
-    "translation": "Fichier ID",
-    "origin": [
-      [
-        "src/components/SearchFileID.js",
-        111
       ]
     ]
   },
@@ -379,7 +450,7 @@
     "origin": [
       [
         "src/components/SearchFileID.js",
-        117
+        78
       ]
     ]
   },
@@ -482,6 +553,46 @@
       ]
     ]
   },
+  "Get Access": {
+    "translation": "Accéder",
+    "origin": [
+      [
+        "src/components/FooterLinks.js",
+        23
+      ]
+    ],
+    "obsolete": true
+  },
+  "To test the API, you are able to search by Location or File number.": {
+    "translation": "Pour tester l'API, vous pouvez effectuer une recherche par emplacement ou par numéro de fichier.",
+    "origin": [
+      [
+        "src/components/Search.js",
+        64
+      ]
+    ],
+    "obsolete": true
+  },
+  "Search by Location or File number": {
+    "translation": "Recherche par lieu ou numéro de fichier.",
+    "origin": [
+      [
+        "src/components/Search.js",
+        75
+      ]
+    ],
+    "obsolete": true
+  },
+  "File number": {
+    "translation": "Numéro de fichier",
+    "origin": [
+      [
+        "src/components/Search.js",
+        86
+      ]
+    ],
+    "obsolete": true
+  },
   "<0>Alpha</0>This is an internal service. <1>To provide feedback, email us</1>.": {
     "translation": "Alpha Ceci est un service interne. Pour nous faire part de vos commentaires, envoyez-nous un e-mail.",
     "origin": [
@@ -493,7 +604,7 @@
     "obsolete": true
   },
   "Pour voir toutes les données disponibles,": {
-    "translation": "",
+    "translation": "Pour voir toutes les données disponibles,",
     "origin": [
       [
         "src/components/Results.js",
@@ -593,7 +704,7 @@
     "obsolete": true
   },
   "Access the API": {
-    "translation": "",
+    "translation": "Accéder à l'API",
     "origin": [
       [
         "src/components/Home.js",
@@ -603,7 +714,7 @@
     "obsolete": true
   },
   "An <0>Application Programming Interface</0>, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
-    "translation": "",
+    "translation": "Une <0> Application Programming Interface </ 0>, ou <1> API </ 1>, est un ensemble de routines, de protocoles et d'outils pour créer des logiciels. De nombreuses applications peuvent se parler et fournir une réponse.",
     "origin": [
       [
         "src/components/Home.js",
@@ -613,7 +724,7 @@
     "obsolete": true
   },
   "View open data": {
-    "translation": "",
+    "translation": "Afficher les données ouvertes",
     "origin": [
       [
         "src/components/Home.js",
@@ -623,7 +734,7 @@
     "obsolete": true
   },
   "The EnerGuide API will help make energy consumption data accessible for everyone.": {
-    "translation": "",
+    "translation": "L'API ÉnerGuide aidera à rendre les données sur la consommation d'énergie accessibles à tous.",
     "origin": [
       [
         "src/components/Home.js",
@@ -637,7 +748,7 @@
     "obsolete": true
   },
   "You can choose to access the granular data that you need. You will benefit from the ability to extract data data that is specific to your needs.": {
-    "translation": "",
+    "translation": "Vous pouvez choisir d'accéder aux données granulaires dont vous avez besoin. Vous bénéficierez de la capacité d'extraire des données de données spécifiques à vos besoins.",
     "origin": [
       [
         "src/components/Home.js",
@@ -647,7 +758,7 @@
     "obsolete": true
   },
   "Developers and data analysts can allow users to query specific information from large data sets. They set the rules that will guide the user to what they need.": {
-    "translation": "",
+    "translation": "Les développeurs et les analystes de données peuvent permettre aux utilisateurs d'interroger des informations spécifiques à partir de grands ensembles de données. Ils définissent les règles qui guideront l'utilisateur à ce dont ils ont besoin.",
     "origin": [
       [
         "src/components/Home.js",
@@ -657,7 +768,7 @@
     "obsolete": true
   },
   "Read the documentation": {
-    "translation": "",
+    "translation": "Lire la documentation",
     "origin": [
       [
         "src/components/Home.js",
@@ -667,7 +778,7 @@
     "obsolete": true
   },
   "Search by": {
-    "translation": "",
+    "translation": "Recherché par",
     "origin": [
       [
         "src/components/Search.js",
@@ -681,7 +792,7 @@
     "obsolete": true
   },
   "Search by Location": {
-    "translation": "",
+    "translation": "Recherche par lieu",
     "origin": [
       [
         "src/components/SearchLocation.js",
@@ -691,7 +802,7 @@
     "obsolete": true
   },
   "Search by the type of energy source. Choose all of the parameters that apply.": {
-    "translation": "",
+    "translation": "Recherche par type de source d'énergie. Choisissez tous les paramètres qui s'appliquent.",
     "origin": [
       [
         "src/components/SearchLocation.js",
@@ -701,7 +812,7 @@
     "obsolete": true
   },
   "An <0>Application Programming Interface</0>Application Programming Interface, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
-    "translation": "",
+    "translation": "Une <0> interface de programmation d'application </ 0> Application Programming Interface, ou <1> API </ 1>, est un ensemble de routines, de protocoles et d'outils pour la construction de logiciels. De nombreuses applications peuvent se parler et fournir une réponse.",
     "origin": [
       [
         "src/components/Home.js",

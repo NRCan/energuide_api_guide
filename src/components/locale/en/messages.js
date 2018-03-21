@@ -16,12 +16,20 @@ module.exports = {
     },
   },
   m: {
+    'Get access': 'Get access',
+    'No results': 'No results',
+    'Search for another file <0>ID</0>': 'Search for another file <0>ID</0>',
+    results: 'results',
+    'Search again by location': 'Search again by location',
+    'To test the API, you are able to search by Location or File <0>ID</0>.':
+      'To test the API, you are able to search by Location or File <0>ID</0>.',
+    'Search by Location or File <0>ID</0>':
+      'Search by Location or File <0>ID</0>',
     Alpha: 'Alpha',
     'This is an internal service.': 'This is an internal service.',
     'To provide feedback, email us': 'To provide feedback, email us',
     Privacy: 'Privacy',
     'Ready to use the Energuide API?': 'Ready to use the Energuide API?',
-    'Get Access': 'Get Access',
     'Natural Resources Canada': 'Natural Resources Canada',
     'EnerGuide API': 'EnerGuide API',
     'The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.':
@@ -52,15 +60,11 @@ module.exports = {
     'view the EnerGuide API documentation':
       'view the EnerGuide API documentation',
     'on GitHub.': 'on GitHub.',
+    'File <0>ID</0>': 'File <0>ID</0>',
+    'Search by file <0>ID</0>': 'Search by file <0>ID</0>',
     'Which parameter would you like to search by?':
       'Which parameter would you like to search by?',
-    'To test the API, you are able to search by Location or File number.':
-      'To test the API, you are able to search by Location or File number.',
-    'Search by Location or File number': 'Search by Location or File number',
     Location: 'Location',
-    'File number': 'File number',
-    'Search by file <0>ID</0>': 'Search by file <0>ID</0>',
-    'File <0>ID</0>': 'File <0>ID</0>',
     'Search by the file <0>ID</0> on your Energuide evaluation.':
       'Search by the file <0>ID</0> on your Energuide evaluation.',
     'No results found': 'No results found',
@@ -76,6 +80,11 @@ module.exports = {
     All: 'All',
     Home: 'Home',
     'Thank you': 'Thank you',
+    'Get Access': 'Get Access',
+    'To test the API, you are able to search by Location or File number.':
+      'To test the API, you are able to search by Location or File number.',
+    'Search by Location or File number': 'Search by Location or File number',
+    'File number': 'File number',
     '<0>Alpha</0>This is an internal service. <1>To provide feedback, email us</1>.':
       '<0>Alpha</0>This is an internal service. <1>To provide feedback, email us</1>.',
     'The EnerGuide API allows you to access the housing data provided by Natural Resource Canada. You will have open access to the data, with granularity to search to a individual dwelling level.':
