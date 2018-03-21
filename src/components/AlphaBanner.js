@@ -1,7 +1,7 @@
 import React from 'react'
 import { Trans } from 'lingui-react'
 import { css } from 'react-emotion'
-import { theme, roundedEdges } from './styles'
+import { theme, roundedEdges, mediaQuery } from './styles'
 
 const banner = css`
   background-color: ${theme.colour.grey};
@@ -29,6 +29,9 @@ const statusBar = css`
   margin-right: ${theme.spacing.md}px;
   background-color: ${theme.colour.blueAlpha};
   ${roundedEdges};
+  ${mediaQuery.small(css`
+    font-size: 10px;
+  `)};
 `
 
 const link = css`

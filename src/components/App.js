@@ -1,5 +1,6 @@
 import React from 'react'
 import { injectGlobal } from 'emotion'
+import { css } from 'react-emotion'
 import Switcher from './Switcher'
 import { I18nProvider } from 'lingui-react'
 import { unpackCatalog } from 'lingui-i18n'
@@ -10,7 +11,7 @@ import PropTypes from 'prop-types'
 import AlphaBanner from './AlphaBanner'
 import FederalBanner from './FederalBanner'
 import Footer from './Footer'
-import { theme } from './styles'
+import { mediaQuery, theme } from './styles'
 
 const catalogs = { en: unpackCatalog(en), fr: unpackCatalog(fr) }
 
@@ -27,6 +28,11 @@ injectGlobal`
 		height: 100%;
     font-family: ${theme.weight.l}, sans serif;
     font-size: ${theme.font.md};
+
+    ${mediaQuery.small(css`
+      font-size: ${theme.font.xs};
+    `)};
+
 	}
 
   *,
@@ -45,10 +51,6 @@ injectGlobal`
     font-family: ${theme.weight.b};
     font-size: ${theme.font.md}px;
   }
-
-  p, {
-		line-height: 1.45;
-	}
 
   p {
     margin-bottom: ${theme.spacing.lg}px;
