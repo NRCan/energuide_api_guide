@@ -53,15 +53,16 @@ const Home = () => (
                 and will be able to query to an individual dwelling.
               </Trans>
             </p>
-            <NavLink to="/search" className={headerLink}>
-              <Trans>Test the API</Trans>
-            </NavLink>
-            <a
-              href="https://github.com/cds-snc/nrcan_api"
-              className={headerLink}
-            >
-              <Trans>View the documentation</Trans>
-            </a>
+            <span className={headerLink}>
+              <NavLink to="/search">
+                <Trans>Test the API</Trans>
+              </NavLink>
+            </span>
+            <span className={headerLink}>
+              <a href="https://github.com/cds-snc/nrcan_api/blob/master/api/docs.md">
+                <Trans>View the documentation</Trans>
+              </a>
+            </span>
           </HeaderContainer>
         </IndexHeader>
 
@@ -122,10 +123,10 @@ const Home = () => (
                 <Trans>
                   To learn how to use the API, we have provided the{' '}
                   <a
-                    href="https://github.com/cds-snc/nrcan_api"
+                    href="https://github.com/cds-snc/nrcan_api/blob/master/api/docs.md"
                     className={noSpaceLink}
                   >
-                    <Trans>documentation on Github.</Trans>
+                    <Trans>documentation on Github</Trans>.
                   </a>
                   The documentation will show all of the data types available
                   under the EnerGuide API.
