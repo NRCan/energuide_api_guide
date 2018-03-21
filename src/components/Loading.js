@@ -1,5 +1,6 @@
 import React from 'react'
 import { css } from 'react-emotion'
+import { Header1, ContainerLoading } from './styles'
 
 const loading = css`
   .loader,
@@ -62,4 +63,20 @@ const loading = css`
   }
 `
 
-export const Loading = () => <div className={loading}>Loading...</div>
+const loadingBar = css`
+  width: 300px;
+  margin-bottom: 50px;
+`
+
+export const Loading = () => (
+  <div className={loading}>
+    <ContainerLoading>
+      <img
+        className={loadingBar}
+        src="https://cdn.rawgit.com/nmakuch/6234e8d9da6620bf96dde84f29aecb74/raw/feb89aad1d75fc73d27a881cbf4bb4000187126c/loadingBar.svg"
+      />
+
+      <Header1>The page is loading...</Header1>
+    </ContainerLoading>
+  </div>
+)
