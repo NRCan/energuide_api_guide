@@ -193,7 +193,6 @@ const ResultsFileID = props => (
 const mapStateToProps = state => ({
   path: state.location.pathname,
   payload: state.location.payload,
-  data: state.data.searchFileIdData,
 })
 
 export default withApollo(connect(mapStateToProps)(ResultsFileID))

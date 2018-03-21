@@ -8,7 +8,6 @@ import TextInput from './forms/TextInput'
 import Button from './forms/Button'
 import { compose, withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
-import { saveFileIdData } from '../actions'
 import { css } from 'react-emotion'
 import { Header1, Header2, SearchContainer } from './styles'
 import FooterLinks from './FooterLinks'
@@ -21,7 +20,6 @@ const main = css`
 
 class SearchFileID extends Component {
   static propTypes = {
-    save: PropTypes.func.isRequired,
     data: PropTypes.object,
     dispatch: PropTypes.func.isRequired,
     handleSubmit: PropTypes.func.isRequired,
@@ -36,8 +34,6 @@ class SearchFileID extends Component {
   }
 
   async handleFormData(data) {
-    let { save } = this.props
-    save(data)
     this.props.dispatch({
       type: 'RESULTSFILEID',
       payload: { fileId: data.fileId },
@@ -103,17 +99,8 @@ class SearchFileID extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    save: data => {
-      dispatch(saveFileIdData(data))
-    },
-  }
-}
-
 const mapStateToProps = state => ({
   path: state.location.pathname,
-  data: state.data.searchFileIdData,
 })
 
 export default compose(
@@ -121,5 +108,5 @@ export default compose(
   reduxForm({
     form: 'searchFileId',
   }),
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps),
 )(SearchFileID)
