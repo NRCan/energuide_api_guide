@@ -45,12 +45,12 @@ const AlphaBanner = () => (
       <span className={statusBar}>
         <Trans>Alpha</Trans>
       </span>
-      <Trans>This is an internal service.</Trans>{' '}
+      <Trans>This is a demonstration of how the API could be used.</Trans>{' '}
       <a
         className={link}
         href="mailto:paul.craig@cds-snc.ca?subject=Hey,%20I%20love%20your%20app!"
       >
-        <Trans>To provide feedback, email us</Trans>
+        <Trans>Help us improve this internal service, email your feedback</Trans>
       </a>.
     </p>
   </div>
