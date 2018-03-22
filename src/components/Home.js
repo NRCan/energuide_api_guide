@@ -105,7 +105,7 @@ const Home = () => (
             </Header3>
             <p className={para}>
               <Trans>
-                As new housing evaluations are added to the EnerGuide API, the
+                As additional housing evaluations are added to the EnerGuide API, the
                 data will be updated and available for you to use.
               </Trans>
             </p>
