@@ -11,7 +11,7 @@ import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
 import { Trans } from 'lingui-react'
 import { css } from 'react-emotion'
-import { theme, Header1, SearchContainer, para } from './styles'
+import { theme, Header1, SearchContainer } from './styles'
 import FooterLinks from './FooterLinks'
 
 const main = css`
@@ -60,7 +60,7 @@ class Search extends Component {
               <Trans>Which parameter would you like to search by?</Trans>
             </Header1>
           </header>
-          <p className={para}>
+          <p>
             <Trans>
               To test the API, you are able to search by Location or File{' '}
               <span className="id-span">ID</span>.
@@ -94,7 +94,7 @@ class Search extends Component {
                 name="search"
                 id="search-1"
               >
-                <TooltipIcon dataTip="A file ID refers to an individual home.<br/>This ID is provided to the homeowner on the Energuide label and report." />
+                <TooltipIcon dataTip="A file ID refers to an individual home.<br/>This ID is provided to the homeowner on the EnerGuide label and report." />
               </Radio>
             </FieldSet>
             <Button disabled={pristine || submitting}>

@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'react-emotion'
-import { theme, visuallyhidden } from '../styles'
+import { theme, visuallyhidden, mediaQuery } from '../styles'
 
 const fieldset = css`
   border: none;
   margin-bottom: ${theme.spacing.xl}px;
+
+  ${mediaQuery.small(css`
+    margin-bottom: ${theme.spacing.md}px;
+  `)};
 `
 
 const legendHidden = css`

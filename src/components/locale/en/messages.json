@@ -1,95 +1,28 @@
 {
-  "Get access": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/FooterLinks.js",
-        27
-      ]
-    ]
-  },
-  "No results": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/ResultsFileID.js",
-        75
-      ]
-    ]
-  },
-  "Search for another file <0>ID</0>": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/ResultsFileID.js",
-        81
-      ],
-      [
-        "src/components/ResultsFileID.js",
-        131
-      ]
-    ]
-  },
-  "results": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/ResultsLocation.js",
-        61
-      ]
-    ]
-  },
-  "Search again by location": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/ResultsLocation.js",
-        65
-      ]
-    ]
-  },
-  "To test the API, you are able to search by Location or File <0>ID</0>.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        64
-      ]
-    ]
-  },
-  "Search by Location or File <0>ID</0>": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        75
-      ]
-    ]
-  },
   "Alpha": {
     "translation": "",
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        46
+        62
       ]
     ]
   },
-  "This is an internal service.": {
+  "This is a demonstration of how the API could be used.": {
     "translation": "",
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        48
+        64
       ]
     ]
   },
-  "To provide feedback, email us": {
+  "Help us improve this internal service, email your feedback": {
     "translation": "",
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        53
+        70
       ]
     ]
   },
@@ -98,7 +31,7 @@
     "origin": [
       [
         "src/components/Footer.js",
-        24
+        36
       ]
     ]
   },
@@ -107,7 +40,16 @@
     "origin": [
       [
         "src/components/FooterLinks.js",
-        24
+        37
+      ]
+    ]
+  },
+  "Get access": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/FooterLinks.js",
+        41
       ]
     ]
   },
@@ -133,11 +75,11 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        147
+        148
       ],
       [
         "src/components/ResultsLocation.js",
-        47
+        48
       ],
       [
         "src/components/Search.js",
@@ -149,7 +91,7 @@
       ],
       [
         "src/components/SearchLocation.js",
-        571
+        572
       ]
     ]
   },
@@ -252,7 +194,7 @@
       ]
     ]
   },
-  "As new housing evaluations are added to the EnerGuide API, the data will be updated and available for you to use.": {
+  "As more housing evaluations are added to the EnerGuide API, the data will be updated and available for you to use.": {
     "translation": "",
     "origin": [
       [
@@ -288,11 +230,11 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        150
+        151
       ],
       [
         "src/components/ResultsLocation.js",
-        50
+        51
       ],
       [
         "src/components/Search.js",
@@ -312,11 +254,11 @@
       ],
       [
         "src/components/SearchLocation.js",
-        574
+        575
       ],
       [
         "src/components/SearchLocation.js",
-        648
+        649
       ]
     ]
   },
@@ -329,15 +271,15 @@
       ],
       [
         "src/components/ResultsLocation.js",
-        53
+        54
       ],
       [
         "src/components/SearchLocation.js",
-        576
+        577
       ],
       [
         "src/components/SearchLocation.js",
-        582
+        583
       ]
     ]
   },
@@ -354,11 +296,11 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        157
+        158
       ],
       [
         "src/components/ResultsLocation.js",
-        55
+        56
       ]
     ]
   },
@@ -389,12 +331,34 @@
       ]
     ]
   },
+  "No results": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        76
+      ]
+    ]
+  },
+  "Search for another file <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        82
+      ],
+      [
+        "src/components/ResultsFileID.js",
+        132
+      ]
+    ]
+  },
   "File <0>ID</0>": {
     "translation": "",
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        114
+        115
       ],
       [
         "src/components/Search.js",
@@ -411,7 +375,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        153
+        154
       ],
       [
         "src/components/SearchFileID.js",
@@ -420,6 +384,24 @@
       [
         "src/components/SearchFileID.js",
         55
+      ]
+    ]
+  },
+  "results": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        62
+      ]
+    ]
+  },
+  "Search again by location": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        66
       ]
     ]
   },
@@ -432,6 +414,24 @@
       ]
     ]
   },
+  "To test the API, you are able to search by Location or File <0>ID</0>.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Search.js",
+        64
+      ]
+    ]
+  },
+  "Search by Location or File <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Search.js",
+        75
+      ]
+    ]
+  },
   "Location": {
     "translation": "",
     "origin": [
@@ -441,7 +441,7 @@
       ],
       [
         "src/components/SearchLocation.js",
-        596
+        597
       ]
     ]
   },
@@ -459,7 +459,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        560
+        561
       ]
     ]
   },
@@ -468,7 +468,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        600
+        601
       ]
     ]
   },
@@ -477,7 +477,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        610
+        611
       ]
     ]
   },
@@ -486,7 +486,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        614
+        615
       ]
     ]
   },
@@ -495,7 +495,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        617
+        618
       ]
     ]
   },
@@ -504,7 +504,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        623
+        624
       ]
     ]
   },
@@ -513,7 +513,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        629
+        630
       ]
     ]
   },
@@ -522,7 +522,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        635
+        636
       ]
     ]
   },
@@ -531,7 +531,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        641
+        642
       ]
     ]
   },
@@ -552,273 +552,5 @@
         17
       ]
     ]
-  },
-  "Get Access": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/FooterLinks.js",
-        23
-      ]
-    ],
-    "obsolete": true
-  },
-  "To test the API, you are able to search by Location or File number.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        64
-      ]
-    ],
-    "obsolete": true
-  },
-  "Search by Location or File number": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        75
-      ]
-    ],
-    "obsolete": true
-  },
-  "File number": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        86
-      ]
-    ],
-    "obsolete": true
-  },
-  "<0>Alpha</0>This is an internal service. <1>To provide feedback, email us</1>.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/AlphaBanner.js",
-        42
-      ]
-    ],
-    "obsolete": true
-  },
-  "The EnerGuide API allows you to access the housing data provided by Natural Resource Canada. You will have open access to the data, with granularity to search to a individual dwelling level.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        38
-      ]
-    ],
-    "obsolete": true
-  },
-  "An <0>API</0>, or <1>Application Programming Interface</1>, is a set of routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        61
-      ]
-    ],
-    "obsolete": true
-  },
-  "To learn how to use the API, we have provided the documentation on Github. The documentation will show all of the data types available under the EnerGuide API.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        106
-      ]
-    ],
-    "obsolete": true
-  },
-  "Search by the type of energy source. Choose the parameter that applies.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        608
-      ]
-    ],
-    "obsolete": true
-  },
-  "Any": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        614
-      ]
-    ],
-    "obsolete": true
-  },
-  "To see how it can be used,": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        113
-      ]
-    ],
-    "obsolete": true
-  },
-  "test the API": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        115
-      ]
-    ],
-    "obsolete": true
-  },
-  "Alpha - This is an internal service": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/AlphaBanner.js",
-        15
-      ]
-    ],
-    "obsolete": true
-  },
-  "What is the EnerGuide API?": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        25
-      ]
-    ],
-    "obsolete": true
-  },
-  "Access the API": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        38
-      ]
-    ],
-    "obsolete": true
-  },
-  "An <0>Application Programming Interface</0>, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        48
-      ]
-    ],
-    "obsolete": true
-  },
-  "View open data": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        61
-      ]
-    ],
-    "obsolete": true
-  },
-  "The EnerGuide API will help make energy consumption data accessible for everyone.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        64
-      ],
-      [
-        "src/components/Home.js",
-        83
-      ]
-    ],
-    "obsolete": true
-  },
-  "You can choose to access the granular data that you need. You will benefit from the ability to extract data data that is specific to your needs.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        73
-      ]
-    ],
-    "obsolete": true
-  },
-  "Developers and data analysts can allow users to query specific information from large data sets. They set the rules that will guide the user to what they need.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        94
-      ]
-    ],
-    "obsolete": true
-  },
-  "Read the documentation": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        112
-      ]
-    ],
-    "obsolete": true
-  },
-  "Search by": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Search.js",
-        57
-      ],
-      [
-        "src/components/SearchLocation.js",
-        57
-      ]
-    ],
-    "obsolete": true
-  },
-  "Search by Location": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        100
-      ]
-    ],
-    "obsolete": true
-  },
-  "Search by the type of energy source. Choose all of the parameters that apply.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        104
-      ]
-    ],
-    "obsolete": true
-  },
-  "An <0>Application Programming Interface</0>Application Programming Interface, or<1>API</1>, is a set of routines, protocols and tools for building software. Many applications can talk to each other and deliver a response.": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/Home.js",
-        53
-      ]
-    ],
-    "obsolete": true
-  },
-  "HOME": {
-    "translation": "Home",
-    "origin": [
-      [
-        "src/components/Home.js",
-        45
-      ]
-    ],
-    "obsolete": true
   }
 }

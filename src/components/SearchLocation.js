@@ -457,6 +457,7 @@ class SearchLocation extends Component {
     let variables = {}
     Object.entries(data).forEach(([key, value]) => {
       if (key === 'location') {
+        value = typeof value === 'string' ? value.toUpperCase() : value
         filters.push(`{
                 field: dwellingForwardSortationArea
                 comparator: eq
@@ -593,8 +594,9 @@ class SearchLocation extends Component {
             >
               <Header2>
                 <label htmlFor="location" id="location-label">
-                  <Trans>Location</Trans> (eg. L4C)
-                </label>
+                  <Trans>Location</Trans>
+                </label>{' '}
+                (eg. L4C)
               </Header2>
               <p id="location-details">
                 <Trans>

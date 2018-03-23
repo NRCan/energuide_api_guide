@@ -30,7 +30,7 @@ injectGlobal`
     font-size: ${theme.font.md};
 
     ${mediaQuery.small(css`
-      font-size: ${theme.font.xs};
+      font-size: ${theme.font.sm};
     `)};
 
 	}
@@ -70,6 +70,7 @@ injectGlobal`
     }
 
     p {
+      font-size: ${theme.font.md}px;
       margin-bottom: ${theme.spacing.md}px;
     }
 

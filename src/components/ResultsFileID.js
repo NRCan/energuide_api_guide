@@ -34,6 +34,7 @@ const ul = css`
 
 const getData = async function(props) {
   let { client, payload: { fileId } } = props
+  fileId = typeof fileId === 'string' ? fileId.toUpperCase() : fileId
 
   let response = await client.query({
     query: gql`
@@ -102,7 +103,7 @@ function ShowFileID({ dwelling, fileId }) {
     return {
       City: dwelling.city,
       'Year built': dwelling.yearBuilt,
-      'ERS rating': evaluation.ersRating,
+      'ERS rating (GJ/year)': evaluation.ersRating,
       'Evaluation type': evaluation.evaluationType,
       'Energy Source': energySourceEnglish,
     }
@@ -136,7 +137,7 @@ function ShowFileID({ dwelling, fileId }) {
   )
 }
 ShowFileID.propTypes = {
-  dwelling: PropTypes.any.isRequired,
+  dwelling: PropTypes.any,
   fileId: PropTypes.any.isRequired,
 }
 

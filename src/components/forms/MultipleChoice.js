@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
 import { css } from 'react-emotion'
-import { theme, roundedEdges } from '../styles'
+import { theme, roundedEdges, mediaQuery } from '../styles'
 
 const govuk_multiple_choice = css`
   display: block;
@@ -147,6 +147,23 @@ const cds_multiple_choice = css`
       padding: 0 ${theme.spacing.sm}px 0 ${theme.spacing.xs}px;
     }
   }
+
+  ${mediaQuery.small(css`
+    margin-bottom: ${theme.spacing.md}px;
+
+    input {
+      width: 22px;
+      height: 22px;
+    }
+
+    label {
+      font-size: ${theme.font.md};
+
+      > span {
+        padding-left: 0;
+      }
+    }
+  `)};
 `
 
 const radio = css`
@@ -165,6 +182,18 @@ const radio = css`
     top: 7px;
     left: 5px;
   }
+
+  ${mediaQuery.small(css`
+    input[type='radio'] + label::before {
+      width: 20px;
+      height: 20px;
+    }
+
+    input[type='radio'] + label::after {
+      top: 6px;
+      left: 4px;
+    }
+  `)};
 `
 
 const Radio = ({ label, value, name, id, children }) => (

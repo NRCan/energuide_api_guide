@@ -3,23 +3,23 @@
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        46
+        62
       ]
     ]
   },
-  "This is an internal service.": {
+  "This is a demonstration of how the API could be used.": {
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        48
+        64
       ]
     ]
   },
-  "To provide feedback, email us": {
+  "Help us improve this internal service, email your feedback": {
     "origin": [
       [
         "src/components/AlphaBanner.js",
-        53
+        70
       ]
     ]
   }

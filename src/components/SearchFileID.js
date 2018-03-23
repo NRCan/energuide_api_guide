@@ -70,9 +70,9 @@ class SearchFileID extends Component {
                 <label htmlFor="fileId" id="fileId-label">
                   <Trans>
                     File <span className="id-span">ID</span>
-                  </Trans>{' '}
-                  (eg. 4X94D01219)
-                </label>
+                  </Trans>
+                </label>{' '}
+                (eg. 4X94D01219)
               </Header2>
               <p id="fileId-details">
                 <Trans>

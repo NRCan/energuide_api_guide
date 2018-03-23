@@ -15,6 +15,14 @@ const container = css`
   background-color: ${theme.colour.black};
   ${mediaQuery.medium(css`
     display: block;
+    div {
+      margin-bottom: ${theme.spacing.sm}px;
+    }
+  `)};
+
+  ${mediaQuery.small(css`
+    padding-left: ${theme.spacing.lg}px;
+    padding-right: ${theme.spacing.xl}px;
   `)};
 `
 
