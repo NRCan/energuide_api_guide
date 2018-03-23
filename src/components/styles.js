@@ -236,7 +236,7 @@ export const UseTheGuide = styled.div`
   background-color: #f8f8f8;
 
   ${mediaQuery.small(css`
-    padding-top: ${theme.spacing.sm}px;
+    padding-top: ${theme.spacing.xs}px;
 
     section {
       margin-bottom: ${theme.spacing.lg}px;
@@ -258,6 +258,13 @@ export const SearchContainer = styled.div`
 
   ${mediaQuery.small(css`
     width: 100%;
+  `)};
+
+  ${mediaQuery.small(css`
+    padding-top: ${theme.spacing.xl}px;
+    padding-right: ${theme.spacing.xl}px;
+    padding-left: ${theme.spacing.lg}px;
+    padding-bottom: ${theme.spacing.xl}px;
   `)};
 `
 

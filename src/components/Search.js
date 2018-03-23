@@ -94,7 +94,7 @@ class Search extends Component {
                 name="search"
                 id="search-1"
               >
-                <TooltipIcon dataTip="A file ID refers to an individual home.<br/>This ID is provided to the homeowner on the Energuide label and report." />
+                <TooltipIcon dataTip="A file ID refers to an individual home.<br/>This ID is provided to the homeowner on the EnerGuide label and report." />
               </Radio>
             </FieldSet>
             <Button disabled={pristine || submitting}>

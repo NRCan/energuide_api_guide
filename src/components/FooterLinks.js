@@ -10,6 +10,7 @@ const footerLinks = css`
 
   ${mediaQuery.small(css`
     padding-left: ${theme.spacing.lg}px;
+    padding-bottom: ${theme.spacing.lg}px;
   `)};
 
   li {
@@ -19,6 +20,14 @@ const footerLinks = css`
       color: ${theme.colour.blue};
     }
   }
+
+  br {
+    display: none;
+
+    ${mediaQuery.xs(css`
+      display: initial;
+    `)};
+  }
 `
 
 const FooterLinks = () => (
@@ -27,6 +36,7 @@ const FooterLinks = () => (
       <li>
         <Trans>Ready to use the Energuide API?</Trans>
         {'  '}
+        <br />
         <a href="http://bit.ly/2u4CxWJ">
           <Trans>Get access</Trans>
         </a>

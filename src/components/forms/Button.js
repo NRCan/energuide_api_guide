@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'react-emotion'
-import { theme, roundedEdges } from '../styles'
+import { theme, roundedEdges, mediaQuery } from '../styles'
 
 const button = css`
   font-size: ${theme.font.md};
-  font-weight: 700;
+  font-family: ${theme.weight.s};
   color: ${theme.colour.white};
   background-color: ${theme.colour.blue};
   border: 5px solid transparent;
@@ -13,6 +13,10 @@ const button = css`
   padding: ${theme.spacing.sm}px ${theme.spacing.xl}px;
   cursor: pointer;
   ${roundedEdges};
+
+  ${mediaQuery.xs(css`
+    width: 100%;
+  `)};
 
   &:focus {
     outline: 4px solid ${theme.colour.focus};
