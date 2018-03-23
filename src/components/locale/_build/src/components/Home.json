@@ -103,7 +103,7 @@
       ]
     ]
   },
-  "As new housing evaluations are added to the EnerGuide API, the data will be updated and available for you to use.": {
+  "As more housing evaluations are added to the EnerGuide API, the data will be updated and available for you to use.": {
     "origin": [
       [
         "src/components/Home.js",
