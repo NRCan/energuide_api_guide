@@ -26,6 +26,7 @@ const tableContainer = css`
 
   ${mediaQuery.small(css`
     width: 100%;
+    height: 400px;
   `)};
 
   & > .fixedDataTableLayout_main {
