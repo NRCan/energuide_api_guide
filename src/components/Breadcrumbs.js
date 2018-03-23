@@ -30,7 +30,7 @@ const breadcrumb = css`
       }
     }
 
-    li:not(:last-child)::after {
+    li:not(:first-child)::before {
       content: '>';
       padding: 0 ${theme.spacing.md}px;
       color: ${theme.colour.grey};
