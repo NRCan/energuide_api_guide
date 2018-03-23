@@ -22,7 +22,7 @@ const container = css`
 
   ${mediaQuery.small(css`
     padding-left: ${theme.spacing.lg}px;
-    padding-right: ${theme.spacing.lg}px;
+    padding-right: ${theme.spacing.xl}px;
   `)};
 `
 

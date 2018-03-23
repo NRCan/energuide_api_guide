@@ -71,8 +71,8 @@ export const theme = {
     base: '20px',
     md: '20px',
     lg: '24px',
-    lg2: '32px',
-    xl: '48px',
+    xl: '32px',
+    xxl: '48px',
   },
   spacing: {
     md: 16,
@@ -103,7 +103,7 @@ export const mediaQuery = Object.keys(breakpoints).reduce(
 
 export const para = css`
   ${mediaQuery.small(css`
-    font-size: ${theme.font.xs};
+    font-size: ${theme.font.sm};
   `)};
 `
 
@@ -112,7 +112,15 @@ export const headerLink = css`
   font-family: ${theme.weight.b}, sans serif;
 
   ${mediaQuery.small(css`
-    font-size: 14px;
+    font-size: ${theme.font.sm};
+
+    &:first-of-type {
+      margin-bottom: ${theme.spacing.md}px;
+    }
+  `)};
+
+  ${mediaQuery.xs(css`
+    display: block;
   `)};
 
   & > a {
@@ -127,11 +135,11 @@ export const headerLink = css`
 export const Header1 = styled.h1`
   color: ${theme.colour.black};
   font-family: ${theme.weight.b}, sans-serif;
-  font-size: ${theme.font.xl};
+  font-size: ${theme.font.xxl};
   margin-bottom: ${theme.spacing.lg}px;
 
   ${mediaQuery.small(css`
-    font-size: ${theme.font.lg2};
+    font-size: ${theme.font.xl};
   `)};
 `
 
@@ -142,7 +150,7 @@ export const Header2 = styled.h2`
   margin-bottom: ${theme.spacing.md}px;
 
   ${mediaQuery.small(css`
-    font-size: ${theme.font.sm};
+    font-size: ${theme.font.md};
   `)};
 `
 
@@ -160,19 +168,20 @@ export const Header3 = styled.h3`
 
 export const IndexHeader = styled.header`
   background-color: ${props => props.theme.colour.yellow};
-  padding: ${theme.spacing.xl}px ${theme.spacing.xxxl}px;
-  height: 19.5em;
-
-  ${mediaQuery.large(css`
-    height: 20em;
-  `)};
+  padding: ${theme.spacing.xxxl}px ${theme.spacing.xxxl}px;
+  height: 21em;
 
   ${mediaQuery.medium(css`
-    height: 18.5em;
+    padding-top: ${theme.spacing.xxl}px;
+    padding-bottom: ${theme.spacing.xxl}px;
+    height: initial;
   `)};
 
   ${mediaQuery.small(css`
-    height: 15em;
+    padding-top: ${theme.spacing.xl}px;
+    padding-bottom: ${theme.spacing.xl}px;
+    padding-left: ${theme.spacing.lg}px;
+    padding-right: ${theme.spacing.xl}px;
   `)};
 `
 
@@ -181,7 +190,6 @@ export const HeaderContainer = styled.div`
   position: absolute;
   z-index: 1;
   margin-left: 0px;
-  padding: ${theme.spacing.xl}px 0px ${theme.spacing.xxl}px 0px;
 
   ${mediaQuery.medium(css`
     position: static;
@@ -190,7 +198,6 @@ export const HeaderContainer = styled.div`
 
   ${mediaQuery.small(css`
     width: 100%;
-    padding: 8px;
   `)};
 
   h2 {
@@ -211,7 +218,10 @@ export const Section = styled.section`
   `)};
 
   ${mediaQuery.small(css`
-    width: 85%;
+    width: 100%;
+    margin-bottom: ${theme.spacing.xl}px;
+    padding-right: ${theme.spacing.xl}px;
+    padding-left: ${theme.spacing.lg}px;
   `)};
 `
 export const PageBody = styled.div`
@@ -224,6 +234,14 @@ export const PageBody = styled.div`
 export const UseTheGuide = styled.div`
   padding-top: ${theme.spacing.md}px;
   background-color: #f8f8f8;
+
+  ${mediaQuery.small(css`
+    padding-top: ${theme.spacing.sm}px;
+
+    section {
+      margin-bottom: ${theme.spacing.lg}px;
+    }
+  `)};
 `
 
 export const SearchContainer = styled.div`

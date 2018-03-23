@@ -1,12 +1,16 @@
 import React from 'react'
 import { Trans } from 'lingui-react'
 import { css } from 'react-emotion'
-import { Header3, theme } from './styles'
+import { Header3, theme, mediaQuery } from './styles'
 
 const footerLinks = css`
   list-style-type: none;
   padding-left: ${theme.spacing.xxxl}px;
   padding-bottom: ${theme.spacing.xl}px;
+
+  ${mediaQuery.small(css`
+    padding-left: ${theme.spacing.lg}px;
+  `)};
 
   li {
     padding-bottom: 10px;
