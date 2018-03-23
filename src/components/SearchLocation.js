@@ -457,6 +457,7 @@ class SearchLocation extends Component {
     let variables = {}
     Object.entries(data).forEach(([key, value]) => {
       if (key === 'location') {
+        value = typeof value === 'string' ? value.toUpperCase() : value
         filters.push(`{
                 field: dwellingForwardSortationArea
                 comparator: eq
