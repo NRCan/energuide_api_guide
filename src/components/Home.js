@@ -45,7 +45,7 @@ const Home = () => (
             <p className={para}>
               <Trans>
                 The EnerGuide API allows you to access the housing data provided
-                by Natural Resources Canada. You will have open access the data,
+                by Natural Resources Canada. You will have open access to the data,
                 and will be able to query to an individual dwelling.
               </Trans>
             </p>
@@ -84,7 +84,7 @@ const Home = () => (
               <Trans>What are the benefits of the EnerGuide API?</Trans>
             </Header2>
             <Header3>
-              <Trans>View open source data</Trans>
+              <Trans>View open data</Trans>
             </Header3>
             <p className={para}>
               <Trans>
