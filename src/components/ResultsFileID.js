@@ -102,7 +102,7 @@ function ShowFileID({ dwelling, fileId }) {
     return {
       City: dwelling.city,
       'Year built': dwelling.yearBuilt,
-      'ERS rating': evaluation.ersRating,
+      'ERS rating (GJ/year)': evaluation.ersRating,
       'Evaluation type': evaluation.evaluationType,
       'Energy Source': energySourceEnglish,
     }
