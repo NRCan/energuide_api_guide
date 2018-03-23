@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
 import { css } from 'react-emotion'
-import { theme, roundedEdges } from '../styles'
+import { theme, roundedEdges, mediaQuery } from '../styles'
 
 const text_input = css`
   font-size: ${theme.font.md};
@@ -17,6 +17,10 @@ const text_input = css`
     outline: 3px solid ${theme.colour.focus};
     outline-offset: 0px;
   }
+
+  ${mediaQuery.xs(css`
+    width: 100%;
+  `)};
 `
 
 const TextInput = ({ name, id, labelledby, children }) => (

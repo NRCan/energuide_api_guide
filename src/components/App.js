@@ -70,6 +70,7 @@ injectGlobal`
     }
 
     p {
+      font-size: ${theme.font.md}px;
       margin-bottom: ${theme.spacing.md}px;
     }
 

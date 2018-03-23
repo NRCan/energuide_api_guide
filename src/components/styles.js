@@ -258,23 +258,28 @@ export const SearchContainer = styled.div`
 
   ${mediaQuery.small(css`
     width: 100%;
-  `)};
-
-  ${mediaQuery.small(css`
     padding-top: ${theme.spacing.xl}px;
     padding-right: ${theme.spacing.xl}px;
     padding-left: ${theme.spacing.lg}px;
     padding-bottom: ${theme.spacing.xl}px;
+
+    header + p {
+      margin-bottom: ${theme.spacing.md}px;
+    }
   `)};
 `
 
 export const LocationContainer = styled.div`
   width: 75%;
-  padding-top: ${theme.spacing.xxl}px;
   padding-left: ${theme.spacing.xxxl}px;
+  padding-top: ${theme.spacing.xxl}px;
 
   ${mediaQuery.small(css`
     width: 100%;
+    padding-top: ${theme.spacing.xl}px;
+    padding-right: ${theme.spacing.xl}px;
+    padding-left: ${theme.spacing.lg}px;
+    padding-bottom: ${theme.spacing.xl}px;
   `)};
 `
 
