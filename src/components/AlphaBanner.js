@@ -10,6 +10,19 @@ const banner = css`
   padding-right: ${theme.spacing.xxxl}px;
   padding-top: 12px;
   padding-bottom: ${theme.spacing.sm}px;
+
+  br {
+    display: none;
+  }
+
+  ${mediaQuery.small(css`
+    padding-left: ${theme.spacing.lg}px;
+    padding-right: ${theme.spacing.lg}px;
+
+    br {
+      display: initial;
+    }
+  `)};
 `
 
 const alpha = css`
@@ -17,7 +30,9 @@ const alpha = css`
   margin-bottom: 0;
 `
 
-const statusBar = css`
+const badge = css`
+  width: 80px;
+  text-align: center;
   text-transform: uppercase;
   line-height: 2;
   color: white;
@@ -30,7 +45,8 @@ const statusBar = css`
   background-color: ${theme.colour.blueAlpha};
   ${roundedEdges};
   ${mediaQuery.small(css`
-    font-size: 10px;
+    display: block;
+    margin-bottom: ${theme.spacing.sm}px;
   `)};
 `
 
@@ -42,15 +58,18 @@ const link = css`
 const AlphaBanner = () => (
   <div className={banner}>
     <p className={alpha}>
-      <span className={statusBar}>
+      <span className={badge}>
         <Trans>Alpha</Trans>
       </span>
-      <Trans>This is an internal service.</Trans>{' '}
+      <Trans>This is a demonstration of how the API could be used.</Trans>{' '}
+      <br />
       <a
         className={link}
         href="mailto:paul.craig@cds-snc.ca?subject=Hey,%20I%20love%20your%20app!"
       >
-        <Trans>To provide feedback, email us</Trans>
+        <Trans>
+          Help us improve this internal service, email your feedback
+        </Trans>
       </a>.
     </p>
   </div>
