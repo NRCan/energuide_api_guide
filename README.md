@@ -2,6 +2,10 @@
 
 [![CircleCI](https://circleci.com/gh/cds-snc/nrcan_poc/tree/master.svg?style=svg)](https://circleci.com/gh/cds-snc/nrcan_poc/tree/master)
 
+[![browserstack-logo-200x105](https://user-images.githubusercontent.com/2454380/38046660-3594eed8-328e-11e8-9a38-9a0d003bfffd.png)](https://www.browserstack.com)
+
+## Reason for existing
+
 This application returns housing energy efficiency data collected by NRCAN. Specifically, does the following:
 - given a file ID, it will return details for that evaluation
 - given a location and a a type of furnace energy source, it will return a list of matching evaluations
@@ -35,3 +39,8 @@ Run the tests with:
 yarn test
 yarn lint
 ```
+
+We are also using [Browserstack](https://www.browserstack.com) to test across different browsers.
+Browserstack is free for open source projects, and they're a great service.
+
+[![browserstack-logo-600x315](https://user-images.githubusercontent.com/2454380/38046864-ba3bd700-328e-11e8-9923-a50728030a0c.png)](https://www.browserstack.com)
