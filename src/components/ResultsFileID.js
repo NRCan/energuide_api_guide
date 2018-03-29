@@ -46,11 +46,11 @@ const getData = async function(props) {
             city
             yearBuilt
             evaluations {
-              ersRating
               evaluationType
               fileId
-              heating {
-                energySourceEnglish
+              houseType
+              eghRating {
+                measurement
               }
             }
           }
@@ -96,16 +96,16 @@ function ShowFileID({ dwelling, fileId }) {
     let evaluation = JSON.parse(
       JSON.stringify(returnTheRightEvaluation(dwelling.evaluations)),
     )
-    evaluation['heating'] =
-      evaluation['heating'] === null ? {} : evaluation['heating']
-    let { heating: { energySourceEnglish } = {} } = evaluation
+    evaluation['eghRating'] =
+      evaluation['eghRating'] === null ? {} : evaluation['eghRating']
+    let { eghRating: { measurement } = {} } = evaluation
 
     return {
       City: dwelling.city,
       'Year built': dwelling.yearBuilt,
-      'ERS rating (GJ/year)': evaluation.ersRating,
+      'House type': evaluation.houseType,
       'Evaluation type': evaluation.evaluationType,
-      'Energy Source': energySourceEnglish,
+      'EGH rating': measurement,
     }
   }
 
