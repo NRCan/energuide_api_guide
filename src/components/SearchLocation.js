@@ -624,7 +624,7 @@ class SearchLocation extends Component {
                 </Header2>
               </legend>
               <p>
-                <Trans>Search by the type of dwelling.</Trans>
+                <Trans>Search by type of dwelling.</Trans>
               </p>
               <Radio
                 label={<Trans>Single detached</Trans>}

@@ -16,8 +16,8 @@ module.exports = {
     'Get access': 'Avoir acc\xE8s',
     'Natural Resources Canada': 'Ressources naturelles Canada',
     'EnerGuide API': "L'API EnerGuide",
-    'The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.':
-      "L'API \xC9nerGuide vous permet d'acc\xE9der aux donn\xE9es sur les cotes d\u2019\xE9nergie r\xE9sidentielle par Ressources naturelles Canada. Vous aurez un acc\xE8s ouvert aux donn\xE9es, avec un niveau de granularit\xE9 pour chercher des logements individuels.",
+    'The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access to the data, and will be able to query to an individual dwelling.':
+      'L\u2019API du \xC9nerGuide vous donne acc\xE8s aux donn\xE9es domiciliaires fournies par Ressources naturelles Canada. Non seulement l\u2019API vous donne acc\xE8s \xE0 toutes les donn\xE9es, elle vous permet d\u2019interroger la base de donn\xE9es pour un logement pr\xE9cis. ',
     'Test the API': "Testez l'API",
     'View the documentation': 'Voir la documentation',
     'What is an API?': "Qu'est-ce qu'une API?",
@@ -25,7 +25,7 @@ module.exports = {
       "Une interface de programmation d'application, ou API, est un ensemble de routines, de protocoles et d'outils pour cr\xE9er des logiciels. Une API facilite le d\xE9veloppement d'un programme informatique en fournissant tous les blocs de construction, qui sont ensuite mis en place par le programmeur.",
     'What are the benefits of the EnerGuide API?':
       "Quels sont les avantages de l'API \xC9nerGuide?",
-    'View open source data': 'Voir les donn\xE9es libres',
+    'View open data': 'Voir donn\xE9es ouvertes ',
     'The EnerGuide API will help make housing evaluation data accessible for everyone.':
       "L'API \xC9nerGuide aidera \xE0 rendre les donn\xE9es d'\xE9valuation du logement accessibles \xE0 tous.",
     'Query specific data': 'Requ\xEAte de donn\xE9es sp\xE9cifiques',
@@ -48,6 +48,7 @@ module.exports = {
     'on GitHub.': 'sur GitHub',
     'No results': 'Aucun r\xE9sultat',
     'Search for another file <0>ID</0>': 'Rechercher un autre fichier ID',
+    'tonnes/year': 'tonnes/an',
     'File <0>ID</0>': 'Fichier ID',
     'Search by file <0>ID</0>': 'Recherche par fichier ID ',
     results: 'r\xE9sultats',
@@ -65,13 +66,13 @@ module.exports = {
     'Search for a region by submitting the first three digits of a postal code.':
       "Recherchez une r\xE9gion en soumettant les trois premiers chiffres d'un code postal.",
     Filters: 'Filtres',
-    'Search by the type of energy source.':
-      "Recherche par type de source d'\xE9nergie",
-    Electricity: '\xC9lectricit\xE9',
-    'Natural gas': 'Gaz naturel',
-    Propane: 'Propane',
-    Oil: 'P\xE9trole',
-    All: 'tout',
+    'Search by type of dwelling.': 'Chercher par type de logement',
+    'Single detached': 'Maison unifamiliale ',
+    'Detached Duplex': 'Duplex seul',
+    'Row house, end unit': 'Maison en rang\xE9e, unit\xE9 du bout ',
+    'Row house, middle unit': 'Maison en rang\xE9e, unit\xE9 de milieu ',
+    Apartment: 'Appartement',
+    All: 'Tout',
     Home: 'Domicile',
     'Thank you': 'Merci',
   },

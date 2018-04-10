@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        561
+        572
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        572
+        583
       ]
     ]
   },
@@ -19,11 +19,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        575
+        586
       ],
       [
         "src/components/SearchLocation.js",
-        649
+        667
       ]
     ]
   },
@@ -31,11 +31,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        577
+        588
       ],
       [
         "src/components/SearchLocation.js",
-        583
+        594
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        597
+        608
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        601
+        613
       ]
     ]
   },
@@ -59,35 +59,19 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        611
+        623
       ]
     ]
   },
-  "Search by the type of energy source.": {
+  "Search by type of dwelling.": {
     "origin": [
       [
         "src/components/SearchLocation.js",
-        615
+        627
       ]
     ]
   },
-  "Electricity": {
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        618
-      ]
-    ]
-  },
-  "Natural gas": {
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        624
-      ]
-    ]
-  },
-  "Propane": {
+  "Single detached": {
     "origin": [
       [
         "src/components/SearchLocation.js",
@@ -95,7 +79,7 @@
       ]
     ]
   },
-  "Oil": {
+  "Detached Duplex": {
     "origin": [
       [
         "src/components/SearchLocation.js",
@@ -103,11 +87,35 @@
       ]
     ]
   },
-  "All": {
+  "Row house, end unit": {
     "origin": [
       [
         "src/components/SearchLocation.js",
         642
+      ]
+    ]
+  },
+  "Row house, middle unit": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        648
+      ]
+    ]
+  },
+  "Apartment": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        654
+      ]
+    ]
+  },
+  "All": {
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        660
       ]
     ]
   }
