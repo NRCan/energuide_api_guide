@@ -55,7 +55,7 @@ const Home = () => (
               </NavLink>
             </span>
             <span className={headerLink}>
-              <a href="https://github.com/cds-snc/nrcan_api/blob/master/api/docs.md">
+              <a href="https://github.com/cds-snc/nrcan_api/blob/master/api/docs-en.md">
                 <Trans>View the documentation</Trans>
               </a>
             </span>
@@ -119,7 +119,7 @@ const Home = () => (
                 <Trans>
                   To learn how to use the API, we have provided the{' '}
                   <a
-                    href="https://github.com/cds-snc/nrcan_api/blob/master/api/docs.md"
+                    href="https://github.com/cds-snc/nrcan_api/blob/master/api/docs-en.md"
                     className={noSpaceLink}
                   >
                     <Trans>documentation on Github</Trans>.
