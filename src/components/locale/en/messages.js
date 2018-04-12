@@ -26,8 +26,8 @@ module.exports = {
     'Get access': 'Get access',
     'Natural Resources Canada': 'Natural Resources Canada',
     'EnerGuide API': 'EnerGuide API',
-    'The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.':
-      'The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.',
+    'The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access to the data, and will be able to query to an individual dwelling.':
+      'The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access to the data, and will be able to query to an individual dwelling.',
     'Test the API': 'Test the API',
     'View the documentation': 'View the documentation',
     'What is an API?': 'What is an API?',
@@ -35,7 +35,7 @@ module.exports = {
       'An API, or <0>Application Programming Interface</0>, is a set of routines, protocols and tools for building software. An API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.',
     'What are the benefits of the EnerGuide API?':
       'What are the benefits of the EnerGuide API?',
-    'View open source data': 'View open source data',
+    'View open data': 'View open data',
     'The EnerGuide API will help make housing evaluation data accessible for everyone.':
       'The EnerGuide API will help make housing evaluation data accessible for everyone.',
     'Query specific data': 'Query specific data',
@@ -56,6 +56,7 @@ module.exports = {
     'on GitHub.': 'on GitHub.',
     'No results': 'No results',
     'Search for another file <0>ID</0>': 'Search for another file <0>ID</0>',
+    'tonnes/year': 'tonnes/year',
     'File <0>ID</0>': 'File <0>ID</0>',
     'Search by file <0>ID</0>': 'Search by file <0>ID</0>',
     results: 'results',
@@ -73,12 +74,12 @@ module.exports = {
     'Search for a region by submitting the first three digits of a postal code.':
       'Search for a region by submitting the first three digits of a postal code.',
     Filters: 'Filters',
-    'Search by the type of energy source.':
-      'Search by the type of energy source.',
-    Electricity: 'Electricity',
-    'Natural gas': 'Natural gas',
-    Propane: 'Propane',
-    Oil: 'Oil',
+    'Search by type of dwelling.': 'Search by type of dwelling.',
+    'Single detached': 'Single detached',
+    'Detached Duplex': 'Detached Duplex',
+    'Row house, end unit': 'Row house, end unit',
+    'Row house, middle unit': 'Row house, middle unit',
+    Apartment: 'Apartment',
     All: 'All',
     Home: 'Home',
     'Thank you': 'Thank you',

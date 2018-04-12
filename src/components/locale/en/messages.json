@@ -75,7 +75,7 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        148
+        157
       ],
       [
         "src/components/ResultsLocation.js",
@@ -91,11 +91,11 @@
       ],
       [
         "src/components/SearchLocation.js",
-        572
+        583
       ]
     ]
   },
-  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.": {
+  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access to the data, and will be able to query to an individual dwelling.": {
     "translation": "",
     "origin": [
       [
@@ -149,7 +149,7 @@
       ]
     ]
   },
-  "View open source data": {
+  "View open data": {
     "translation": "",
     "origin": [
       [
@@ -230,7 +230,7 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        151
+        160
       ],
       [
         "src/components/ResultsLocation.js",
@@ -254,11 +254,11 @@
       ],
       [
         "src/components/SearchLocation.js",
-        575
+        586
       ],
       [
         "src/components/SearchLocation.js",
-        649
+        667
       ]
     ]
   },
@@ -275,11 +275,11 @@
       ],
       [
         "src/components/SearchLocation.js",
-        577
+        588
       ],
       [
         "src/components/SearchLocation.js",
-        583
+        594
       ]
     ]
   },
@@ -296,7 +296,7 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        158
+        167
       ],
       [
         "src/components/ResultsLocation.js",
@@ -336,7 +336,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        76
+        80
       ]
     ]
   },
@@ -345,11 +345,20 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        82
+        86
       ],
       [
         "src/components/ResultsFileID.js",
-        132
+        141
+      ]
+    ]
+  },
+  "tonnes/year": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        117
       ]
     ]
   },
@@ -358,7 +367,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        115
+        124
       ],
       [
         "src/components/Search.js",
@@ -375,7 +384,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        154
+        163
       ],
       [
         "src/components/SearchFileID.js",
@@ -441,7 +450,7 @@
       ],
       [
         "src/components/SearchLocation.js",
-        597
+        608
       ]
     ]
   },
@@ -459,7 +468,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        561
+        572
       ]
     ]
   },
@@ -468,7 +477,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        601
+        613
       ]
     ]
   },
@@ -477,38 +486,20 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        611
+        623
       ]
     ]
   },
-  "Search by the type of energy source.": {
+  "Search by type of dwelling.": {
     "translation": "",
     "origin": [
       [
         "src/components/SearchLocation.js",
-        615
+        627
       ]
     ]
   },
-  "Electricity": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        618
-      ]
-    ]
-  },
-  "Natural gas": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        624
-      ]
-    ]
-  },
-  "Propane": {
+  "Single detached": {
     "translation": "",
     "origin": [
       [
@@ -517,7 +508,7 @@
       ]
     ]
   },
-  "Oil": {
+  "Detached Duplex": {
     "translation": "",
     "origin": [
       [
@@ -526,12 +517,39 @@
       ]
     ]
   },
-  "All": {
+  "Row house, end unit": {
     "translation": "",
     "origin": [
       [
         "src/components/SearchLocation.js",
         642
+      ]
+    ]
+  },
+  "Row house, middle unit": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        648
+      ]
+    ]
+  },
+  "Apartment": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        654
+      ]
+    ]
+  },
+  "All": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        660
       ]
     ]
   },

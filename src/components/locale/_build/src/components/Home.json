@@ -15,7 +15,7 @@
       ]
     ]
   },
-  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.": {
+  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access to the data, and will be able to query to an individual dwelling.": {
     "origin": [
       [
         "src/components/Home.js",
@@ -63,7 +63,7 @@
       ]
     ]
   },
-  "View open source data": {
+  "View open data": {
     "origin": [
       [
         "src/components/Home.js",

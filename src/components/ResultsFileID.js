@@ -7,6 +7,7 @@ import Async from 'react-promise'
 import { Loading } from './Loading'
 import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
+import { i18n } from 'lingui-i18n'
 import Breadcrumbs from './Breadcrumbs'
 import { Header1, SearchContainer } from './styles'
 import FooterLinks from './FooterLinks'
@@ -113,7 +114,7 @@ function ShowFileID({ dwelling, fileId }) {
       'Greenhouse Gas Emissions':
         greenhouseGasEmissions.measurement === null
           ? null
-          : greenhouseGasEmissions.measurement + ' tonnes/year',
+          : greenhouseGasEmissions.measurement + ' ' + i18n.t`tonnes/year`,
     }
   }
 

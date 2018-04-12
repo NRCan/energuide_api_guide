@@ -75,7 +75,7 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        148
+        157
       ],
       [
         "src/components/ResultsLocation.js",
@@ -91,12 +91,12 @@
       ],
       [
         "src/components/SearchLocation.js",
-        572
+        583
       ]
     ]
   },
-  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access the data, and will be able to query to an individual dwelling.": {
-    "translation": "L'API ÉnerGuide vous permet d'accéder aux données sur les cotes d’énergie résidentielle par Ressources naturelles Canada. Vous aurez un accès ouvert aux données, avec un niveau de granularité pour chercher des logements individuels.",
+  "The EnerGuide API allows you to access the housing data provided by Natural Resources Canada. You will have open access to the data, and will be able to query to an individual dwelling.": {
+    "translation": "L’API du ÉnerGuide vous donne accès aux données domiciliaires fournies par Ressources naturelles Canada. Non seulement l’API vous donne accès à toutes les données, elle vous permet d’interroger la base de données pour un logement précis. ",
     "origin": [
       [
         "src/components/Home.js",
@@ -149,8 +149,8 @@
       ]
     ]
   },
-  "View open source data": {
-    "translation": "Voir les données libres",
+  "View open data": {
+    "translation": "Voir données ouvertes ",
     "origin": [
       [
         "src/components/Home.js",
@@ -230,7 +230,7 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        151
+        160
       ],
       [
         "src/components/ResultsLocation.js",
@@ -254,11 +254,11 @@
       ],
       [
         "src/components/SearchLocation.js",
-        575
+        586
       ],
       [
         "src/components/SearchLocation.js",
-        649
+        667
       ]
     ]
   },
@@ -275,11 +275,11 @@
       ],
       [
         "src/components/SearchLocation.js",
-        577
+        588
       ],
       [
         "src/components/SearchLocation.js",
-        583
+        594
       ]
     ]
   },
@@ -296,7 +296,7 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        158
+        167
       ],
       [
         "src/components/ResultsLocation.js",
@@ -336,7 +336,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        76
+        80
       ]
     ]
   },
@@ -345,11 +345,20 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        82
+        86
       ],
       [
         "src/components/ResultsFileID.js",
-        132
+        141
+      ]
+    ]
+  },
+  "tonnes/year": {
+    "translation": "tonnes/an",
+    "origin": [
+      [
+        "src/components/ResultsFileID.js",
+        117
       ]
     ]
   },
@@ -358,7 +367,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        115
+        124
       ],
       [
         "src/components/Search.js",
@@ -375,7 +384,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        154
+        163
       ],
       [
         "src/components/SearchFileID.js",
@@ -441,7 +450,7 @@
       ],
       [
         "src/components/SearchLocation.js",
-        597
+        608
       ]
     ]
   },
@@ -459,7 +468,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        561
+        572
       ]
     ]
   },
@@ -468,7 +477,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        601
+        613
       ]
     ]
   },
@@ -477,39 +486,21 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        611
+        623
       ]
     ]
   },
-  "Search by the type of energy source.": {
-    "translation": "Recherche par type de source d'énergie",
+  "Search by type of dwelling.": {
+    "translation": "Chercher par type de logement",
     "origin": [
       [
         "src/components/SearchLocation.js",
-        615
+        627
       ]
     ]
   },
-  "Electricity": {
-    "translation": "Électricité",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        618
-      ]
-    ]
-  },
-  "Natural gas": {
-    "translation": "Gaz naturel",
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        624
-      ]
-    ]
-  },
-  "Propane": {
-    "translation": "Propane",
+  "Single detached": {
+    "translation": "Maison unifamiliale ",
     "origin": [
       [
         "src/components/SearchLocation.js",
@@ -517,8 +508,8 @@
       ]
     ]
   },
-  "Oil": {
-    "translation": "Pétrole",
+  "Detached Duplex": {
+    "translation": "Duplex seul",
     "origin": [
       [
         "src/components/SearchLocation.js",
@@ -526,12 +517,39 @@
       ]
     ]
   },
-  "All": {
-    "translation": "tout",
+  "Row house, end unit": {
+    "translation": "Maison en rangée, unité du bout ",
     "origin": [
       [
         "src/components/SearchLocation.js",
         642
+      ]
+    ]
+  },
+  "Row house, middle unit": {
+    "translation": "Maison en rangée, unité de milieu ",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        648
+      ]
+    ]
+  },
+  "Apartment": {
+    "translation": "Appartement",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        654
+      ]
+    ]
+  },
+  "All": {
+    "translation": "Tout",
+    "origin": [
+      [
+        "src/components/SearchLocation.js",
+        660
       ]
     ]
   },
