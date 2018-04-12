@@ -104,7 +104,7 @@ const App = ({ lang }) => (
         href="https://fontlibrary.org/face/hk-grotesk"
         type="text/css"
       />
-      <html lang={'en'} />
+      <html lang={lang} />
       <meta content="width=device-width,initial-scale=1" name="viewport" />
     </Helmet>
 
