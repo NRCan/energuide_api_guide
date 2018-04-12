@@ -29,7 +29,7 @@ const noSpaceLink = css`
 
 const Home = () => (
   <ThemeProvider theme={theme}>
-    <div id="pageWrap">
+    <div>
       <main role="main">
         <IndexHeader>
           <HeaderContainer>
@@ -45,8 +45,8 @@ const Home = () => (
             <p className={para}>
               <Trans>
                 The EnerGuide API allows you to access the housing data provided
-                by Natural Resources Canada. You will have open access to the data,
-                and will be able to query to an individual dwelling.
+                by Natural Resources Canada. You will have open access to the
+                data, and will be able to query to an individual dwelling.
               </Trans>
             </p>
             <span className={headerLink}>

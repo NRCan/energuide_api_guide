@@ -27,6 +27,7 @@ const CircuitHouse = () => (
     <img
       className={headerWidth}
       src="https://rawgit.com/nmakuch/7bb71ff879fc076c5c201d62b8f248cd/raw/664d2632493d4a325430ad0d0a934f253f6edaaf/CircuitHouse.svg"
+      alt={''}
     />
   </div>
 )

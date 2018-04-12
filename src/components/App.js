@@ -12,6 +12,7 @@ import AlphaBanner from './AlphaBanner'
 import FederalBanner from './FederalBanner'
 import Footer from './Footer'
 import { mediaQuery, theme } from './styles'
+import { Helmet } from 'react-helmet'
 
 const catalogs = { en: unpackCatalog(en), fr: unpackCatalog(fr) }
 
@@ -96,15 +97,22 @@ injectGlobal`
 
 const App = ({ lang }) => (
   <I18nProvider language={lang} catalogs={catalogs} development={dev}>
-    <link
-      rel="stylesheet"
-      media="screen"
-      href="https://fontlibrary.org/face/hk-grotesk"
-      type="text/css"
-    />
+    <Helmet>
+      <link
+        rel="stylesheet"
+        media="screen"
+        href="https://fontlibrary.org/face/hk-grotesk"
+        type="text/css"
+      />
+      <html lang={lang} />
+      <meta content="width=device-width,initial-scale=1" name="viewport" />
+    </Helmet>
+
     <div id="pageWrap">
-      <AlphaBanner />
-      <FederalBanner />
+      <div role={'banner'}>
+        <AlphaBanner />
+        <FederalBanner />
+      </div>
       <Switcher />
     </div>
     <Footer id="foot" />

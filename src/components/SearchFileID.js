@@ -57,10 +57,7 @@ class SearchFileID extends Component {
               </Trans>
             </Header1>
           </header>
-          <form
-            onSubmit={handleSubmit(this.handleFormData)}
-            aria-labelledby="search-by-description"
-          >
+          <form onSubmit={handleSubmit(this.handleFormData)}>
             <TextInput
               name="fileId"
               id="fileId"
