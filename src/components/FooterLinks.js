@@ -36,7 +36,7 @@ const FooterLinks = () => (
       <Trans>Ready to use the Energuide API?</Trans>
       {'  '}
       <br />
-      <a href="http://bit.ly/2u4CxWJ">
+      <a href="https://bit.ly/2HxeqDm">
         <Trans>Get access</Trans>
       </a>
     </li>
