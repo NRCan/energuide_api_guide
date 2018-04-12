@@ -11,14 +11,10 @@ import { css } from 'react-emotion'
 
 const tableContainer = css`
   margin-top: ${theme.spacing.xl}px;
-  padding-top: 4px;
   width: 100%;
   overflow: scroll;
   border: 2px solid ${theme.colour.greyLight};
   position: relative;
-  -webkit-box-shadow: inset 0px 6px 13px -9px ${theme.colour.grey};
-  -moz-box-shadow: inset 0px 6px 13px -9px ${theme.colour.grey};
-  box-shadow: inset 0px 6px 13px -9px ${theme.colour.grey};
 
   ${mediaQuery.large(css`
     width: 120%;
