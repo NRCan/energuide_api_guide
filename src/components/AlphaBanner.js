@@ -63,10 +63,7 @@ const AlphaBanner = () => (
       </span>
       <Trans>This is a demonstration of how the API could be used.</Trans>{' '}
       <br />
-      <a
-        className={link}
-        href="mailto:paul.craig@cds-snc.ca?subject=Hey,%20I%20love%20your%20app!"
-      >
+      <a className={link} href="mailto:cds-snc@tbs-sct.gc.ca">
         <Trans>
           Help us improve this internal service, email your feedback
         </Trans>
