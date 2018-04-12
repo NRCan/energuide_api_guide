@@ -21,7 +21,7 @@ const A = styled('a')`
 
 export const LanguageSwitcher = ({ currentLanguage, setLanguage }) => (
   <A
-    tabIndex={0}
+    lang={currentLanguage === 'en' ? 'fr' : 'en'}
     onClick={() => setLanguage(currentLanguage)}
     onKeyPress={e => {
       if (e.key === 'Enter') {

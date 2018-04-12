@@ -1,7 +1,7 @@
 import React from 'react'
 import { Trans } from 'lingui-react'
 import { css } from 'react-emotion'
-import { Header3, theme, mediaQuery } from './styles'
+import { theme, mediaQuery } from './styles'
 
 const footerLinks = css`
   list-style-type: none;
@@ -31,18 +31,16 @@ const footerLinks = css`
 `
 
 const FooterLinks = () => (
-  <Header3>
-    <ul className={footerLinks}>
-      <li>
-        <Trans>Ready to use the Energuide API?</Trans>
-        {'  '}
-        <br />
-        <a href="http://bit.ly/2u4CxWJ">
-          <Trans>Get access</Trans>
-        </a>
-      </li>
-    </ul>
-  </Header3>
+  <ul className={footerLinks}>
+    <li>
+      <Trans>Ready to use the Energuide API?</Trans>
+      {'  '}
+      <br />
+      <a href="http://bit.ly/2u4CxWJ">
+        <Trans>Get access</Trans>
+      </a>
+    </li>
+  </ul>
 )
 
 export default FooterLinks

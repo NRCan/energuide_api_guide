@@ -103,8 +103,10 @@ const App = ({ lang }) => (
       type="text/css"
     />
     <div id="pageWrap">
-      <AlphaBanner />
-      <FederalBanner />
+      <div role={'banner'}>
+        <AlphaBanner />
+        <FederalBanner />
+      </div>
       <Switcher />
     </div>
     <Footer id="foot" />
