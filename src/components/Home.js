@@ -55,7 +55,7 @@ const Home = () => (
               </NavLink>
             </span>
             <span className={headerLink}>
-              <a href="hhttps://github.com/cds-snc/nrcan_api/blob/master/docs/using_the_api.md">
+              <a href="https://github.com/cds-snc/nrcan_api/blob/master/docs/using_the_api.md">
                 <Trans>View the documentation</Trans>
               </a>
             </span>
