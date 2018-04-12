@@ -53,10 +53,11 @@ class DataTable extends Component {
 
   render() {
     let rows = []
+    let i = 0
 
     this.props.data.forEach(function(item) {
       rows.push(
-        <tr>
+        <tr key={i}>
           <td>{item.yearBuilt}</td>
           <td>{item.region}</td>
           <td>{item.forwardSortationArea}</td>
@@ -64,6 +65,7 @@ class DataTable extends Component {
           <td>{item.eghRating}</td>
         </tr>,
       )
+      i++
     })
 
     return (
