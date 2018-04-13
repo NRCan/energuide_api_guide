@@ -4,6 +4,7 @@ import { mediaQuery, theme } from './styles'
 
 const headerImg = css`
   position: absolute;
+  height: 100%;
   top: 105px;
   right: 0px;
   padding-top: ${theme.spacing.xl}px;

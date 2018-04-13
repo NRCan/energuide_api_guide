@@ -11,6 +11,7 @@ const container = css`
     ${theme.spacing.xxxl}px;
   display: flex;
   width: auto;
+  max-height: 60px;
   justify-content: space-between;
   background-color: ${theme.colour.black};
   ${mediaQuery.medium(css`
