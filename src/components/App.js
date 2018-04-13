@@ -26,7 +26,7 @@ injectGlobal`
 		margin: 0;
 		background: ${theme.colour.white};
 		height: 100%;
-    font-family: ${theme.weight.l}, arial, sans serif;
+    font-family: ${theme.weight.l}, Arial, sans serif;
     font-size: ${theme.font.md};
 
     ${mediaQuery.small(css`

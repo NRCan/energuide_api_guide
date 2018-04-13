@@ -24,7 +24,7 @@ import CircuitHouse from './CircuitHouse'
 const noSpaceLink = css`
   color: ${theme.colour.blue};
   padding-right: ${theme.spacing.xs}px;
-  font-family: ${theme.weight.b}, arial, sans serif;
+  font-family: ${theme.weight.b}, Arial, sans serif;
 `
 
 const Home = () => (
