@@ -109,7 +109,7 @@ export const para = css`
 
 export const headerLink = css`
   padding-right: ${theme.spacing.md}px;
-  font-family: ${theme.weight.b}, sans serif;
+  font-family: ${theme.weight.b}, arial, sans serif;
 
   ${mediaQuery.small(css`
     font-size: ${theme.font.sm};
@@ -134,7 +134,7 @@ export const headerLink = css`
 
 export const Header1 = styled.h1`
   color: ${theme.colour.black};
-  font-family: ${theme.weight.b}, sans-serif;
+  font-family: ${theme.weight.b}, arial, sans-serif;
   font-size: ${theme.font.xxl};
   margin-bottom: ${theme.spacing.lg}px;
 
@@ -145,7 +145,7 @@ export const Header1 = styled.h1`
 
 export const Header2 = styled.h2`
   color: ${theme.colour.black};
-  font-family: ${theme.weight.b}, sans-serif;
+  font-family: ${theme.weight.b}, arial, sans-serif;
   font-size: ${theme.font.lg};
   margin-bottom: ${theme.spacing.md}px;
 
@@ -156,7 +156,7 @@ export const Header2 = styled.h2`
 
 export const Header3 = styled.h3`
   color: ${theme.colour.black};
-  font-family: ${theme.weight.b}, sans-serif;
+  font-family: ${theme.weight.b}, arial, sans-serif;
   font-size: ${theme.font.md};
   margin-bottom: 0px;
   line-height: 1.4;
