@@ -21,13 +21,12 @@ const dev =
   process.env.NODE_ENV !== 'production' ? require('lingui-i18n/dev') : undefined
 
 injectGlobal`
-
 	html, body {
     padding: 0;
 		margin: 0;
 		background: ${theme.colour.white};
 		height: 100%;
-    font-family: ${theme.weight.l}, sans serif;
+    font-family: ${theme.weight.l}, Arial, sans serif;
     font-size: ${theme.font.md};
 
     ${mediaQuery.small(css`

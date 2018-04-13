@@ -8,6 +8,7 @@ const footer = css`
   background-color: ${theme.colour.black};
   padding: ${theme.spacing.xl}px ${theme.spacing.xxxl}px;
   display: flex;
+  max-height: 100px;
   justify-content: space-between;
   position: relative;
 
