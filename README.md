@@ -1,3 +1,5 @@
+[La version française suit.](#---------------------------------------------------------------------)
+
 # Proof of Concept for the NRCAN API
 
 [![CircleCI](https://circleci.com/gh/cds-snc/nrcan_poc/tree/master.svg?style=svg)](https://circleci.com/gh/cds-snc/nrcan_poc/tree/master)
@@ -42,5 +44,53 @@ yarn lint
 
 We are also using [Browserstack](https://www.browserstack.com) to test across different browsers.
 Browserstack is free for open source projects, and they're a great service.
+
+[![browserstack-logo-600x315](https://user-images.githubusercontent.com/2454380/38046864-ba3bd700-328e-11e8-9923-a50728030a0c.png)](https://www.browserstack.com)
+
+## ---------------------------------------------------------------------
+
+
+# Preuve de faisabilité pour l'API de RNCan 
+
+[![CircleCI](https://circleci.com/gh/cds-snc/nrcan_poc/tree/master.svg?style=svg)](https://circleci.com/gh/cds-snc/nrcan_poc/tree/master)
+
+[![browserstack-logo-200x105](https://user-images.githubusercontent.com/2454380/38046660-3594eed8-328e-11e8-9a38-9a0d003bfffd.png)](https://www.browserstack.com)
+
+## Raison d'être
+
+Cette application retourne les données sur l’efficacité de l’énergie sur le logement recueilli par RNCan. Plus précisément, cette application fait ce qui suit :
+- Selon l’identificateur du fichier, elle retournera les détails pour cette évaluation
+- Selon le lieu et le type de la source d’énergie de la fournaise, elle retournera une liste d’évaluations correspondantes.
+
+Cette application est la première consommatrice de l'[API RNCAN](https://github.com/cds-snc/nrcan_api#lapi-de-l%C3%89nerguide-de-rncan); dans ce contexte, elle permet d’atteindre deux objectifs :
+1. C’est une interface au-dessus de l’API permettant à ceux qui ne sont pas des concepteurs d’interroger les données de RNCan 
+2. Elle fournit un exemple de mise en œuvre pour les services futurs qui seront reliés à l’API
+
+
+## Démarrage
+
+#### Préalables 
+
+Vous aurez besoin d’installer npm, et préférablement yarn aussi.
+
+#### Décollage :rocket:
+
+1. Cloner le projet
+2. Installez les dépendances avec yarn
+3. Exécuter localement l’application avec yarn dev
+4. [http://localhost:3003/](http://localhost:3003/)
+
+Excellent! Offrez-vous des Timbits pour vous féliciter (ou une alternative adéquate sans gluten).
+
+## Tests
+
+Effectuez des tests avec :
+
+```bash
+yarn test
+yarn lint
+```
+
+Nous utilisons aussi [Browserstack](https://www.browserstack.com) pour tester les divers navigateurs. Le navigateur Browserstack est gratuit pour les projets libres, et il fournit un excellent service.
 
 [![browserstack-logo-600x315](https://user-images.githubusercontent.com/2454380/38046864-ba3bd700-328e-11e8-9923-a50728030a0c.png)](https://www.browserstack.com)
