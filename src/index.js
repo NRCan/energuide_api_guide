@@ -1,5 +1,3 @@
-/* eslint-disable global-require */
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { hydrate } from 'emotion'
@@ -7,18 +5,10 @@ import { Provider } from 'react-redux'
 import createHistory from 'history/createBrowserHistory'
 import AppContainer from 'react-hot-loader/lib/AppContainer'
 import configureStore from './configureStore'
-import 'isomorphic-fetch'
-import { ApolloClient } from 'apollo-client'
-import { HttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloProvider } from 'react-apollo'
 import App from './components/App'
+import { client } from './ApolloClient'
 
-const client = new ApolloClient({
-  link: new HttpLink({ uri: 'http://nrcanapi.cds-snc.ca/graphql' }),
-  cache: new InMemoryCache(),
-  ssrMode: true,
-})
 hydrate(window.EMOTION_HYDRATION_IDS)
 
 const history = createHistory()

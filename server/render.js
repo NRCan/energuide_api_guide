@@ -5,18 +5,9 @@ import { flushChunkNames } from 'react-universal-component/server'
 import flushChunks from 'webpack-flush-chunks'
 import { extractCritical } from 'emotion-server'
 import configureStore from './configureStore'
-import App from '../src/components/App'
-import { ApolloClient } from 'apollo-client'
-import { HttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloProvider } from 'react-apollo'
-import 'isomorphic-fetch'
-
-const client = new ApolloClient({
-  link: new HttpLink({ uri: 'http://nrcanapi.cds-snc.ca/graphql' }),
-  cache: new InMemoryCache(),
-  ssrMode: true,
-})
+import App from '../src/components/App'
+import { client } from '../src/ApolloClient'
 
 export default ({ clientStats }) => async (req, res, next) => {
   const store = await configureStore(req, res)
