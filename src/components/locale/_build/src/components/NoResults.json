@@ -1,0 +1,18 @@
+{
+  "No results": {
+    "origin": [
+      [
+        "src/components/NoResults.js",
+        15
+      ]
+    ]
+  },
+  "Search for another file <0>ID</0>": {
+    "origin": [
+      [
+        "src/components/NoResults.js",
+        21
+      ]
+    ]
+  }
+}

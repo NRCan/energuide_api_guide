@@ -11,7 +11,9 @@ module.exports = {
           ? 'one'
           : n10 == 2 && n100 != 12
             ? 'two'
-            : n10 == 3 && n100 != 13 ? 'few' : 'other'
+            : n10 == 3 && n100 != 13
+              ? 'few'
+              : 'other'
       return n == 1 && v0 ? 'one' : 'other'
     },
   },
@@ -47,6 +49,8 @@ module.exports = {
     'How can I use the EnerGuide API?': 'How can I use the EnerGuide API?',
     'To learn how to use the API, we have provided the <0>documentation on Github.</0>The documentation will show all of the data types available under the EnerGuide API.':
       'To learn how to use the API, we have provided the <0>documentation on Github.</0>The documentation will show all of the data types available under the EnerGuide API.',
+    'No results': 'No results',
+    'Search for another file <0>ID</0>': 'Search for another file <0>ID</0>',
     Search: 'Search',
     'Search by location': 'Search by location',
     Results: 'Results',
@@ -54,8 +58,6 @@ module.exports = {
     'view the EnerGuide API documentation':
       'view the EnerGuide API documentation',
     'on GitHub.': 'on GitHub.',
-    'No results': 'No results',
-    'Search for another file <0>ID</0>': 'Search for another file <0>ID</0>',
     'tonnes/year': 'tonnes/year',
     'File <0>ID</0>': 'File <0>ID</0>',
     'Search by file <0>ID</0>': 'Search by file <0>ID</0>',
