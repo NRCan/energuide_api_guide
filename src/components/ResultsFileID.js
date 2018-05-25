@@ -2,19 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { NavLink } from 'redux-first-router-link'
 import { connect } from 'react-redux'
-import { withApollo } from 'react-apollo'
-import Async from 'react-promise'
-import { Loading } from './Loading'
-import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import { i18n } from 'lingui-i18n'
-import Breadcrumbs from './Breadcrumbs'
-import { Header1, SearchContainer } from './styles'
-import FooterLinks from './FooterLinks'
 import { css } from 'react-emotion'
-import { theme, mediaQuery } from './styles'
-
-Async.defaultPending = <Loading />
+import { Header1, SearchContainer, theme, mediaQuery } from './styles'
+import FooterLinks from './FooterLinks'
+import Breadcrumbs from './Breadcrumbs'
+import { NoResults } from './NoResults'
 
 const marginBottom = css`
   margin-bottom: ${theme.spacing.xl}px;
@@ -33,64 +27,10 @@ const ul = css`
   }
 `
 
-const getData = async function(props) {
-  let { client, payload: { fileId } } = props
-  fileId = typeof fileId === 'string' ? fileId.toUpperCase() : fileId
-
-  let response = await client.query({
-    query: gql`
-      query getEvaluationByFileId($fileId: String!) {
-        dwellings(
-          filters: [{ field: evaluationFileId, comparator: eq, value: $fileId }]
-        ) {
-          results {
-            city
-            yearBuilt
-            evaluations {
-              evaluationType
-              fileId
-              houseType
-              ersRating {
-                measurement
-              }
-              greenhouseGasEmissions {
-                measurement
-              }
-            }
-          }
-        }
-      }
-    `,
-    variables: { fileId: fileId },
-  })
-
-  if (response.loading) {
-    return <div>Loading...</div>
-  }
-  let { data: { dwellings: { results: [dwelling] } } } = response
-
-  return <ShowFileID dwelling={dwelling} fileId={fileId} />
-}
+const isEmpty = obj =>
+  Object.keys(obj).length === 0 && obj.constructor === Object
 
 function ShowFileID({ dwelling, fileId }) {
-  if (!dwelling) {
-    return (
-      <SearchContainer>
-        <Header1>
-          <Trans>No results</Trans>
-        </Header1>
-        <p className={marginBottom}>
-          No evaluation was found with the file ID: <strong>{fileId}</strong>
-        </p>
-        <NavLink to="/search-fileid">
-          <Trans>
-            Search for another file <span className="id-span">ID</span>
-          </Trans>
-        </NavLink>
-      </SearchContainer>
-    )
-  }
-
   const returnTheRightEvaluation = evaluations => {
     return evaluations.find(e => e.fileId === fileId)
   }
@@ -167,15 +107,24 @@ const ResultsFileID = props => (
       <Trans>Results</Trans>
     </Breadcrumbs>
 
-    <Async promise={getData(props)} then={val => <div>{val}</div>} />
+    {!isEmpty(props.data) && (
+      <ShowFileID dwelling={props.data} fileId={props.fileId} />
+    )}
 
+    {isEmpty(props.data) && <NoResults fileId={props.fileId} />}
     <FooterLinks />
   </main>
 )
 
+ResultsFileID.propTypes = {
+  data: PropTypes.object,
+  fileId: PropTypes.string.isRequired,
+}
+
 const mapStateToProps = state => ({
   path: state.location.pathname,
-  payload: state.location.payload,
+  data: state.data.searchFileIdData,
+  fileId: state.location.payload.fileId,
 })
 
-export default withApollo(connect(mapStateToProps)(ResultsFileID))
+export default connect(mapStateToProps)(ResultsFileID)
