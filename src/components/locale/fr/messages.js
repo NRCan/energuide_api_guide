@@ -38,6 +38,8 @@ module.exports = {
       "Comment puis-je utiliser l'API \xC9nerGuide?",
     'To learn how to use the API, we have provided the <0>documentation on Github.</0>The documentation will show all of the data types available under the EnerGuide API.':
       "Pour apprendre \xE0 utiliser l'API, nous avons fourni la documentation sur Github. La documentation montrera tous les types de donn\xE9es disponibles dans l'API \xC9nerGuide.",
+    'No results': 'Aucun r\xE9sultat',
+    'Search for another file <0>ID</0>': 'Rechercher un autre fichier ID',
     Search: 'Recherche',
     'Search by location': 'Rechercher par lieu',
     Results: 'R\xE9sultats',
@@ -46,8 +48,6 @@ module.exports = {
     'view the EnerGuide API documentation':
       "voir la documentation de l'API EnerGuide",
     'on GitHub.': 'sur GitHub',
-    'No results': 'Aucun r\xE9sultat',
-    'Search for another file <0>ID</0>': 'Rechercher un autre fichier ID',
     'tonnes/year': 'tonnes/an',
     'File <0>ID</0>': 'Fichier ID',
     'Search by file <0>ID</0>': 'Recherche par fichier ID ',
