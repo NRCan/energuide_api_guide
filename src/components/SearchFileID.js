@@ -69,7 +69,7 @@ class SearchFileID extends Component {
                     File <span className="id-span">ID</span>
                   </Trans>
                 </label>{' '}
-                (eg. 5E58E90218)
+                (eg. 4X94D01219)
               </Header2>
               <p id="fileId-details">
                 <Trans>
