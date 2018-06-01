@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 
 export const getEvaluationByFileId = gql`
-  query getEvaluationByFileId($fileId: String!) {
+  query POCgetEvaluationByFileId($fileId: String!) {
     dwellings(
       filters: [{ field: evaluationFileId, comparator: eq, value: $fileId }]
     ) {
@@ -13,6 +13,9 @@ export const getEvaluationByFileId = gql`
           fileId
           houseType
           ersRating {
+            measurement
+          }
+          eghRating {
             measurement
           }
           greenhouseGasEmissions {
