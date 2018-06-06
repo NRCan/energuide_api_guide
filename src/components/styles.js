@@ -1,10 +1,6 @@
 import { css } from 'react-emotion'
 import styled from 'react-emotion'
 
-export const fontFace = css`
-  @import url(https://fontlibrary.org/face/hk-grotesk);
-`
-
 const borderRadius = 2
 export const roundedEdges = css`
   -webkit-border-radius: ${borderRadius}px;
@@ -56,14 +52,14 @@ export const theme = {
     visited: '#551a8b',
   },
   weight: {
-    l: 'HKGroteskLight',
-    li: 'HKGroteskLightItalic',
-    m: 'HKGroteskMedium',
-    mi: 'HKGroteskMediumItalic',
-    r: 'HKGroteskRegular',
-    s: 'HKGroteskSemiBold',
-    b: 'HKGroteskBold',
-    bi: 'HKGroteskSemiBoldItalic',
+    l: 'lighter, sans serif',
+    li: 'lighter, italic, sans serif',
+    m: 'sans serif',
+    mi: 'sans serif',
+    r: 'sans serif',
+    s: 'sans serif',
+    b: 'bold, sans serif',
+    bi: 'bold, italic, sans serif',
   },
   font: {
     xs: '12px',
