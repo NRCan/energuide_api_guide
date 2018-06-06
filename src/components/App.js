@@ -97,12 +97,6 @@ injectGlobal`
 const App = ({ lang }) => (
   <I18nProvider language={lang} catalogs={catalogs} development={dev}>
     <Helmet>
-      <link
-        rel="stylesheet"
-        media="screen"
-        href="https://fontlibrary.org/face/hk-grotesk"
-        type="text/css"
-      />
       <html lang={lang} />
       <meta content="width=device-width,initial-scale=1" name="viewport" />
     </Helmet>
