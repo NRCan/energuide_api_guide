@@ -32,7 +32,7 @@ const isEmpty = obj =>
 
 function ShowFileID({ dwelling, fileId }) {
   const returnTheRightEvaluation = evaluations => {
-    return evaluations.find(e => e.fileId === fileId)
+    return evaluations.find(e => e.fileId === fileId) || {}
   }
 
   const displayValues = dwelling => {
@@ -109,7 +109,6 @@ const ResultsFileID = props => (
       </NavLink>
       <Trans>Results</Trans>
     </Breadcrumbs>
-
     {!isEmpty(props.data) && (
       <ShowFileID dwelling={props.data} fileId={props.fileId} />
     )}
