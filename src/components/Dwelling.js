@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { Trans } from 'lingui-react'
 import { Header1, SearchContainer, theme, mediaQuery } from './styles'
 import { css } from 'react-emotion'
-import { displayValues } from '../utils'
 
 const marginBottom = css`
   margin-bottom: ${theme.spacing.xl}px;
@@ -36,7 +35,7 @@ export const Dwelling = ({ dwelling, fileId }) => (
         ${ul} ${marginBottom};
       `}
     >
-      {Object.entries(displayValues(dwelling)).map((datum, i) => (
+      {Object.entries(dwelling).map((datum, i) => (
         <li key={i}>
           <strong>{datum[0]}</strong>: {datum[1]}
         </li>
