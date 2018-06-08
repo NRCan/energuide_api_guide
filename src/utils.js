@@ -4,7 +4,11 @@ export const isEmpty = obj =>
   Object.keys(obj).length === 0 && obj.constructor === Object
 
 export const returnTheRightEvaluation = (evaluations, fileId) => {
-  return evaluations.find(e => e.fileId === fileId) || {}
+  if (evaluations && evaluations.length > 0) {
+    return evaluations.find(e => e.fileId === fileId) || {}
+  } else {
+    return {}
+  }
 }
 
 export const displayValues = (dwelling, fileId) => {
