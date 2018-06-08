@@ -284,8 +284,3 @@ export const ContainerFourOh = styled.div`
   align-items: center;
   justify-content: center;
 `
-
-export const ContainerLoading = styled.div`
-  text-align: center;
-  padding-top: 10%;
-`
