@@ -9,7 +9,7 @@ import { NoResults } from './NoResults'
 import { Dwelling } from './Dwelling'
 import { isEmpty, displayValues } from '../utils'
 
-const ResultsFileID = props => (
+const ResultsFileID = ({ data, fetching, fileId }) => (
   <main role="main">
     <Breadcrumbs>
       <NavLink to="/">
@@ -25,14 +25,11 @@ const ResultsFileID = props => (
       </NavLink>
       <Trans>Results</Trans>
     </Breadcrumbs>
-    {!isEmpty(props.data) && (
-      <Dwelling
-        dwelling={displayValues(props.data, props.fileId)}
-        fileId={props.fileId}
-      />
+    {!isEmpty(data) && (
+      <Dwelling dwelling={displayValues(data, fileId)} fileId={fileId} />
     )}
 
-    {isEmpty(props.data) && <NoResults fileId={props.fileId} />}
+    {fetching === false && isEmpty(data) && <NoResults fileId={fileId} />}
     <FooterLinks />
   </main>
 )
@@ -40,10 +37,12 @@ const ResultsFileID = props => (
 ResultsFileID.propTypes = {
   data: PropTypes.object,
   fileId: PropTypes.string.isRequired,
+  fetching: PropTypes.bool.isRequired,
 }
 
 const mapStateToProps = state => ({
   path: state.location.pathname,
+  fetching: state.data.fetching,
   data: state.data.searchFileIdData,
   fileId: state.location.payload.fileId,
 })
