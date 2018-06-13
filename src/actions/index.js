@@ -1,5 +1,7 @@
 export const SET_LANGUAGE = 'SET_LANGUAGE'
 
+export const FETCHING = 'FETCHING'
+
 export const setLanguage = lang => ({
   type: SET_LANGUAGE,
   lang,
@@ -55,3 +57,7 @@ export const setFlash = (message = null, priority = null) => ({
   message,
   priority,
 })
+
+export const dataFetchingInProgress = () => ({ fetching: true, type: FETCHING })
+
+export const dataFetchingComplete = () => ({ fetching: false, type: FETCHING })
