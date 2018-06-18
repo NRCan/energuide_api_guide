@@ -14,7 +14,12 @@ import Button from './forms/Button'
 import Flash from './Flash' // eslint-disable-line import/no-named-as-default
 import { Header1, Header2, LocationContainer } from './styles'
 import FooterLinks from './FooterLinks'
-import { setFlash, saveLocationData, deleteLocationData } from '../actions'
+import {
+  setFlash,
+  saveLocationData,
+  deleteLocationData,
+  goToLocationResults,
+} from '../actions'
 
 class SearchLocation extends Component {
   static propTypes = {
@@ -271,7 +276,7 @@ const mapDispatchToProps = dispatch => {
     save: (data, filter) => {
       dispatch(saveLocationData(data, filter))
     },
-    navigateToResultsPage: () => dispatch({ type: 'RESULTSLOCATION' }),
+    navigateToResultsPage: () => dispatch(goToLocationResults()),
     flash: (message, priority) => {
       dispatch(setFlash(message, priority))
     },

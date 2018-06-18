@@ -7,6 +7,13 @@ export const setLanguage = lang => ({
   lang,
 })
 
+export const RESULTSLOCATION = 'RESULTSLOCATION'
+
+export const goToLocationResults = (data = {}) => ({
+  type: RESULTSLOCATION,
+  payload: data,
+})
+
 export const SAVE_LOCATION_LOOKUP_RESULTS = 'SAVE_LOCATION_LOOKUP_RESULTS'
 
 export const saveLocationData = (data, { houseType }) => {
