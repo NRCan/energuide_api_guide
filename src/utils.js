@@ -1,3 +1,5 @@
+import React from 'react'
+import { Trans } from 'lingui-react'
 import gql from 'graphql-tag'
 import { i18n } from 'lingui-i18n'
 
@@ -39,7 +41,6 @@ export const displayValues = (dwelling, fileId) => {
 }
 
 export const createQuery = data => {
-  let clientFilter = { houseType: 'all' }
   let args = []
   let filters = []
   let variables = {}
@@ -55,7 +56,7 @@ export const createQuery = data => {
       variables.location = value
     } else {
       switch (value) {
-        case 'single-detached':
+        case 'Single detached':
           filters.push(`
               {
                 field: evaluationHouseType
@@ -65,9 +66,8 @@ export const createQuery = data => {
           `)
           args.push('$singleDetached: String!')
           variables.singleDetached = 'Single detached'
-          clientFilter.houseType = 'Single detached'
           break
-        case 'detached-duplex':
+        case 'Detached Duplex':
           filters.push(`
                   {
                     field: evaluationHouseType
@@ -77,9 +77,8 @@ export const createQuery = data => {
               `)
           args.push('$detachedDuplex: String!')
           variables.detachedDuplex = 'Detached Duplex'
-          clientFilter.houseType = 'Detached Duplex'
           break
-        case 'row-house-end':
+        case 'Row house, end unit':
           filters.push(`
                 {
                   field: evaluationHouseType
@@ -89,9 +88,8 @@ export const createQuery = data => {
             `)
           args.push('$rowHouseEnd: String!')
           variables.rowHouseEnd = 'Row house, end unit'
-          clientFilter.houseType = 'Row house, end unit'
           break
-        case 'row-house-middle':
+        case 'Row house, middle unit':
           filters.push(`
                   {
                     field: evaluationHouseType
@@ -101,9 +99,8 @@ export const createQuery = data => {
               `)
           args.push('$rowHouseMiddle: String!')
           variables.rowHouseMiddle = 'Row house, middle unit'
-          clientFilter.houseType = 'Row house, middle unit'
           break
-        case 'apartment':
+        case 'Apartment':
           filters.push(`
                     {
                       field: evaluationHouseType
@@ -113,9 +110,8 @@ export const createQuery = data => {
                 `)
           args.push('$apartment: String!')
           variables.apartment = 'Apartment'
-          clientFilter.houseType = 'Apartment'
           break
-        case 'all':
+        case 'All':
           // No need for a filter
           break
       }
@@ -123,7 +119,6 @@ export const createQuery = data => {
   })
   return {
     variables,
-    clientFilter,
     query: gql`
         query POCSearchLocation(${args}) {
           dwellings(
@@ -146,5 +141,23 @@ export const createQuery = data => {
           }
         }
       `,
+  }
+}
+
+// This is dumb and its a lingui workaround thing.
+export const translateHouseType = value => {
+  switch (value) {
+    case 'Single detached':
+      return <Trans>Single detached</Trans>
+    case 'Detached Duplex':
+      return <Trans>Detached Duplex</Trans>
+    case 'Row house, end unit':
+      return <Trans>Row house, end unit</Trans>
+    case 'Row house, middle unit':
+      return <Trans>Row house, middle unit</Trans>
+    case 'Apartment':
+      return <Trans>Apartment</Trans>
+    case 'All':
+      return <Trans>All</Trans>
   }
 }

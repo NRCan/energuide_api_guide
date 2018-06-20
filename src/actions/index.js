@@ -21,7 +21,7 @@ export const saveLocationData = (data, { houseType }) => {
     type: SAVE_LOCATION_LOOKUP_RESULTS,
     data: data.reduce((output, datum) => {
       datum.evaluations.map(evaluation => {
-        if (evaluation.houseType === houseType || houseType === 'all') {
+        if (evaluation.houseType === houseType || houseType === 'All') {
           output.push({
             yearBuilt: datum.yearBuilt,
             region: datum.region,

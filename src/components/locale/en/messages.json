@@ -26,6 +26,36 @@
       ]
     ]
   },
+  "File <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Dwelling.js",
+        28
+      ],
+      [
+        "src/components/Search.js",
+        89
+      ],
+      [
+        "src/components/SearchFileID.js",
+        68
+      ]
+    ]
+  },
+  "Search for another file <0>ID</0>": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Dwelling.js",
+        45
+      ],
+      [
+        "src/components/NoResults.js",
+        21
+      ]
+    ]
+  },
   "Privacy": {
     "translation": "",
     "origin": [
@@ -75,7 +105,7 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        97
+        16
       ],
       [
         "src/components/ResultsLocation.js",
@@ -91,7 +121,7 @@
       ],
       [
         "src/components/SearchLocation.js",
-        175
+        77
       ]
     ]
   },
@@ -230,19 +260,6 @@
       ]
     ]
   },
-  "Search for another file <0>ID</0>": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/NoResults.js",
-        21
-      ],
-      [
-        "src/components/ResultsFileID.js",
-        81
-      ]
-    ]
-  },
   "Search": {
     "translation": "",
     "origin": [
@@ -252,7 +269,7 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        100
+        19
       ],
       [
         "src/components/ResultsLocation.js",
@@ -276,11 +293,11 @@
       ],
       [
         "src/components/SearchLocation.js",
-        178
+        80
       ],
       [
         "src/components/SearchLocation.js",
-        259
+        161
       ]
     ]
   },
@@ -297,11 +314,11 @@
       ],
       [
         "src/components/SearchLocation.js",
-        180
+        82
       ],
       [
         "src/components/SearchLocation.js",
-        186
+        88
       ]
     ]
   },
@@ -318,7 +335,7 @@
       ],
       [
         "src/components/ResultsFileID.js",
-        107
+        26
       ],
       [
         "src/components/ResultsLocation.js",
@@ -353,38 +370,12 @@
       ]
     ]
   },
-  "tonnes/year": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/ResultsFileID.js",
-        57
-      ]
-    ]
-  },
-  "File <0>ID</0>": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/ResultsFileID.js",
-        64
-      ],
-      [
-        "src/components/Search.js",
-        89
-      ],
-      [
-        "src/components/SearchFileID.js",
-        68
-      ]
-    ]
-  },
   "Search by file <0>ID</0>": {
     "translation": "",
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        103
+        22
       ],
       [
         "src/components/SearchFileID.js",
@@ -450,7 +441,7 @@
       ],
       [
         "src/components/SearchLocation.js",
-        200
+        102
       ]
     ]
   },
@@ -468,7 +459,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        164
+        66
       ]
     ]
   },
@@ -477,7 +468,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        205
+        107
       ]
     ]
   },
@@ -486,7 +477,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        215
+        117
       ]
     ]
   },
@@ -495,7 +486,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        219
+        121
       ]
     ]
   },
@@ -504,7 +495,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        222
+        124
+      ],
+      [
+        "src/utils.js",
+        150
       ]
     ]
   },
@@ -513,7 +508,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        228
+        130
       ]
     ]
   },
@@ -522,7 +517,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        234
+        136
+      ],
+      [
+        "src/utils.js",
+        154
       ]
     ]
   },
@@ -531,7 +530,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        240
+        142
+      ],
+      [
+        "src/utils.js",
+        156
       ]
     ]
   },
@@ -540,7 +543,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        246
+        148
+      ],
+      [
+        "src/utils.js",
+        158
       ]
     ]
   },
@@ -549,7 +556,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        252
+        154
+      ],
+      [
+        "src/utils.js",
+        160
       ]
     ]
   },
@@ -568,6 +579,24 @@
       [
         "src/components/Sidebar.js",
         17
+      ]
+    ]
+  },
+  "tonnes/year": {
+    "translation": "",
+    "origin": [
+      [
+        "src/utils.js",
+        39
+      ]
+    ]
+  },
+  "Detached duplex": {
+    "translation": "",
+    "origin": [
+      [
+        "src/utils.js",
+        152
       ]
     ]
   }

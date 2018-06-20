@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'react-emotion'
+import { translateHouseType } from '../utils'
 
 const dataTable = css`
   table {
@@ -55,13 +56,13 @@ class DataTable extends Component {
     let rows = []
     let i = 0
 
-    this.props.data.forEach(function(item) {
+    this.props.data.forEach(item => {
       rows.push(
         <tr key={i}>
           <td>{item.yearBuilt}</td>
           <td>{item.region}</td>
           <td>{item.forwardSortationArea}</td>
-          <td>{item.houseType}</td>
+          <td>{translateHouseType(item.houseType)}</td>
           <td>{item.eghRating}</td>
         </tr>,
       )
