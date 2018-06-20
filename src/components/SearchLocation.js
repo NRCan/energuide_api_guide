@@ -4,7 +4,6 @@ import { reduxForm } from 'redux-form'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { compose, withApollo } from 'react-apollo'
-import gql from 'graphql-tag'
 import { Trans } from 'lingui-react'
 import Breadcrumbs from './Breadcrumbs'
 import FieldSet from './forms/FieldSet'
@@ -14,16 +13,16 @@ import Button from './forms/Button'
 import Flash from './Flash' // eslint-disable-line import/no-named-as-default
 import { Header1, Header2, LocationContainer } from './styles'
 import FooterLinks from './FooterLinks'
+import { createQuery } from '../utils'
 import {
-  setFlash,
-  saveLocationData,
-  deleteLocationData,
-  goToLocationResults,
+  flash,
+  saveLocation,
+  deleteLocation,
+  navigateToResultsPage,
 } from '../actions'
 
 class SearchLocation extends Component {
   static propTypes = {
-    save: PropTypes.func.isRequired,
     data: PropTypes.array,
     handleSubmit: PropTypes.func.isRequired,
     pristine: PropTypes.bool.isRequired,
@@ -38,134 +37,32 @@ class SearchLocation extends Component {
 
   async handleFormData(data) {
     let {
-      navigateToResultsPage,
       client,
-      save,
       flash,
-      deleteFormData,
+      deleteLocation,
+      navigateToResultsPage,
+      saveLocation,
     } = this.props
 
-    deleteFormData() // clear any previous data
+    deleteLocation() // clear any previous data
     flash() // clear any previous flash messages
 
-    let clientFilter = { houseType: 'all' }
-    let args = []
-    let filters = []
-    let variables = {}
-    Object.entries(data).forEach(([key, value]) => {
-      if (key === 'location') {
-        value = typeof value === 'string' ? value.toUpperCase() : value
-        filters.push(`{
-                field: dwellingForwardSortationArea
-                comparator: eq
-                value: $location
-              }`)
-        args.push('$location: String!')
-        variables.location = value
-      } else {
-        switch (value) {
-          case 'single-detached':
-            filters.push(`
-              {
-                field: evaluationHouseType
-                comparator: eq
-                value: $singleDetached
-              }
-          `)
-            args.push('$singleDetached: String!')
-            variables.singleDetached = 'Single detached'
-            clientFilter.houseType = 'Single detached'
-            break
-          case 'detached-duplex':
-            filters.push(`
-                  {
-                    field: evaluationHouseType
-                    comparator: eq
-                    value: $detachedDuplex
-                  }
-              `)
-            args.push('$detachedDuplex: String!')
-            variables.detachedDuplex = 'Detached Duplex'
-            clientFilter.houseType = 'Detached Duplex'
-            break
-          case 'row-house-end':
-            filters.push(`
-                {
-                  field: evaluationHouseType
-                  comparator: eq
-                  value: $rowHouseEnd
-                }
-            `)
-            args.push('$rowHouseEnd: String!')
-            variables.rowHouseEnd = 'Row house, end unit'
-            clientFilter.houseType = 'Row house, end unit'
-            break
-          case 'row-house-middle':
-            filters.push(`
-                  {
-                    field: evaluationHouseType
-                    comparator: eq
-                    value: $rowHouseMiddle
-                  }
-              `)
-            args.push('$rowHouseMiddle: String!')
-            variables.rowHouseMiddle = 'Row house, middle unit'
-            clientFilter.houseType = 'Row house, middle unit'
-            break
-          case 'apartment':
-            filters.push(`
-                    {
-                      field: evaluationHouseType
-                      comparator: eq
-                      value: $apartment
-                    }
-                `)
-            args.push('$apartment: String!')
-            variables.apartment = 'Apartment'
-            clientFilter.houseType = 'Apartment'
-            break
-          case 'all':
-            // No need for a filter
-            break
-        }
-      }
-    })
+    const { clientFilter, variables, query } = createQuery(data)
 
     let response = await client.query({
-      query: gql`
-        query POCSearchLocation(${args}) {
-          dwellings(
-            limit: 100
-            filters: [
-              ${filters}
-            ]
-          ) {
-            results {
-              yearBuilt
-              region
-              forwardSortationArea
-              evaluations {
-                houseType
-                eghRating {
-                  measurement
-                }
-              }
-            }
-          }
-        }
-      `,
+      query,
       variables,
     })
+
     if (response.errors) {
       flash(response.errors, 'error')
     } else {
       let { data: { dwellings } } = response
-
       if (dwellings.results.length > 0) {
-        save(dwellings.results, clientFilter)
+        saveLocation(dwellings.results, clientFilter)
         navigateToResultsPage()
       } else {
-        deleteLocationData()
+        deleteLocation()
         flash(<Trans>No results found</Trans>, 'warn')
       }
     }
@@ -271,19 +168,6 @@ class SearchLocation extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    save: (data, filter) => {
-      dispatch(saveLocationData(data, filter))
-    },
-    navigateToResultsPage: () => dispatch(goToLocationResults()),
-    flash: (message, priority) => {
-      dispatch(setFlash(message, priority))
-    },
-    deleteFormData: () => dispatch(deleteLocationData()),
-  }
-}
-
 const mapStateToProps = state => ({
   path: state.location.pathname,
   data: state.data.searchLocationData,
@@ -295,5 +179,10 @@ export default compose(
     form: 'searchByLocation',
     initialValues: { houseType: 'all' },
   }),
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps, {
+    saveLocation,
+    navigateToResultsPage,
+    deleteLocation,
+    flash,
+  }),
 )(SearchLocation)

@@ -1,4 +1,10 @@
-import { isEmpty, returnTheRightEvaluation, displayValues } from '../utils'
+import { print } from 'graphql/language/printer'
+import {
+  isEmpty,
+  createQuery,
+  returnTheRightEvaluation,
+  displayValues,
+} from '../utils'
 
 let dwelling = {
   city: 'Mississauga',
@@ -76,6 +82,33 @@ describe('Utility functions', () => {
         'Evaluation type': 'E',
         'House type': 'Row house, end unit',
         'Year built': 1970,
+      })
+    })
+  })
+
+  describe('createQuery', () => {
+    it('creates client side filter based on the form data', () => {
+      const data = { houseType: 'detached-duplex', location: 'L4C' }
+      const { clientFilter } = createQuery(data)
+      expect(clientFilter).toEqual({ houseType: 'Detached Duplex' })
+    })
+
+    it('creates a query filter based on the form data', () => {
+      const data = { houseType: 'detached-duplex', location: 'L4C' }
+      const { query } = createQuery(data)
+      expect(print(query)).toMatch(
+        /filters: \[\{field: evaluationHouseType, comparator: eq, value: \$detachedDuplex\}/,
+      )
+      expect(print(query)).toMatch(
+        /\{field: dwellingForwardSortationArea, comparator: eq, value: \$location\}\]/,
+      )
+    })
+    it('returns a set of variables based on the form data', () => {
+      const data = { houseType: 'detached-duplex', location: 'L4C' }
+      const { variables } = createQuery(data)
+      expect(variables).toEqual({
+        detachedDuplex: 'Detached Duplex',
+        location: 'L4C',
       })
     })
   })
