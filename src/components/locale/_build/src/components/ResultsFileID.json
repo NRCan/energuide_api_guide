@@ -1,33 +1,9 @@
 {
-  "tonnes/year": {
-    "origin": [
-      [
-        "src/components/ResultsFileID.js",
-        57
-      ]
-    ]
-  },
-  "File <0>ID</0>": {
-    "origin": [
-      [
-        "src/components/ResultsFileID.js",
-        64
-      ]
-    ]
-  },
-  "Search for another file <0>ID</0>": {
-    "origin": [
-      [
-        "src/components/ResultsFileID.js",
-        81
-      ]
-    ]
-  },
   "EnerGuide API": {
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        97
+        16
       ]
     ]
   },
@@ -35,7 +11,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        100
+        19
       ]
     ]
   },
@@ -43,7 +19,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        103
+        22
       ]
     ]
   },
@@ -51,7 +27,7 @@
     "origin": [
       [
         "src/components/ResultsFileID.js",
-        107
+        26
       ]
     ]
   }

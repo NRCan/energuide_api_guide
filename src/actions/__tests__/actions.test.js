@@ -1,4 +1,5 @@
-import { goToLocationResults } from '../'
+import { saveLocationData, goToLocationResults } from '../'
+
 describe('Action creators', () => {
   describe('goToLocationResults', () => {
     it('produces an action with the correct type', () => {
@@ -16,6 +17,39 @@ describe('Action creators', () => {
       expect(goToLocationResults()).toEqual({
         type: 'RESULTSLOCATION',
         payload: {},
+      })
+    })
+  })
+
+  describe('saveLocationData', () => {
+    it('should be not broken', () => {
+      let data = [
+        {
+          yearBuilt: 1900,
+          region: 'PE',
+          forwardSortationArea: 'C1A',
+          evaluations: [
+            {
+              houseType: 'Detached Duplex',
+              eghRating: { measurement: 48, __typename: 'Rating' },
+              __typename: 'Evaluation',
+            },
+          ],
+          __typename: 'Dwelling',
+        },
+      ]
+
+      expect(saveLocationData(data, { houseType: 'Detached Duplex' })).toEqual({
+        type: 'SAVE_LOCATION_LOOKUP_RESULTS',
+        data: [
+          {
+            eghRating: 48,
+            forwardSortationArea: 'C1A',
+            houseType: 'Detached Duplex',
+            region: 'PE',
+            yearBuilt: 1900,
+          },
+        ],
       })
     })
   })

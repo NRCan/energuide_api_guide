@@ -47,7 +47,7 @@ class SearchLocation extends Component {
     deleteLocation() // clear any previous data
     flash() // clear any previous flash messages
 
-    const { clientFilter, variables, query } = createQuery(data)
+    const { variables, query } = createQuery(data)
 
     let response = await client.query({
       query,
@@ -59,7 +59,7 @@ class SearchLocation extends Component {
     } else {
       let { data: { dwellings } } = response
       if (dwellings.results.length > 0) {
-        saveLocation(dwellings.results, clientFilter)
+        saveLocation(dwellings.results, { houseType: data.houseType })
         navigateToResultsPage()
       } else {
         deleteLocation()
@@ -122,37 +122,37 @@ class SearchLocation extends Component {
               </p>
               <Radio
                 label={<Trans>Single detached</Trans>}
-                value="single-detached"
+                value="Single detached"
                 name="houseType"
                 id="house-type-1"
               />
               <Radio
                 label={<Trans>Detached Duplex</Trans>}
-                value="detached-duplex"
+                value="Detached Duplex"
                 name="houseType"
                 id="house-type-2"
               />
               <Radio
                 label={<Trans>Row house, end unit</Trans>}
-                value="row-house-end"
+                value="Row house, end unit"
                 name="houseType"
                 id="house-type-3"
               />
               <Radio
                 label={<Trans>Row house, middle unit</Trans>}
-                value="row-house-middle"
+                value="Row house, middle unit"
                 name="houseType"
                 id="house-type-4"
               />
               <Radio
                 label={<Trans>Apartment</Trans>}
-                value="apartment"
+                value="Apartment"
                 name="houseType"
                 id="house-type-5"
               />
               <Radio
                 label={<Trans>All</Trans>}
-                value="all"
+                value="All"
                 name="houseType"
                 id="house-type-6"
               />
@@ -177,7 +177,7 @@ export default compose(
   withApollo,
   reduxForm({
     form: 'searchByLocation',
-    initialValues: { houseType: 'all' },
+    initialValues: { houseType: 'All' },
   }),
   connect(mapStateToProps, {
     saveLocation,

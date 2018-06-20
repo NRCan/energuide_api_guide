@@ -1,7 +1,9 @@
 import { print } from 'graphql/language/printer'
+import { shallow } from 'enzyme'
 import {
   isEmpty,
   createQuery,
+  translateHouseType,
   returnTheRightEvaluation,
   displayValues,
 } from '../utils'
@@ -87,14 +89,8 @@ describe('Utility functions', () => {
   })
 
   describe('createQuery', () => {
-    it('creates client side filter based on the form data', () => {
-      const data = { houseType: 'detached-duplex', location: 'L4C' }
-      const { clientFilter } = createQuery(data)
-      expect(clientFilter).toEqual({ houseType: 'Detached Duplex' })
-    })
-
     it('creates a query filter based on the form data', () => {
-      const data = { houseType: 'detached-duplex', location: 'L4C' }
+      const data = { houseType: 'Detached Duplex', location: 'L4C' }
       const { query } = createQuery(data)
       expect(print(query)).toMatch(
         /filters: \[\{field: evaluationHouseType, comparator: eq, value: \$detachedDuplex\}/,
@@ -103,12 +99,50 @@ describe('Utility functions', () => {
         /\{field: dwellingForwardSortationArea, comparator: eq, value: \$location\}\]/,
       )
     })
+
     it('returns a set of variables based on the form data', () => {
-      const data = { houseType: 'detached-duplex', location: 'L4C' }
+      const data = { houseType: 'Detached Duplex', location: 'L4C' }
       const { variables } = createQuery(data)
       expect(variables).toEqual({
         detachedDuplex: 'Detached Duplex',
         location: 'L4C',
+      })
+    })
+  })
+
+  describe('translateHouseType', () => {
+    describe('when given the string "Single detached"', () => {
+      it('returns a tranlated lingui object', () => {
+        const wrapper = shallow(translateHouseType('Single detached'))
+        expect(wrapper.props().id).toEqual('Single detached')
+      })
+    })
+
+    describe('when given the string "Detached Duplex"', () => {
+      it('returns a tranlated lingui object', () => {
+        const wrapper = shallow(translateHouseType('Detached Duplex'))
+        expect(wrapper.props().id).toEqual('Detached Duplex')
+      })
+    })
+
+    describe('when given the string "Row house, end unit"', () => {
+      it('returns a tranlated lingui object', () => {
+        const wrapper = shallow(translateHouseType('Row house, end unit'))
+        expect(wrapper.props().id).toEqual('Row house, end unit')
+      })
+    })
+
+    describe('when given the string "Row house, middle unit"', () => {
+      it('returns a tranlated lingui object', () => {
+        const wrapper = shallow(translateHouseType('Row house, middle unit'))
+        expect(wrapper.props().id).toEqual('Row house, middle unit')
+      })
+    })
+
+    describe('when given the string "Apartment"', () => {
+      it('returns a tranlated lingui object', () => {
+        const wrapper = shallow(translateHouseType('Apartment'))
+        expect(wrapper.props().id).toEqual('Apartment')
       })
     })
   })

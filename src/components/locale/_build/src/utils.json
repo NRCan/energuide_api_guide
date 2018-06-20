@@ -1,0 +1,58 @@
+{
+  "tonnes/year": {
+    "origin": [
+      [
+        "src/utils.js",
+        39
+      ]
+    ]
+  },
+  "Single detached": {
+    "origin": [
+      [
+        "src/utils.js",
+        150
+      ]
+    ]
+  },
+  "Detached duplex": {
+    "origin": [
+      [
+        "src/utils.js",
+        152
+      ]
+    ]
+  },
+  "Row house, end unit": {
+    "origin": [
+      [
+        "src/utils.js",
+        154
+      ]
+    ]
+  },
+  "Row house, middle unit": {
+    "origin": [
+      [
+        "src/utils.js",
+        156
+      ]
+    ]
+  },
+  "Apartment": {
+    "origin": [
+      [
+        "src/utils.js",
+        158
+      ]
+    ]
+  },
+  "All": {
+    "origin": [
+      [
+        "src/utils.js",
+        160
+      ]
+    ]
+  }
+}
