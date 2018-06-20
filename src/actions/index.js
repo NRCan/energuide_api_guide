@@ -68,3 +68,11 @@ export const setFlash = (message = null, priority = null) => ({
 export const dataFetchingInProgress = () => ({ fetching: true, type: FETCHING })
 
 export const dataFetchingComplete = () => ({ fetching: false, type: FETCHING })
+
+export const saveLocation = (data, filter) => saveLocationData(data, filter)
+
+export const navigateToResultsPage = data => goToLocationResults(data)
+
+export const flash = (message, priority) => setFlash(message, priority)
+
+export const deleteLocation = () => deleteLocationData()

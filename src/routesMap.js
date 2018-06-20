@@ -7,7 +7,12 @@ export default {
   SEARCH: '/search',
   LOCATION: '/search-location',
   FILEID: '/search-fileid',
-  RESULTSLOCATION: '/results-location',
+  RESULTSLOCATION: {
+    path: '/results-location',
+    thunk: async (dispatch, getState) => {
+      // TODO: the right thing
+    },
+  },
   RESULTSFILEID: {
     path: '/results-fileid/:fileId',
     thunk: async (dispatch, getState) => {
