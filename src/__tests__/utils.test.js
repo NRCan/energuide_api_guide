@@ -93,7 +93,7 @@ describe('Utility functions', () => {
       const data = { houseType: 'Detached Duplex', location: 'L4C' }
       const { query } = createQuery(data)
       expect(print(query)).toMatch(
-        /filters: \[\{field: evaluationHouseType, comparator: eq, value: \$detachedDuplex\}/,
+        /filters: \[\{field: evaluationHouseType, comparator: eq, value: \$value/,
       )
       expect(print(query)).toMatch(
         /\{field: dwellingForwardSortationArea, comparator: eq, value: \$location\}\]/,
@@ -103,10 +103,7 @@ describe('Utility functions', () => {
     it('returns a set of variables based on the form data', () => {
       const data = { houseType: 'Detached Duplex', location: 'L4C' }
       const { variables } = createQuery(data)
-      expect(variables).toEqual({
-        detachedDuplex: 'Detached Duplex',
-        location: 'L4C',
-      })
+      expect(variables).toEqual({ location: 'L4C', value0: 'Detached Duplex' })
     })
   })
 
