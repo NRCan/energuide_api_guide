@@ -5,9 +5,14 @@ import { connect } from 'react-redux'
 import { Trans } from 'lingui-react'
 import Breadcrumbs from './Breadcrumbs'
 import { Header1, SearchContainer, theme, mediaQuery } from './styles'
+import { isEmpty } from '../utils'
 import FooterLinks from './FooterLinks'
 import DataTable from './DataTable'
 import { css } from 'react-emotion'
+
+const margin = css`
+  margin: 1em 0em;
+`
 
 const tableContainer = css`
   margin-top: ${theme.spacing.xl}px;
@@ -33,10 +38,11 @@ const tableContainer = css`
 class ResultsLocation extends Component {
   static propTypes = {
     data: PropTypes.array,
+    fetching: PropTypes.bool.isRequired,
   }
 
   render() {
-    let { data } = this.props
+    let { data, fetching } = this.props
     return (
       <main role="main">
         <Breadcrumbs>
@@ -52,20 +58,24 @@ class ResultsLocation extends Component {
           <Trans>Results</Trans>
         </Breadcrumbs>
         <SearchContainer>
-          <header>
+          {fetching === false && (
             <Header1>
-              {`${data ? data.length : 0} `}
-              <Trans>results</Trans>
+              <Trans>{data.length} results</Trans>
             </Header1>
-          </header>
-          <NavLink to="/search-location">
-            <Trans>Search again by location</Trans>
-          </NavLink>
-
-          <div className={tableContainer}>
-            <span />
-            {data.length > 0 && <DataTable data={data} />}
-          </div>
+          )}
+          {!fetching &&
+            !isEmpty(data) && (
+              <div>
+                <div className={tableContainer}>
+                  <DataTable className={margin} data={data} />
+                </div>
+              </div>
+            )}
+          {!fetching && (
+            <NavLink to="/search-location">
+              <Trans>Search for another location</Trans>
+            </NavLink>
+          )}
         </SearchContainer>
         <FooterLinks />
       </main>
@@ -75,6 +85,7 @@ class ResultsLocation extends Component {
 
 const mapStateToProps = state => ({
   path: state.location.pathname,
+  fetching: state.data.fetching,
   data: state.data.searchLocationData,
 })
 
