@@ -1,6 +1,5 @@
 export { default as page } from './page'
 export { default as data } from './data'
-export { default as flash } from './flash'
 export { default as title } from './title'
 export { default as form } from './form'
 export { default as language } from './language'

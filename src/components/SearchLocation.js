@@ -10,20 +10,15 @@ import FieldSet from './forms/FieldSet'
 import TextInput from './forms/TextInput'
 import { Radio } from './forms/MultipleChoice'
 import Button from './forms/Button'
-import Flash from './Flash' // eslint-disable-line import/no-named-as-default
 import { Header1, Header2, LocationContainer } from './styles'
 import FooterLinks from './FooterLinks'
-import { createQuery } from '../utils'
-import {
-  flash,
-  saveLocation,
-  deleteLocation,
-  navigateToResultsPage,
-} from '../actions'
+import { deleteLocation, navigateToResultsPage } from '../actions'
 
 class SearchLocation extends Component {
   static propTypes = {
     data: PropTypes.array,
+    deleteLocation: PropTypes.func.isRequired,
+    navigateToResultsPage: PropTypes.func.isRequired,
     handleSubmit: PropTypes.func.isRequired,
     pristine: PropTypes.bool.isRequired,
     reset: PropTypes.func.isRequired,
@@ -36,36 +31,8 @@ class SearchLocation extends Component {
   }
 
   async handleFormData(data) {
-    let {
-      client,
-      flash,
-      deleteLocation,
-      navigateToResultsPage,
-      saveLocation,
-    } = this.props
-
-    deleteLocation() // clear any previous data
-    flash() // clear any previous flash messages
-
-    const { variables, query } = createQuery(data)
-
-    let response = await client.query({
-      query,
-      variables,
-    })
-
-    if (response.errors) {
-      flash(response.errors, 'error')
-    } else {
-      let { data: { dwellings } } = response
-      if (dwellings.results.length > 0) {
-        saveLocation(dwellings.results, { houseType: data.houseType })
-        navigateToResultsPage()
-      } else {
-        deleteLocation()
-        flash(<Trans>No results found</Trans>, 'warn')
-      }
-    }
+    this.props.deleteLocation()
+    this.props.navigateToResultsPage(data)
   }
 
   render() {
@@ -81,7 +48,6 @@ class SearchLocation extends Component {
           </NavLink>
           <Trans>Search by location</Trans>
         </Breadcrumbs>
-        <Flash />
         <LocationContainer>
           <header>
             <Header1 id="search-by-location-description">
@@ -180,9 +146,7 @@ export default compose(
     initialValues: { houseType: 'All' },
   }),
   connect(mapStateToProps, {
-    saveLocation,
-    navigateToResultsPage,
     deleteLocation,
-    flash,
+    navigateToResultsPage,
   }),
 )(SearchLocation)

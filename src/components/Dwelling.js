@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavLink } from 'redux-first-router-link'
 import PropTypes from 'prop-types'
 import { Trans } from 'lingui-react'
 import { Header1, SearchContainer, theme, mediaQuery } from './styles'
@@ -41,11 +40,6 @@ export const Dwelling = ({ dwelling, fileId }) => (
         </li>
       ))}
     </ul>
-    <NavLink to="/search-fileid">
-      <Trans>
-        Search for another file <span className="id-span">ID</span>
-      </Trans>
-    </NavLink>
   </SearchContainer>
 )
 
