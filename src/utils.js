@@ -44,75 +44,31 @@ export const createQuery = data => {
   let args = []
   let filters = []
   let variables = {}
-  Object.entries(data).forEach(([key, value]) => {
+  Object.entries(data).forEach(([key, value], i) => {
     if (key === 'location') {
       value = typeof value === 'string' ? value.toUpperCase() : value
       filters.push(`{
-                field: dwellingForwardSortationArea
-                comparator: eq
-                value: $location
-              }`)
+          field: dwellingForwardSortationArea
+          comparator: eq
+          value: $location
+        }`)
       args.push('$location: String!')
       variables.location = value
     } else {
       switch (value) {
-        case 'Single detached':
+        case 'All':
+          // No need for a filter
+          break
+        default:
           filters.push(`
               {
                 field: evaluationHouseType
                 comparator: eq
-                value: $singleDetached
+                value: $value${i}
               }
-          `)
-          args.push('$singleDetached: String!')
-          variables.singleDetached = 'Single detached'
-          break
-        case 'Detached Duplex':
-          filters.push(`
-                  {
-                    field: evaluationHouseType
-                    comparator: eq
-                    value: $detachedDuplex
-                  }
-              `)
-          args.push('$detachedDuplex: String!')
-          variables.detachedDuplex = 'Detached Duplex'
-          break
-        case 'Row house, end unit':
-          filters.push(`
-                {
-                  field: evaluationHouseType
-                  comparator: eq
-                  value: $rowHouseEnd
-                }
             `)
-          args.push('$rowHouseEnd: String!')
-          variables.rowHouseEnd = 'Row house, end unit'
-          break
-        case 'Row house, middle unit':
-          filters.push(`
-                  {
-                    field: evaluationHouseType
-                    comparator: eq
-                    value: $rowHouseMiddle
-                  }
-              `)
-          args.push('$rowHouseMiddle: String!')
-          variables.rowHouseMiddle = 'Row house, middle unit'
-          break
-        case 'Apartment':
-          filters.push(`
-                    {
-                      field: evaluationHouseType
-                      comparator: eq
-                      value: $apartment
-                    }
-                `)
-          args.push('$apartment: String!')
-          variables.apartment = 'Apartment'
-          break
-        case 'All':
-          // No need for a filter
+          args.push(`$value${i}: String!`)
+          variables[`value${i}`] = value
           break
       }
     }
@@ -144,7 +100,7 @@ export const createQuery = data => {
   }
 }
 
-// This is dumb and its a lingui workaround thing.
+// This is kind of dumb but it lets us find and extract these values with lingui
 export const translateHouseType = value => {
   switch (value) {
     case 'Single detached':
