@@ -13,8 +13,8 @@ const externals = fs
   .filter(
     x =>
       !/\.bin|react-universal-component|require-universal-module|webpack-flush-chunks/.test(
-        x
-      )
+        x,
+      ),
   )
   .reduce((externals, mod) => {
     externals[mod] = `commonjs ${mod}`
@@ -41,21 +41,10 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'css-loader/locals',
-          options: {
-            modules: true,
-            localIdentName: '[name]__[local]--[hash:base64:5]',
-          },
-        },
-      },
     ],
   },
   resolve: {
-    extensions: ['.js', '.css'],
+    extensions: ['.js'],
   },
   plugins: [
     new webpack.optimize.LimitChunkCountPlugin({
