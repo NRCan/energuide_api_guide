@@ -39,8 +39,8 @@ class ResultsLocation extends Component {
     if (!fetching) {
       return (
         <Header1>
-          {data.length}
-          <Trans> results</Trans>
+          {data.length + ' '}
+          <Trans>results</Trans>
         </Header1>
       )
     }
