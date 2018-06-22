@@ -1,22 +1,4 @@
 {
-  "{0} results": {
-    "translation": "{0} résultats",
-    "origin": [
-      [
-        "src/components/ResultsLocation.js",
-        63
-      ]
-    ]
-  },
-  "Search for another location": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/ResultsLocation.js",
-        76
-      ]
-    ]
-  },
   "Alpha": {
     "translation": "Alpha",
     "origin": [
@@ -114,7 +96,7 @@
       ],
       [
         "src/components/ResultsLocation.js",
-        50
+        78
       ],
       [
         "src/components/Search.js",
@@ -287,7 +269,7 @@
       ],
       [
         "src/components/ResultsLocation.js",
-        53
+        81
       ],
       [
         "src/components/Search.js",
@@ -324,7 +306,7 @@
       ],
       [
         "src/components/ResultsLocation.js",
-        56
+        84
       ],
       [
         "src/components/SearchLocation.js",
@@ -353,7 +335,7 @@
       ],
       [
         "src/components/ResultsLocation.js",
-        58
+        86
       ]
     ]
   },
@@ -398,6 +380,24 @@
       [
         "src/components/SearchFileID.js",
         55
+      ]
+    ]
+  },
+  "results": {
+    "translation": "résultats",
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        42
+      ]
+    ]
+  },
+  "Search for another location": {
+    "translation": "Recherche d'un autre lieu",
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        66
       ]
     ]
   },
@@ -582,12 +582,12 @@
       ]
     ]
   },
-  "results": {
-    "translation": "résultats",
+  "{0} results": {
+    "translation": "{0} résultats",
     "origin": [
       [
         "src/components/ResultsLocation.js",
-        58
+        63
       ]
     ],
     "obsolete": true

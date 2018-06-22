@@ -39,7 +39,8 @@ class ResultsLocation extends Component {
     if (!fetching) {
       return (
         <Header1>
-          <Trans>{data.length} results</Trans>
+          {data.length}
+          <Trans> results</Trans>
         </Header1>
       )
     }
