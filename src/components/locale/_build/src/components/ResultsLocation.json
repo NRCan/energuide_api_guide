@@ -1,41 +1,9 @@
 {
-  "EnerGuide API": {
+  "results": {
     "origin": [
       [
         "src/components/ResultsLocation.js",
-        50
-      ]
-    ]
-  },
-  "Search": {
-    "origin": [
-      [
-        "src/components/ResultsLocation.js",
-        53
-      ]
-    ]
-  },
-  "Search by location": {
-    "origin": [
-      [
-        "src/components/ResultsLocation.js",
-        56
-      ]
-    ]
-  },
-  "Results": {
-    "origin": [
-      [
-        "src/components/ResultsLocation.js",
-        58
-      ]
-    ]
-  },
-  "{0} results": {
-    "origin": [
-      [
-        "src/components/ResultsLocation.js",
-        63
+        42
       ]
     ]
   },
@@ -43,7 +11,39 @@
     "origin": [
       [
         "src/components/ResultsLocation.js",
-        76
+        66
+      ]
+    ]
+  },
+  "EnerGuide API": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        78
+      ]
+    ]
+  },
+  "Search": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        81
+      ]
+    ]
+  },
+  "Search by location": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        84
+      ]
+    ]
+  },
+  "Results": {
+    "origin": [
+      [
+        "src/components/ResultsLocation.js",
+        86
       ]
     ]
   }
