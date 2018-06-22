@@ -1,17 +1,9 @@
 {
-  "No results found": {
-    "origin": [
-      [
-        "src/components/SearchLocation.js",
-        66
-      ]
-    ]
-  },
   "EnerGuide API": {
     "origin": [
       [
         "src/components/SearchLocation.js",
-        77
+        44
       ]
     ]
   },
@@ -19,11 +11,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        80
+        47
       ],
       [
         "src/components/SearchLocation.js",
-        161
+        127
       ]
     ]
   },
@@ -31,11 +23,11 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        82
+        49
       ],
       [
         "src/components/SearchLocation.js",
-        88
+        54
       ]
     ]
   },
@@ -43,7 +35,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        102
+        68
       ]
     ]
   },
@@ -51,7 +43,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        107
+        73
       ]
     ]
   },
@@ -59,7 +51,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        117
+        83
       ]
     ]
   },
@@ -67,7 +59,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        121
+        87
       ]
     ]
   },
@@ -75,7 +67,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        124
+        90
       ]
     ]
   },
@@ -83,7 +75,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        130
+        96
       ]
     ]
   },
@@ -91,7 +83,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        136
+        102
       ]
     ]
   },
@@ -99,7 +91,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        142
+        108
       ]
     ]
   },
@@ -107,7 +99,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        148
+        114
       ]
     ]
   },
@@ -115,7 +107,7 @@
     "origin": [
       [
         "src/components/SearchLocation.js",
-        154
+        120
       ]
     ]
   }

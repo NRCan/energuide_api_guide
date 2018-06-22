@@ -11,15 +11,15 @@
     "origin": [
       [
         "src/utils.js",
-        150
+        107
       ]
     ]
   },
-  "Detached duplex": {
+  "Detached Duplex": {
     "origin": [
       [
         "src/utils.js",
-        152
+        109
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/utils.js",
-        154
+        111
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/utils.js",
-        156
+        113
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/utils.js",
-        158
+        115
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/utils.js",
-        160
+        117
       ]
     ]
   }

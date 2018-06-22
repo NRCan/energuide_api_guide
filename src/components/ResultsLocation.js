@@ -1,25 +1,18 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 import { NavLink } from 'redux-first-router-link'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Trans } from 'lingui-react'
 import Breadcrumbs from './Breadcrumbs'
-import { Header1, SearchContainer, theme, mediaQuery } from './styles'
+import { Header1, SearchContainer, mediaQuery } from './styles'
 import { isEmpty } from '../utils'
 import FooterLinks from './FooterLinks'
 import DataTable from './DataTable'
 import { css } from 'react-emotion'
 
-const margin = css`
-  margin: 1em 0em;
-`
-
 const tableContainer = css`
-  margin-top: ${theme.spacing.xl}px;
   width: 100%;
   overflow: scroll;
-  border: 2px solid ${theme.colour.greyLight};
-  position: relative;
 
   ${mediaQuery.large(css`
     width: 120%;
@@ -41,8 +34,43 @@ class ResultsLocation extends Component {
     fetching: PropTypes.bool.isRequired,
   }
 
+  resultCount() {
+    const { fetching, data } = this.props
+    if (!fetching) {
+      return (
+        <Header1>
+          <Trans>{data.length} results</Trans>
+        </Header1>
+      )
+    }
+  }
+
+  showData() {
+    const { fetching, data } = this.props
+    if (!fetching && !isEmpty(data)) {
+      return (
+        <div className={tableContainer}>
+          <DataTable data={data} />
+        </div>
+      )
+    }
+  }
+
+  showLinks() {
+    const { fetching } = this.props
+
+    if (!fetching) {
+      return (
+        <Fragment>
+          <NavLink to="/search-location">
+            <Trans>Search for another location</Trans>
+          </NavLink>
+        </Fragment>
+      )
+    }
+  }
+
   render() {
-    let { data, fetching } = this.props
     return (
       <main role="main">
         <Breadcrumbs>
@@ -58,24 +86,9 @@ class ResultsLocation extends Component {
           <Trans>Results</Trans>
         </Breadcrumbs>
         <SearchContainer>
-          {fetching === false && (
-            <Header1>
-              <Trans>{data.length} results</Trans>
-            </Header1>
-          )}
-          {!fetching &&
-            !isEmpty(data) && (
-              <div>
-                <div className={tableContainer}>
-                  <DataTable className={margin} data={data} />
-                </div>
-              </div>
-            )}
-          {!fetching && (
-            <NavLink to="/search-location">
-              <Trans>Search for another location</Trans>
-            </NavLink>
-          )}
+          {this.resultCount()}
+          {this.showData()}
+          {this.showLinks()}
         </SearchContainer>
         <FooterLinks />
       </main>
