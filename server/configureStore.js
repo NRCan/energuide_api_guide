@@ -4,7 +4,7 @@ import configureStore from '../src/configureStore'
 
 export default async (req, res) => {
   const history = createHistory({ initialEntries: [req.path] })
-  const { store, thunk } = configureStore(history)
+  const { store, thunk } = configureStore(history, { language: req.language })
 
   await thunk(store) // THE PAYOFF BABY!
 
