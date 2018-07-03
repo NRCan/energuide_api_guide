@@ -34,6 +34,7 @@
     "emotion-server": "^9.2.4",
     "emotion-theming": "^9.2.4",
     "express": "^4.16.3",
+    "express-request-language": "^1.1.15",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
     "history": "^4.7.2",
