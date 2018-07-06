@@ -1,0 +1,4 @@
+commonLabels:
+  app: energuide-poc
+resources:
+  - deployment.yaml

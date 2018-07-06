@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: energuide-poc
+  labels:
+    app: energuide-poc
+spec:
+  type: NodePort
+  ports:
+    - port: 3003
+      targetPort: 3003
+      protocol: TCP
+      name: energuide-poc
+  selector:
+    app: energuide-poc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: energuide-poc
+  labels:
+    app: energuide-poc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: energuide-poc
+  template:
+    metadata:
+      labels:
+        app: energuide-poc
+    spec:
+      containers:
+      - name: energuide-poc
+        image: cdssnc/nrcan-energuide-api-poc
+        ports:
+        - containerPort: 3003

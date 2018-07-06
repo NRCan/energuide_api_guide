@@ -1,0 +1,7 @@
+apiVersion: skaffold/v1alpha2
+kind: Config
+build:
+  artifacts:
+  - imageName: cdssnc/nrcan-energuide-api-poc
+deploy:
+  kustomize: {}
